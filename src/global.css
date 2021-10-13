@@ -1,0 +1,16 @@
+/*Fonte Didact Gothic*/
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+html,
+body,
+div#root{
+  height: 100%;
+}
