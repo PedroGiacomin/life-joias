@@ -14,6 +14,7 @@ function Routes(){
         <Route path="/login" component={Login}/>
         <Route path="/home" component={Home}/>
         <Route path="/cadastro" component={Cadastro}/>
+        <Route path="/menu" component={Menu}/>
       </Switch>
     </BrowserRouter>
   )
