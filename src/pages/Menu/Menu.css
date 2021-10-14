@@ -1,12 +1,15 @@
-.MuiToolbar-root{
+.cabecalho{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 85px;
   background-color: #F2E2D0;
+  padding-left: 11%;
+  padding-right: 11%;
 }
 
 .logo{
   max-height: 90%;
-  padding-left: 8%;
-
 }
 
 .icone{
@@ -14,6 +17,5 @@
 }
 
 .iconContainer{
-  margin-left: auto;
-  padding-right: 8%;
+  margin-left: auto; 
 }
