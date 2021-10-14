@@ -5,6 +5,7 @@ import Cadastro from "./pages/Cadastro";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Menu from "./pages/Menu";
+import Perfil from "./pages/Perfil";
 
 function Routes(){
 
@@ -14,6 +15,8 @@ function Routes(){
         <Route path="/login" component={Login}/>
         <Route path="/home" component={Home}/>
         <Route path="/cadastro" component={Cadastro}/>
+        <Route path="/menu" component={Menu}/>
+        <Route path="/perfil" component={Perfil}/>
       </Switch>
     </BrowserRouter>
   )
