@@ -1,4 +1,19 @@
 .MuiToolbar-root{
-  height: 75px;
+  height: 85px;
   background-color: #F2E2D0;
+}
+
+.logo{
+  max-height: 90%;
+  padding-left: 8%;
+
+}
+
+.icone{
+  color: #343434;
+}
+
+.iconContainer{
+  margin-left: auto;
+  padding-right: 8%;
 }
