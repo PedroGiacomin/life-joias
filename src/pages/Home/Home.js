@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from 'react-multi-carousel';
+import {Card} from '@material-ui/core';
 import "react-multi-carousel/lib/styles.css";
 
 import "./Home.css"
@@ -18,7 +19,7 @@ function Home(){
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 1
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -36,11 +37,45 @@ function Home(){
         </div>
         <div className="carrosselContainer">
           <Carousel responsive={responsive}
-                    centerMode={true}>
-            <div className="caixaTeste">Item 1</div>
-            <div className="caixaTeste">Item 2</div>
-            <div className="caixaTeste">Item 3</div>
-            <div className="caixaTeste">Item 4</div>
+                    centerMode={true}
+                    infinite>
+                    
+            {/**A div envolta do Card eh uma flexbox para centralizar os itens */}
+            <div className="cardContainer">
+              <Card>
+                teste 1
+              </Card>
+            </div>  
+
+            <div className="cardContainer">
+              <Card>
+                teste 2
+              </Card>
+            </div>  
+
+            <div className="cardContainer">
+              <Card>
+                teste 3
+              </Card>
+            </div>  
+
+            <div className="cardContainer">
+              <Card>
+                teste 4
+              </Card>
+            </div>  
+
+            <div className="cardContainer">
+              <Card>
+                teste 5
+              </Card>
+            </div>  
+
+            <div className="cardContainer">
+              <Card>
+                teste 6
+              </Card>
+            </div>  
           </Carousel>
         </div>
       

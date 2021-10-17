@@ -16,7 +16,7 @@
 
 .carrosselContainer{
   background-color: #F2E2D0;
-
+  padding: 10px 10px 10px 10px;
 }
 
 .imagemHome{
@@ -26,10 +26,16 @@
   background-image: url(../../images/img-home.jpg);
 }
 
-.caixaTeste{
-  width: 50px;
-  min-height: 100px;
-  background-color: grey;
+.cardContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.MuiCard-root{
+  width: 243px;
+  height: 381px;
+
+
 }
 
 @media screen and (max-width: 960px) {
