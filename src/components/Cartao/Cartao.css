@@ -1,0 +1,31 @@
+/*Fonte Didact Gothic*/
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+.cardContainer{
+  display: flex;
+  justify-content: center;
+}
+
+/* Roots dos componentes MUI */
+.MuiCard-root{
+  width: 243px;
+  height: 381px;
+}
+
+.MuiTypography-root{
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+.MuiTypography-h5{
+  font-size: 1.2rem;
+}
+
+.MuiTypography-h6{
+  font-size: 1rem;
+}
+
+.MuiButton-root{
+  background-color: #F2E2D0;
+  color: black;
+}
+

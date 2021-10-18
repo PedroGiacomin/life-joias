@@ -1,8 +1,9 @@
 import React from "react";
 import Carousel from 'react-multi-carousel';
 import {Card} from '@material-ui/core';
-import "react-multi-carousel/lib/styles.css";
+import Cartao from "../../components/Cartao";
 
+import "react-multi-carousel/lib/styles.css";
 import "./Home.css"
 
 function Home(){
@@ -39,13 +40,8 @@ function Home(){
           <Carousel responsive={responsive}
                     centerMode={true}
                     infinite>
-                    
-            {/**A div envolta do Card eh uma flexbox para centralizar os itens */}
-            <div className="cardContainer">
-              <Card>
-                teste 1
-              </Card>
-            </div>  
+            
+            <Cartao/>
 
             <div className="cardContainer">
               <Card>
