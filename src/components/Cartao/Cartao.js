@@ -11,14 +11,14 @@ function Cartao(){
       <div className="cardContainer">
         <Card>
           <CardMedia
-            component="img"
-            height="100"
-            image="../public/imagens/anel1.jpg"
-            alt="Anel 1"
+          component="img"
+          height="100"
+          src="../../images/anel1.jpg"
+          alt="Anel 1"
           />
           <CardContent>
       
-            <Typography gutterBottom variant="h5" component="div" align="center">
+            <Typography gutterBottom variant="h5" align="center">
               Anel de Ouro Splindow
             </Typography>
 

@@ -12,20 +12,31 @@
   height: 381px;
 }
 
+/* Por algum motivo o css passou a ser sobrescrito por
+    essa regra: .css-68fhrh-MuiTypography-root DO NADA
+    por isso coloquei important em tudo*/
 .MuiTypography-root{
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Didact Gothic', sans-serif !important;
 }
 
 .MuiTypography-h5{
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
 }
 
 .MuiTypography-h6{
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .MuiButton-root{
-  background-color: #F2E2D0;
-  color: black;
+  background-color: #F2E2D0 !important;
+  color: black !important;
+  font-family: 'Didact Gothic', sans-serif !important;
 }
+
+.MuiCardActions-root{
+  display: flex;
+  justify-content: center;
+}
+
+
 
