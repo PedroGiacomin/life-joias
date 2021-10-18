@@ -8,6 +8,7 @@ import "./Home.css"
 
 function Home(){
 
+  //Define a responsividade do carrossel
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -28,6 +29,34 @@ function Home(){
     }
   };
 
+  //Produtos mais vendidos
+  const maisVendidas=[
+    {
+      id: "anel1",
+      nome: "Anel Splindow",
+      preco: 159.90,
+      img: "../../images/anel1.jpg"
+    },
+    {
+      id: "colar1",
+      nome: "Colar Sanctum",
+      preco: 159.90,
+      img: "../../images/colar1.jpg"
+    },
+    {
+      id: "relogio1",
+      nome: "Relogio Bifrost",
+      preco: 159.90,
+      img: "../../images/relogio1.jpg"
+    },
+    {
+      id: "alianca1",
+      nome: "Alianças Santorum",
+      preco: 159.90,
+      img: "../../images/alianca1.jpg"
+    }
+  ]
+
   return(
     <>
       <div className="imagemHome"/>
@@ -41,37 +70,9 @@ function Home(){
                     centerMode={true}
                     infinite>
             
-            <Cartao/>
-
-            <div className="cardContainer">
-              <Card>
-                teste 2
-              </Card>
-            </div>  
-
-            <div className="cardContainer">
-              <Card>
-                teste 3
-              </Card>
-            </div>  
-
-            <div className="cardContainer">
-              <Card>
-                teste 4
-              </Card>
-            </div>  
-
-            <div className="cardContainer">
-              <Card>
-                teste 5
-              </Card>
-            </div>  
-
-            <div className="cardContainer">
-              <Card>
-                teste 6
-              </Card>
-            </div>  
+            {/*Passa o produto por props para o componente Cartao*/}
+            {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
+              
           </Carousel>
         </div>
       

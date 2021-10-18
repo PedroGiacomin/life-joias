@@ -11,7 +11,8 @@
   align-items: center;
   max-width: 100%;
   height: 100%;
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 .carrosselContainer{

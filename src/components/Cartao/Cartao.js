@@ -3,24 +3,24 @@ import { Card, CardMedia, CardContent, Typography, CardActions, Button} from "@m
 
 import "./Cartao.css";
 
-function Cartao(){
+function Cartao({produto}){
 
   return(
     <>
       {/**A div envolta do Card eh uma flexbox para centralizar os itens */}
       <div className="cardContainer">
-        <Card>
+        <Card >
           
           <div className="prodImage"/>
           
           <CardContent>
       
             <Typography gutterBottom variant="h5" align="center">
-              Anel de Ouro Splindow
+              {produto.nome}
             </Typography>
 
             <Typography align="center" variant="h6">
-              R$ 15,90
+              R$ {produto.preco}
             </Typography>
 
           </CardContent>
