@@ -10,12 +10,9 @@ function Cartao(){
       {/**A div envolta do Card eh uma flexbox para centralizar os itens */}
       <div className="cardContainer">
         <Card>
-          <CardMedia
-          component="img"
-          height="100"
-          src="../../images/anel1.jpg"
-          alt="Anel 1"
-          />
+          
+          <div className="prodImage"/>
+          
           <CardContent>
       
             <Typography gutterBottom variant="h5" align="center">
@@ -25,6 +22,7 @@ function Cartao(){
             <Typography align="center" variant="h6">
               R$ 15,90
             </Typography>
+
           </CardContent>
 
           <CardActions>
