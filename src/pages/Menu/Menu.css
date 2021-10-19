@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 12.5vh;
+  height: 12vh;
   background-color: #F2E2D0;
   padding-left: 11%;
   padding-right: 11%;
 }
 
 .logo{
-  max-height: 90%;
+  max-height: 80%;
 }
 
 .icone{

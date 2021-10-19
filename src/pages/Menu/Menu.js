@@ -49,7 +49,7 @@ function Menu(){
       <navbar className="linknavbar"> 
       
       <Link className="linkConfig" to="Jóias"> 
-      Jóias
+      <h4>Jóias</h4>
       </Link>    
       <Link className="linkConfig" to="Semijóias"> 
       Semijóias 
