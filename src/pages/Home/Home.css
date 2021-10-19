@@ -1,8 +1,7 @@
 .base{
   background-color: #ffffff;
   height: 100%;
-  padding-left: 11%;
-  padding-right: 11%;
+  width: 100%;
 }
 
 .titleContainer{
@@ -17,9 +16,20 @@
 }
 
 .carrosselContainer{
+  display: flex;
+  justify-content: space-around;
   background-color: #F2E2D0;
   padding: 10px 10px 10px 10px;
-  margin-bottom: 50px;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.carrossel{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .imagemHome{

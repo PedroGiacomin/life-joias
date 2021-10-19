@@ -4,12 +4,14 @@
 .cardContainer{
   display: flex;
   justify-content: center;
+  height: 45vh;
+  min-width: 20vw;
 }
 
 /* Roots dos componentes MUI */
 .MuiCard-root{
-  width: 200px;
-  height: 313px;
+  width: 80%;
+  height: 100%;
 }
 
 /* Por algum motivo o css passou a ser sobrescrito por
@@ -50,7 +52,7 @@
   background-image: url(../../images/anel1.jpg);
 }
 
-@media(max-width: 560px){
+/*@media(max-width: 560px){
   .MuiCard-root{
     width: 200px;
     height: 200px;
@@ -103,6 +105,6 @@
     padding-top: inherit;
   }
 }
-
+*/
 
 

@@ -54,22 +54,66 @@ function Home(){
       nome: "Alianças Santorum",
       preco: 159.90,
       img: "../../images/alianca1.jpg"
+    },
+    {
+      id: "anel1",
+      nome: "Anel Splindow",
+      preco: 159.90,
+      img: "../../images/anel1.jpg"
+    },
+    {
+      id: "colar1",
+      nome: "Colar Sanctum",
+      preco: 159.90,
+      img: "../../images/colar1.jpg"
+    },
+    {
+      id: "relogio1",
+      nome: "Relogio Bifrost",
+      preco: 159.90,
+      img: "../../images/relogio1.jpg"
+    },
+    {
+      id: "alianca1",
+      nome: "Alianças Santorum",
+      preco: 159.90,
+      img: "../../images/alianca1.jpg"
+    },
+    {
+      id: "colar1",
+      nome: "Colar Sanctum",
+      preco: 159.90,
+      img: "../../images/colar1.jpg"
+    },
+    {
+      id: "relogio1",
+      nome: "Relogio Bifrost",
+      preco: 159.90,
+      img: "../../images/relogio1.jpg"
+    },
+    {
+      id: "alianca1",
+      nome: "Alianças Santorum",
+      preco: 159.90,
+      img: "../../images/alianca1.jpg"
     }
   ]
 
   return(
     <>
+    <div className="base">
       <div className="imagemHome"/>
-          
-      <div className="base">
+        
         <div className="titleContainer">
           <h2>Mais vendidas</h2>
         </div>
         <div className="carrosselContainer">
-          <Carousel responsive={responsive}
-                    centerMode={true}
-                    infinite>
-            
+          <Carousel className="carrossel"
+            responsive={responsive}
+            centerMode={true}
+            infinite
+            >
+
             {/*Passa o produto por props para o componente Cartao*/}
             {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
               
