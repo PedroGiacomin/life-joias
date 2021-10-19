@@ -1,8 +1,8 @@
 import React from "react";
-import {IconButton} from "@material-ui/core"
-import {BsPersonCircle, BsHandbag, BsHeart} from "react-icons/bs"
+import {ButtonGroup, IconButton} from "@material-ui/core"
+import {BsPersonCircle, BsHandbag, BsHeart, BsFacebook, BsInstagram, BsWhatsapp} from "react-icons/bs"
 import { useHistory } from "react-router";
-
+import { Link } from "react-router-dom";
 import "./Menu.css"
 
 /**Menu é header + navbar. */
@@ -25,6 +25,8 @@ function Menu(){
     handleClick(pathName);
   }
 
+  
+
   return(
     <>
       <header className="cabecalho">
@@ -43,6 +45,41 @@ function Menu(){
           
         </div>
       </header>
+        
+      <navbar className="linknavbar"> 
+      
+      <Link className="linkConfig" to="Jóias"> 
+      <h4>Jóias</h4>
+      </Link>    
+      <Link className="linkConfig" to="Semijóias"> 
+      Semijóias 
+      </Link>   
+      <Link className="linkConfig" to="Relógios"> 
+      Relógios 
+      </Link>   
+      <Link className="linkConfig" to="Alianças"> 
+      Alianças 
+      </Link>   
+      <Link className="linkConfig" to="Blog"> 
+      Blog 
+      </Link>       
+      
+      </navbar>
+
+     <footer className= "finalpag">
+     <img className="logo2" src="./imagens/Logo.png"/>
+     <div className="iconContainer2">
+          <IconButton onClick={() => handleClick("/login")}>
+            <BsFacebook className="icone"/>
+          </IconButton>
+          <IconButton onClick={() => handleClick("/login")}>
+            <BsInstagram className="icone"/>
+          </IconButton>
+          <IconButton onClick={() => handleClick("/login")}>
+            <BsWhatsapp className="icone"/>
+          </IconButton>
+        </div>
+     </footer>
     </>
   );
 }
