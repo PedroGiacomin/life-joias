@@ -8,8 +8,8 @@
 
 /* Roots dos componentes MUI */
 .MuiCard-root{
-  width: 243px;
-  height: 381px;
+  width: 200px;
+  height: 313px;
 }
 
 /* Por algum motivo o css passou a ser sobrescrito por
@@ -20,17 +20,19 @@
 }
 
 .MuiTypography-h5{
-  font-size: 1.2em !important;
+  font-size: 100% !important;
+  padding-top: 10px;
 }
 
 .MuiTypography-h6{
-  font-size: 1em !important;
+  font-size: 100% !important;
 }
 
 .MuiButton-root{
   background-color: #F2E2D0 !important;
   color: black !important;
   font-family: 'Didact Gothic', sans-serif !important;
+  size: medium;
 }
 
 .MuiCardActions-root{
@@ -43,10 +45,63 @@
 .prodImage{
   width: 100%;
   height: 50%;
-  margin-bottom: 10%;
   background-size: cover;
   background-position: center center;
   background-image: url(../../images/anel1.jpg);
+}
+
+@media(max-width: 560px){
+  .MuiCard-root{
+    width: 200px;
+    height: 200px;
+  }
+
+  .MuiCardContent-root{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .MuiButton-root{
+    background-color: #F2E2D0 !important;
+    color: black !important;
+    font-family: 'Didact Gothic', sans-serif !important;
+    font-size: 0.6em;
+  }
+
+  .prodImage{
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../../images/anel1.jpg);
+  }
+  
+}
+
+@media(max-width:430px){
+  .MuiCard-root{
+    width: 100px;
+    height: 156px;
+  }
+
+  .MuiTypography-h5{
+    font-size: 0.7em !important;
+    padding-top: inherit;
+  }
+  
+  .MuiTypography-h6{
+    font-size: 0.6em !important;
+    padding-bottom: 0px;
+  }
+
+  .MuiButton-root{
+    background-color: #F2E2D0 !important;
+    color: black !important;
+    font-family: 'Didact Gothic', sans-serif !important;
+    font-size: 0.6em;
+    padding-bottom: 0px;
+    padding-top: inherit;
+  }
 }
 
 

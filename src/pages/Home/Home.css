@@ -13,11 +13,13 @@
   height: 100%;
   padding-top: 50px;
   padding-bottom: 25px;
+  font-size: 1rem;
 }
 
 .carrosselContainer{
   background-color: #F2E2D0;
   padding: 10px 10px 10px 10px;
+  margin-bottom: 50px;
 }
 
 .imagemHome{
@@ -27,14 +29,18 @@
   background-image: url(../../images/img-home.jpg);
 }
 
-.cardContainer{
-  display: flex;
-  justify-content: center;
+.sobre{
+  background-color: #EBEBEB;
+  padding-left: 11%;
+  padding-right: 11%;
 }
 
-.MuiCard-root{
-  width: 243px;
-  height: 381px;
+.sobreTitle{
+  font-size: 1em;
+}
+
+.sobreTexto{
+
 }
 
 @media screen and (max-width: 960px) {
