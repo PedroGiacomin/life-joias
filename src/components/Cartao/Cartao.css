@@ -4,7 +4,7 @@
 .cardContainer{
   display: flex;
   justify-content: center;
-  height: 45vh;
+  height: 55vh;
   min-width: 20vw;
 }
 
@@ -22,12 +22,12 @@
 }
 
 .MuiTypography-h5{
-  font-size: 100% !important;
+  font-size: 2.5vh !important;
   padding-top: 10px;
 }
 
 .MuiTypography-h6{
-  font-size: 100% !important;
+  font-size: 2.3vh !important;
 }
 
 .MuiButton-root{

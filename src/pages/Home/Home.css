@@ -12,7 +12,7 @@
   height: 100%;
   padding-top: 50px;
   padding-bottom: 25px;
-  font-size: 1rem;
+  font-size: 2vh;
 }
 
 .carrosselContainer{
@@ -43,14 +43,20 @@
   background-color: #EBEBEB;
   padding-left: 11%;
   padding-right: 11%;
+  padding-top: 4vh;
+  padding-bottom: 10vh;
+  margin-top: 5%;
 }
 
 .sobreTitle{
-  font-size: 1em;
+  font-size: 1.3em;
+  font-weight: lighter;
+  padding-bottom: 20px;
+
 }
 
-.sobreTexto{
-
+.sobreContent{
+  font-size: 0.8em;
 }
 
 @media screen and (max-width: 960px) {
