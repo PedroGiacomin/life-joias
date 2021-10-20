@@ -52,16 +52,16 @@ function Menu(){
       <h4>Jóias</h4>
       </Link>    
       <Link className="linkConfig" to="Semijóias"> 
-      Semijóias 
+      <h4>Semijóias</h4> 
       </Link>   
       <Link className="linkConfig" to="Relógios"> 
-      Relógios 
+      <h4>Relógios</h4> 
       </Link>   
       <Link className="linkConfig" to="Alianças"> 
-      Alianças 
+      <h4>Alianças</h4> 
       </Link>   
       <Link className="linkConfig" to="Blog"> 
-      Blog 
+      <h4>Alianças</h4>
       </Link>       
       
       </navbar>
