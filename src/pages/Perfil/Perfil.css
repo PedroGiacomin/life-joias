@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
 .basePerfil{
   height: 100%;
   display: flex;
@@ -23,17 +25,34 @@
 
 .inputPerfil{
   justify-self: flex-end;
-  width: 90%
+  width: 80%;
+  background-color: #F2E2D0;
+  border-style: inherit;
+  border-radius: 5px;
+  box-shadow:  1px 1px 1px #C4C4C4;
+  
 }
 
 .inputTipoPerfil{
-  font-size: 0.8em;
+  font-size: 0.7em;
   justify-self: flex-start;
-  width: 25%
+  color: #343434;
+  width: 25%;
+  
 }
 
 .titlePerfil{
   padding-top: 10px;
+  padding-bottom: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.subtitlePerfil{
+  
+  font-size: 100%;
+  font-weight: lighter;
   padding-bottom: 20px;
 }
 
