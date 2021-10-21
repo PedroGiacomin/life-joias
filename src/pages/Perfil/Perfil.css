@@ -13,35 +13,36 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 10%;
+  padding-right: 15%;
   width: 50vw;
 }
 
 /* Um grupo é nome do dado + dado*/
 .inputGroupPerfil{
   display: flex;
-  justify-content: space-between;
   padding-bottom: 10px;
 }
 
 .inputPerfil{
-  justify-self: flex-end;
-  width: 80%;
+  justify-self: flex-start;
+  width: 85%;
   background-color: #F2E2D0;
   border-style: inherit;
   border-radius: 5px;
   box-shadow:  1px 1px 1px #C4C4C4;
-  
+  font-size: 1em;
 }
 
 .inputTipoPerfil{
-  font-size: 0.7em;
+  font-size: 0.9em;
   justify-self: flex-start;
   color: #343434;
-  width: 25%;
-  
+  width: 20%;
 }
 
 .titlePerfil{
+  font-size: 2.5em;
   padding-top: 10px;
   padding-bottom: 30px;
   font-family: 'Oswald', sans-serif;
@@ -49,9 +50,8 @@
   text-transform: uppercase;
 }
 
-.subtitlePerfil{
-  
-  font-size: 100%;
+.subtitlePerfil{  
+  font-size: 1.5em;
   font-weight: lighter;
   padding-bottom: 20px;
 }
@@ -62,4 +62,13 @@
   width: 100%;
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+.botaoPerfil{
+  font-size: 1em;
+  align-self: flex-end;
+  background-color: #EACCA8;
+  border-color: #EACCA8;
+  box-shadow: inherit;
+  border-radius: 5px;
 }

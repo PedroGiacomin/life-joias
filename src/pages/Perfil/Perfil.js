@@ -42,50 +42,30 @@ function Perfil(){
     )
   }
 
-  /** Grupo de input com 2 caixinhas*/
-  function complexInput(chave, valor){
 
-    return(
-    <>
-      <Form.Group className="mb-3" className="inputGroupPerfil">
-        <Form.Label className="inputTipoPerfil">{chave}</Form.Label>
-        <Form.Control 
-          className="inputPerfil"
-          type="input" 
-          defaultValue={valor} 
-          readOnly={false}
-          plaintext 
-        />
-        {/**Inserir aqui uma logica para liberar a escrita somente quando
-        o usuario clicar no botao de atualizar dados*/}
-      </Form.Group>
-    </>
-    )
-  }
 
   return(
     <div className="basePerfil">
       <div className="caixaPerfil">
         <h2 className="titlePerfil">Perfil</h2>
         <h3 className="subtitlePerfil">Dados Pessoais</h3>
-
-          <Form className="formPerfil">
-            
-
-            {basicInput("Nome", pessoa.nome)}
-            {basicInput("Email", pessoa.email)}
-            {basicInput("Data de nascimento", pessoa.dataNascimento)}
-            {basicInput("Telefone", pessoa.telefone)}
-          </Form>
+        <Form className="formPerfil">
+          
+          {basicInput("Nome", pessoa.nome)}
+          {basicInput("Email", pessoa.email)}
+          {basicInput("Data de nascimento", pessoa.dataNascimento)}
+          {basicInput("Telefone", pessoa.telefone)}
+        </Form>
         
+        <h3 className="subtitlePerfil">Endereço</h3>
+        <Form className="formPerfil">
+          {basicInput("Logradouro", pessoa.endereco.rua)}
+        </Form>
 
-        <div >
-          <Button variant="primary" type="submit" >
-            Editar Dados
-          </Button>
-        </div>
-
-        
+        <Button className="botaoPerfil" variant="primary" size="lg">
+          Editar Dados
+        </Button>{' '}
+     
       </div>
     </div>
   );
