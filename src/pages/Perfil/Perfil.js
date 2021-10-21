@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button"
+import Button from "react-bootstrap/Button";
+import {useState} from "react";
 
 import "./Perfil.css"
 
@@ -22,6 +23,14 @@ function Perfil(){
     }
   };
 
+  //Bool para permitir editar
+  const [podeEditar, setPodeEditar] = useState(false);
+
+  function clickEditar(){
+    setPodeEditar(true);
+    
+  }
+  //Input com uma so linha
   function basicInput(chave, valor){
 
     return(
@@ -32,7 +41,7 @@ function Perfil(){
           className="inputPerfil"
           type="input" 
           defaultValue={valor} 
-          readOnly={false}
+          readOnly={!podeEditar}
           plaintext 
         />
         {/**Inserir aqui uma logica para liberar a escrita somente quando
@@ -41,8 +50,6 @@ function Perfil(){
     </>
     )
   }
-
-
 
   return(
     <div className="basePerfil">
@@ -62,9 +69,17 @@ function Perfil(){
           {basicInput("Logradouro", pessoa.endereco.rua)}
         </Form>
 
-        <Button className="botaoPerfil" variant="primary" size="lg">
+      <div className="doisBotoesPerfil">
+        <Button className="botaoPerfil" variant="primary" size="lg"
+          onClick={() => {setPodeEditar(true)}}>
           Editar Dados
         </Button>{' '}
+        <Button id="salvar" className="botaoPerfil" variant="primary" size="lg"
+          onClick={() => {setPodeEditar(false)}}>
+          Salvar
+        </Button>{' '}
+      </div>
+     
      
       </div>
     </div>

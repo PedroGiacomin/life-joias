@@ -72,3 +72,7 @@
   box-shadow: inherit;
   border-radius: 5px;
 }
+
+.doisBotoesPerfil{
+  align-self: flex-end;
+}
