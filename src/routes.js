@@ -11,6 +11,8 @@ import Semijóias from "./pages/Semijóias";
 import Relógios from "./pages/Relógios";
 import Blog from "./pages/Blog";
 import Alianças from "./pages/Alianças"
+import Footer from "./pages/Footer";
+
 function Routes(){
 
   return(
@@ -26,6 +28,7 @@ function Routes(){
         <Route path="/Relógios" component={Relógios}/>
         <Route path="/Blog" component={Blog}/>
         <Route path="/Alianças" component={Alianças}/>
+        <Route path="/footer" component={Footer}/>
       </Switch>
     </BrowserRouter>
   )
