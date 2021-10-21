@@ -65,21 +65,6 @@ function Menu(){
       </Link>       
       
       </navbar>
-
-     <footer className= "finalpag">
-     <img className="logo2" src="./imagens/Logo.png"/>
-     <div className="iconContainer2">
-          <IconButton onClick={() => handleClick("/login")}>
-            <BsFacebook className="icone"/>
-          </IconButton>
-          <IconButton onClick={() => handleClick("/login")}>
-            <BsInstagram className="icone"/>
-          </IconButton>
-          <IconButton onClick={() => handleClick("/login")}>
-            <BsWhatsapp className="icone"/>
-          </IconButton>
-        </div>
-     </footer>
     </>
   );
 }

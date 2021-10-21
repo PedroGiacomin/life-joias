@@ -37,25 +37,3 @@ color:#343434 ;
 padding-left: 5%;
 padding-right: 11.5%;
 }
-
-.finalpag{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 11vh;
-  background-color: #F2E2D0;
-  padding-left: 11%;
-  padding-right: 11%;
-  position:absolute;
-  bottom:0;
-  width:100%;
- 
-}
-
-.logo2{
-  max-height: 70%;
-}
-
-.iconContainer2{
-  margin-left: auto;
-}
