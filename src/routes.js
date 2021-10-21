@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
 import Cadastro from "./pages/Cadastro";
 import Home from "./pages/Home";
@@ -17,19 +17,24 @@ function Routes(){
 
   return(
     <BrowserRouter>
-      <Switch>
-        <Route path="/login" component={Login}/>
-        <Route path="/home" component={Home}/>
-        <Route path="/cadastro" component={Cadastro}/>
-        <Route path="/menu" component={Menu}/>
-        <Route path="/perfil" component={Perfil}/>
-        <Route path="/Jóias" component={Jóias}/>
-        <Route path="/Semijóias" component={Semijóias}/>
-        <Route path="/Relógios" component={Relógios}/>
-        <Route path="/Blog" component={Blog}/>
-        <Route path="/Alianças" component={Alianças}/>
-        <Route path="/footer" component={Footer}/>
-      </Switch>
+      <div>
+        <Menu/>
+        <Switch>
+          <Route path="/login" component={Login}/>
+          <Route path="/home" component={Home}/>
+          <Route path="/cadastro" component={Cadastro}/>
+          <Route path="/perfil" component={Perfil}/>
+          <Route path="/Jóias" component={Jóias}/>
+          <Route path="/Semijóias" component={Semijóias}/>
+          <Route path="/Relógios" component={Relógios}/>
+          <Route path="/Blog" component={Blog}/>
+          <Route path="/Alianças" component={Alianças}/>
+          
+          {/*Se nao acha uma rota valida, volta pro login*/}
+          <Route component={() => <Redirect to="/home"/>}/>
+        </Switch>
+        <Footer/>
+      </div>
     </BrowserRouter>
   )
 }
