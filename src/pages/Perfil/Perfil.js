@@ -26,17 +26,17 @@ function Perfil(){
   //Bool para permitir editar
   const [podeEditar, setPodeEditar] = useState(false);
 
-  //Input com uma so casa
-  function basicInput(chave, valor){
 
+  //Input basico: nome do dado + dado
+  function inputBox(nome, dado){
     return(
     <>
-      <Form.Group className="mb-3" className="inputGroupPerfil">
-        <Form.Label className="inputTipoPerfil">{chave}</Form.Label>
+      <Form.Group className="mb-3" className="inputBox">
+        <Form.Label className="nomeInput">{nome}</Form.Label>
         <Form.Control 
-          className="inputPerfil"
+          className="dadoInput"
           type="input" 
-          defaultValue={valor} 
+          defaultValue={dado} 
           readOnly={!podeEditar}
           plaintext 
         />
@@ -45,38 +45,42 @@ function Perfil(){
       </Form.Group>
     </>
     )
-  }
+  }    
 
-    //Input com uma so linha
-    function complexInput(chave, valor){
-
-      return(
-      <>
-        <Form.Group className="mb-3" className="inputGroupPerfilComplex">
-          <div className="doisInputsPerfil">
-            <Form.Label className="inputTipoPerfil">{chave}</Form.Label>
-            <Form.Control 
-              className="inputPerfilComplex"
-              type="input" 
-              defaultValue={valor} 
-              readOnly={!podeEditar}
-              plaintext 
-            />
-
-            <Form.Label className="inputTipoPerfil">{chave}</Form.Label>
-            <Form.Control 
-              className="inputPerfilComplex"
-              type="input" 
-              defaultValue={valor} 
-              readOnly={!podeEditar}
-              plaintext 
-            />
-          </div>
-        </Form.Group>
-      </>
-      )
-    }
+  /* O que muda eh so o dadoInput */
+  function inputBoxShort(nome, dado){
+    return(
+    <>
+      <Form.Group className="mb-3" className="inputBox">
+        <Form.Label className="nomeInput">{nome}</Form.Label>
+        <Form.Control 
+          className="dadoInputShort"
+          type="input" 
+          defaultValue={dado} 
+          readOnly={!podeEditar}
+          plaintext 
+        />
+      </Form.Group>
+    </>
+    )
+  }  
   
+  function inputBoxLarge(nome, dado){
+    return(
+    <>
+      <Form.Group className="mb-3" className="inputBox">
+        <Form.Label className="nomeInput">{nome}</Form.Label>
+        <Form.Control 
+          className="dadoInputLarge"
+          type="input" 
+          defaultValue={dado} 
+          readOnly={!podeEditar}
+          plaintext 
+        />
+      </Form.Group>
+    </>
+    )
+  }  
 
   return(
     <div className="basePerfil">
@@ -84,17 +88,29 @@ function Perfil(){
         <h2 className="titlePerfil">Perfil</h2>
         <h3 className="subtitlePerfil">Dados Pessoais</h3>
         <Form className="formPerfil">
-          {basicInput("Nome", pessoa.nome)}
-          {basicInput("Email", pessoa.email)}
-          {basicInput("Data de nascimento", pessoa.dataNascimento)}
-          {basicInput("Telefone", pessoa.telefone)}
-
-          {complexInput("Data de nascimento", pessoa.dataNascimento)}
+          
+          
+          {inputBox("Nome", pessoa.nome)}
+          {inputBox("Email", pessoa.email)}
+          
+          <div className="doisInputs">
+            {inputBoxLarge("Telefone", pessoa.telefone)}
+            {inputBoxShort("Data de nascimento", pessoa.dataNascimento)} 
+          </div>
         </Form>
         
         <h3 className="subtitlePerfil">Endereço</h3>
         <Form className="formPerfil">
-          {basicInput("Logradouro", pessoa.endereco.rua)}
+          {inputBox("Logradouro", pessoa.endereco.rua)}
+          
+          <div className="doisInputs">
+            {inputBoxShort("CEP", pessoa.dataNascimento)}
+            {inputBoxLarge("Cidade", pessoa.telefone)}
+          </div>
+          <div className="doisInputs">
+            {inputBoxShort("Número", pessoa.dataNascimento)}
+            {inputBoxLarge("Bairro", pessoa.telefone)}
+          </div>
         </Form>
 
         {/**Um botao que permite edicao e o outro que salva as alteracoes*/}
