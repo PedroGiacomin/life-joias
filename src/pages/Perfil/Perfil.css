@@ -131,3 +131,10 @@
 .doisBotoesPerfil{
   align-self: flex-end;
 }
+
+.deletarPerfil{
+  padding-top: 10px;
+  align-self: flex-end;
+  font-size: 0.8em;
+  color: #343434;
+}

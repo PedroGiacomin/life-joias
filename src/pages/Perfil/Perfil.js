@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import {useState} from "react";
 
 import "./Perfil.css"
+import { Link } from "react-router-dom";
 
 function Perfil(){
 
@@ -124,7 +125,7 @@ function Perfil(){
             Salvar
           </Button>{' '}
         </div>
-
+        <Link to="/" className="deletarPerfil">Deletar perfil</Link>
       </div>
     </div>
   );
