@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+.baseCad{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.formCad{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.caixaCad{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10%;
+  padding-right: 15%;
+  width: 50vw;
+}
+
+.titleCad{
+  font-size: 5vh;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.inputBoxCad{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+
+.inputBoxShortCad{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  width: 45%;
+  min-width: 100px;
+}
+
+.doisInputsCad{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Nome do dado */
+.nomeInputCad{
+  margin-right: 20px;
+  font-size: 0.9em;
+  color: #343434;
+}
+
+/* A caixinha de input ocupa o espaço que resta da flex box*/
+.dadoInputCad{
+  height: 25px;
+  width: 100%;
+  background-color: #F2E2D0;
+  border-style: inherit;
+  border-radius: 5px;
+  box-shadow:  1px 1px 1px #C4C4C4;
+  font-size: 1em;
+}
