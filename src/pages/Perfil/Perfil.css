@@ -31,7 +31,16 @@
 .inputBox{
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   padding-bottom: 15px;
+}
+
+.inputBoxShort{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  max-width: 45%;
 }
 
 /* Nome do dado */
@@ -39,7 +48,6 @@
   margin-right: 20px;
   font-size: 0.9em;
   color: #343434;
-  width: 2.5vw;
 }
 
 /* A caixinha de input ocupa o espaço que resta da flex box*/
@@ -54,7 +62,7 @@
 }
 
 .doisInputs{
-  width:100%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -76,24 +84,6 @@
   border-radius: 5px;
   box-shadow:  1px 1px 1px #C4C4C4;
   font-size: 1em;
-}
-
-.inputPerfil{
-  justify-self: flex-start;
-  width: 85%;
-  height: 25px;
-  background-color: #F2E2D0;
-  border-style: inherit;
-  border-radius: 5px;
-  box-shadow:  1px 1px 1px #C4C4C4;
-  font-size: 1em;
-}
-
-.inputTipoPerfil{
-  font-size: 0.9em;
-  justify-self: flex-start;
-  color: #343434;
-  width: 20%;
 }
 
 .titlePerfil{

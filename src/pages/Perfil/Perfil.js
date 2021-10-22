@@ -52,10 +52,10 @@ function Perfil(){
   function inputBoxShort(nome, dado){
     return(
     <>
-      <Form.Group className="mb-3" className="inputBox">
+      <Form.Group className="mb-3" className="inputBoxShort">
         <Form.Label className="nomeInput">{nome}</Form.Label>
         <Form.Control 
-          className="dadoInputShort"
+          className="dadoInput"
           type="input" 
           defaultValue={dado} 
           readOnly={!podeEditar}
@@ -66,23 +66,6 @@ function Perfil(){
     )
   }  
   
-  function inputBoxLarge(nome, dado){
-    return(
-    <>
-      <Form.Group className="mb-3" className="inputBox">
-        <Form.Label className="nomeInput">{nome}</Form.Label>
-        <Form.Control 
-          className="dadoInputLarge"
-          type="input" 
-          defaultValue={dado} 
-          readOnly={!podeEditar}
-          plaintext 
-        />
-      </Form.Group>
-    </>
-    )
-  }  
-
   return(
     <div className="basePerfil">
       <div className="caixaPerfil">
@@ -93,11 +76,11 @@ function Perfil(){
           
           {inputBox("Nome", pessoa.nome)}
           {inputBox("Email", pessoa.email)}
-          
           <div className="doisInputs">
-            {inputBoxLarge("Telefone", pessoa.telefone)}
-            {inputBoxShort("Data de nascimento", pessoa.dataNascimento)} 
+          {inputBoxShort("Telefone", pessoa.telefone)}
+          {inputBoxShort("Nascimento", pessoa.dataNascimento)} 
           </div>
+
         </Form>
         
         <h3 className="subtitlePerfil">Endereço</h3>
@@ -106,11 +89,11 @@ function Perfil(){
           
           <div className="doisInputs">
             {inputBoxShort("CEP", pessoa.dataNascimento)}
-            {inputBoxLarge("Cidade", pessoa.telefone)}
+            {inputBoxShort("Cidade", pessoa.telefone)}
           </div>
           <div className="doisInputs">
             {inputBoxShort("Número", pessoa.dataNascimento)}
-            {inputBoxLarge("Bairro", pessoa.telefone)}
+            {inputBoxShort("Bairro", pessoa.telefone)}
           </div>
         </Form>
 
