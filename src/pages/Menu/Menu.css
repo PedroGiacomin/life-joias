@@ -14,6 +14,8 @@
 
 .icone{
   color: #343434;
+  width: 4vw;
+  margin: inherit;
 }
 
 .iconContainer{
@@ -79,6 +81,9 @@
 /*Desliga a drawer acima de 1024*/
 @media(min-width: 1023px) {
   .drawer{
+    display: none;
+  }
+  .drawerButton{
     display: none;
   }
 }
