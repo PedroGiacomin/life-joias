@@ -1,0 +1,110 @@
+/*Fonte Didact Gothic*/
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+.cardContainer{
+  display: flex;
+  justify-content: center;
+  height: 55vh;
+  min-width: 20vw;
+}
+
+/* Roots dos componentes MUI */
+.MuiCard-root{
+  width: 80%;
+  height: 100%;
+}
+
+/* Por algum motivo o css passou a ser sobrescrito por
+    essa regra: .css-68fhrh-MuiTypography-root DO NADA
+    por isso coloquei important em tudo*/
+.MuiTypography-root{
+  font-family: 'Didact Gothic', sans-serif !important;
+}
+
+.MuiTypography-h5{
+  font-size: 2.5vh !important;
+  padding-top: 10px;
+}
+
+.MuiTypography-h6{
+  font-size: 2.3vh !important;
+}
+
+.MuiButton-root{
+  background-color: #F2E2D0 !important;
+  color: black !important;
+  font-family: 'Didact Gothic', sans-serif !important;
+  size: medium;
+}
+
+.MuiCardActions-root{
+  display: flex;
+  justify-content: center;
+}
+
+/*Solucao que encontrei para colocar imagem, estah como imagem de fundo
+*/
+.prodImage{
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../../images/anel1.jpg);
+}
+
+/*@media(max-width: 560px){
+  .MuiCard-root{
+    width: 200px;
+    height: 200px;
+  }
+
+  .MuiCardContent-root{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .MuiButton-root{
+    background-color: #F2E2D0 !important;
+    color: black !important;
+    font-family: 'Didact Gothic', sans-serif !important;
+    font-size: 0.6em;
+  }
+
+  .prodImage{
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../../images/anel1.jpg);
+  }
+  
+}
+
+@media(max-width:430px){
+  .MuiCard-root{
+    width: 100px;
+    height: 156px;
+  }
+
+  .MuiTypography-h5{
+    font-size: 0.7em !important;
+    padding-top: inherit;
+  }
+  
+  .MuiTypography-h6{
+    font-size: 0.6em !important;
+    padding-bottom: 0px;
+  }
+
+  .MuiButton-root{
+    background-color: #F2E2D0 !important;
+    color: black !important;
+    font-family: 'Didact Gothic', sans-serif !important;
+    font-size: 0.6em;
+    padding-bottom: 0px;
+    padding-top: inherit;
+  }
+}
+*/
+
+
