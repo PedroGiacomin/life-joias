@@ -77,8 +77,8 @@ function Perfil(){
           {inputBox("Nome", pessoa.nome)}
           {inputBox("Email", pessoa.email)}
           <div className="doisInputs">
-          {inputBoxShort("Telefone", pessoa.telefone)}
-          {inputBoxShort("Nascimento", pessoa.dataNascimento)} 
+            {inputBoxShort("Telefone", pessoa.telefone)}
+            {inputBoxShort("Nascimento", pessoa.dataNascimento)} 
           </div>
 
         </Form>
