@@ -78,8 +78,15 @@ function Cadastro(){
               {inputBoxShort("Cidade", "cidade")} 
               {inputBoxShort("Estado", "estado")}
             </div>
-            
+
+            <br/>
+
+            {inputBox("Senha", "senha")}
+            {inputBox("Confirme sua senha", "confirm")}
+
           </Form>
+
+          {console.log(pessoa)}
 
        </div>
       </div>
