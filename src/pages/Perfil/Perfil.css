@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+.basePerfil{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.caixaPerfil{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10%;
+  padding-right: 15%;
+  margin-bottom: 2vh;
+  width: 50vw;
+}
+
+/* Um grupo é nome do dado + dado*/
+
+/* Regras do 1 input por linha*/
+.inputGroupPerfil{
+  display: flex;
+  padding-bottom: 15px;
+}
+
+/* Cada caixa com nome do dado + dado*/
+.inputBox{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+
+.inputBoxShort{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  width: 45%;
+  min-width: 100px;
+}
+
+/* Nome do dado */
+.nomeInput{
+  margin-right: 20px;
+  font-size: 0.9em;
+  color: #343434;
+}
+
+/* A caixinha de input ocupa o espaço que resta da flex box*/
+.dadoInput{
+  height: 25px;
+  width: 100%;
+  background-color: #F2E2D0;
+  border-style: inherit;
+  border-radius: 5px;
+  box-shadow:  1px 1px 1px #C4C4C4;
+  font-size: 1em;
+}
+
+.doisInputs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dadoInputShort{
+  height: 25px;
+  background-color: #F2E2D0;
+  border-style: inherit;
+  border-radius: 5px;
+  box-shadow:  1px 1px 1px #C4C4C4;
+  font-size: 1em;
+}
+
+.dadoInputLarge{
+  height: 25px;
+  background-color: #F2E2D0;
+  border-style: inherit;
+  border-radius: 5px;
+  box-shadow:  1px 1px 1px #C4C4C4;
+  font-size: 1em;
+}
+
+.titlePerfil{
+  font-size: 5vh;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.subtitlePerfil{  
+  font-size: 1.5em;
+  font-weight: lighter;
+  padding-bottom: 20px;
+}
+
+.formPerfil{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.botaoPerfil{
+  font-size: 1em;
+  align-self: flex-end;
+  background-color: #EACCA8;
+  border-color: #EACCA8;
+  box-shadow: inherit;
+  border-radius: 5px;
+}
+
+.doisBotoesPerfil{
+  align-self: flex-end;
+}
+
+.deletarPerfil{
+  padding-top: 10px;
+  align-self: flex-end;
+  font-size: 0.8em;
+  color: #343434;
+}
