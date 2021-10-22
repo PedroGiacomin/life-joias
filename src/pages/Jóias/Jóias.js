@@ -4,10 +4,7 @@ import Cartao from "../../components/Cartao";
 
 import "./Jóias.css"
 
-
 function Jóias(){
-
-
 
   return(
    <>
@@ -66,6 +63,12 @@ function Jóias(){
       </div>   
       </div>
       
+
+      <div>
+   
+      
+      </div>
+
        </div>
 </>
     ); 
