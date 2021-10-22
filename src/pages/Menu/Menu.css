@@ -43,7 +43,9 @@
   justify-content: center;
   width: 100%;
   padding-bottom: 10px;
-  box-shadow: 1px 1px 1px #000000;
+  margin-bottom: 2vh;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .logoDrawer{
@@ -62,23 +64,27 @@
 
 .linkConfigDrawer{
   display: flex;
+  justify-content: center;
+
+  width: 80%;
   text-decoration: none;
   color:#343434 ;
   font-size: 1.2em;
-  padding-bottom: 10px;  
+
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;  
+  border-bottom: 1px solid #F2E2D0 ;
 }
 
-
-
 /*Desliga a drawer acima de 1024*/
-@media(min-width:1024px) {
+@media(min-width: 1023px) {
   .drawer{
     display: none;
   }
 }
 
 /*Desliga a navbar acima de 1024*/
-@media(max-width:1024px){
+@media(max-width:1023px){
   .linknavbar{
     display: none;
   }
