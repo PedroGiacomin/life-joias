@@ -86,8 +86,9 @@ function Cadastro(){
 
           </Form>
 
-          {console.log(pessoa)}
-
+          <Button className="botaoCad" variant="primary" size="lg">
+            FINALIZAR
+          </Button>{' '}
        </div>
       </div>
     </>  
