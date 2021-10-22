@@ -8,8 +8,6 @@ import "./Jóias.css"
 function Jóias(){
 
 
-  
-
 
   return(
    <>
