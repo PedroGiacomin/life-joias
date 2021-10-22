@@ -36,7 +36,6 @@ height: 100vw;
  }
 
 .cFiltroJoias{
-
 position: absolute;
 left: 0%;
 right: 0%;
@@ -47,6 +46,6 @@ background: #F2E2D0;
 
 .filtroJoias{
   color: #343434;
-  margin-left: 50px;
-  
+  display: flex;
+  justify-content: center;
 }
