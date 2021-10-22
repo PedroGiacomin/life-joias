@@ -19,6 +19,7 @@ function Jóias(){
    <h2 className="mjoias">Jóias</h2>
    <p className="tjoias">Usar joias é uma forma de marcar o seu estilo, agregando personalidade à sua imagem. Clássico, moderno, divertido... seja qual for o seu estilo, temos a joia ideal para compor o seu look.</p>
     </div>
+    <div className="containerFiltro">
     <div className="dFiltroJoias">
     <div className="cFiltroJoias">  
        <List>
@@ -63,7 +64,7 @@ function Jóias(){
 
       </div>
       </div>   
-
+      </div>
       
        </div>
 </>

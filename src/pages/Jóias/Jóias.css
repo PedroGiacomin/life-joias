@@ -10,7 +10,7 @@
 .joias{  
     padding-top: 0.5vh;
     padding-bottom: 3vh;
-    margin-top: 5%;
+    margin-top: 3%;
   }
   
   .mjoias{
@@ -30,17 +30,19 @@
 }
 
  .dFiltroJoias{
-position: absolute;
-width: 14vw;
-height: 100vw;
+   margin-top: 3%;
+   width: 14vw;
+   height: 50vw;
+ }
+
+ .containerFiltro{
+   display: flex;
  }
 
 .cFiltroJoias{
-position: absolute;
-left: 0%;
-right: 0%;
-top: 5%;
+top: 10%;
 bottom: 20%;
+height: 40vw;
 background: #F2E2D0;
 }
 
