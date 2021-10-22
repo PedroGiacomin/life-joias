@@ -25,14 +25,10 @@ function Menu(){
     const pathName = (logged ? "/perfil" : "/login");
     handleClick(pathName);
   }
-  
 
-  return(
-    <>
-      <header className="cabecalho">
-
-        {/* Drawer no lugar da navbar para tela pequena */}
-        <SwipeableDrawer 
+  function drawer(){
+    return(
+      <SwipeableDrawer 
           className="drawer" 
           open={drawerIsOpen}
           onClose={() => setDrawerIsOpen(false)}
@@ -66,6 +62,16 @@ function Menu(){
 
           </List>
         </SwipeableDrawer>
+    )
+  }
+  
+
+  return(
+    <>
+      <header className="cabecalho">
+
+        {/* Drawer no lugar da navbar para tela pequena */}
+        {drawer()}
 
         {/** Botao da drawer que so aparece em tela pequena */}
         <div className="drawerButton">
