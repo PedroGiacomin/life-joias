@@ -1,0 +1,52 @@
+.fotojoias{
+    height: 33vh;
+    width: 80vw;
+    background-image: url('ijlog.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+
+.joias{  
+    padding-top: 0.5vh;
+    padding-bottom: 3vh;
+    margin-top: 5%;
+  }
+  
+  .mjoias{
+    font-size: 1.9em;
+    padding-left: 5%;
+  }
+  
+  .tjoias{
+    font-size: 1.3em;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+  }
+
+.baseJoias{
+  padding-left: 11%;
+  padding-right: 11%;
+}
+
+ .dFiltroJoias{
+position: absolute;
+width: 14vw;
+height: 100vw;
+ }
+
+.cFiltroJoias{
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 5%;
+bottom: 20%;
+background: #F2E2D0;
+}
+
+.filtroJoias{
+  color: #343434;
+  margin-left: 50px;
+  
+}
