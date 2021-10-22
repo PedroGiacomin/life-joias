@@ -31,13 +31,53 @@
 }
 
 .linkConfig{
-display: flex;
-text-decoration: none;
-color:#343434 ;
-padding-left: 5%;
-padding-right: 11.5%;
+  display: flex;
+  text-decoration: none;
+  color:#343434 ;
+  padding-left: 5%;
+  padding-right: 11.5%;
 }
 
+.logoDrawerContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 1px #000000;
+}
+
+.logoDrawer{
+  max-height: 10vh;
+}
+
+.drawerList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  width:260px;
+  background-color: #EACCA8;
+}
+
+.linkConfigDrawer{
+  display: flex;
+  text-decoration: none;
+  color:#343434 ;
+  font-size: 1.2em;
+  padding-bottom: 10px;  
+}
+
+
+
+/*Desliga a drawer acima de 1024*/
+@media(min-width:1024px) {
+  .drawer{
+    display: none;
+  }
+}
+
+/*Desliga a navbar acima de 1024*/
 @media(max-width:1024px){
   .linknavbar{
     display: none;

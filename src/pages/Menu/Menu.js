@@ -1,5 +1,5 @@
 import React from "react";
-import {ButtonGroup, IconButton} from "@material-ui/core"
+import {Drawer, List, ListItem, Typography, IconButton} from "@material-ui/core"
 import {BsPersonCircle, BsHandbag, BsHeart, BsFacebook, BsInstagram, BsWhatsapp} from "react-icons/bs"
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
@@ -30,6 +30,35 @@ function Menu(){
   return(
     <>
       <header className="cabecalho">
+
+        {/* Colapsa a navbar abaixo de 1024px*/}
+        <Drawer className="drawer" open={true}>
+
+          <List className="drawerList">
+
+            <div className="logoDrawerContainer">
+              <img className="logoDrawer" src="./imagens/Logo.png"/>
+            </div>
+
+            <Link className="linkConfigDrawer" to="Jóias"> 
+              <h4 className="categoriaDrawer">Jóias</h4>
+            </Link>    
+            <Link className="linkConfigDrawer" to="Semijóias"> 
+              <h4>Semijóias</h4> 
+            </Link>   
+            <Link className="linkConfigDrawer" to="Relógios"> 
+              <h4>Relógios</h4> 
+            </Link>   
+            <Link className="linkConfigDrawer" to="Alianças"> 
+              <h4>Alianças</h4> 
+            </Link>   
+            <Link className="linkConfigDrawer" to="Blog"> 
+              <h4>Blog</h4>
+            </Link> 
+
+          </List>
+        </Drawer>
+
         <img className="logo" src="./imagens/Logo.png"/>
         <div className="iconContainer">
           <IconButton onClick={() => handleProfButton(isLogado)}>
@@ -42,26 +71,27 @@ function Menu(){
           <IconButton onClick={() => handleClick("/login")}>
             <BsHeart className="icone"/>
           </IconButton>
-          
         </div>
+
+
       </header>
         
       <navbar className="linknavbar"> 
       
       <Link className="linkConfig" to="Jóias"> 
-      <h4>Jóias</h4>
+        <h4>Jóias</h4>
       </Link>    
       <Link className="linkConfig" to="Semijóias"> 
-      <h4>Semijóias</h4> 
+        <h4>Semijóias</h4> 
       </Link>   
       <Link className="linkConfig" to="Relógios"> 
-      <h4>Relógios</h4> 
+        <h4>Relógios</h4> 
       </Link>   
       <Link className="linkConfig" to="Alianças"> 
-      <h4>Alianças</h4> 
+        <h4>Alianças</h4> 
       </Link>   
       <Link className="linkConfig" to="Blog"> 
-      <h4>Blog</h4>
+        <h4>Blog</h4>
       </Link>       
       
       </navbar>
