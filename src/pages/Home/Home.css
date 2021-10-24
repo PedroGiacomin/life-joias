@@ -12,7 +12,7 @@
   height: 100%;
   padding-top: 50px;
   padding-bottom: 25px;
-  font-size: 2vh;
+  font-size: 3.5vh;
 }
 
 .carrosselContainer{
@@ -65,7 +65,7 @@
   font-size: 0.8em;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   .imagemHome{
     height: 40vh;
   }

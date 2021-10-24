@@ -11,12 +11,12 @@
 
 .logo{
   max-height: 7vh;
+  cursor: pointer;
 }
 
 .icone{
   color: #343434;
 }
-
 
 .linknavbar{
   display: flex;
@@ -48,6 +48,7 @@
 
 .logoDrawer{
   max-height: 10vh;
+  cursor: pointer;
 }
 
 .drawerList{
@@ -57,7 +58,7 @@
   height: 100%;
 
   width:260px;
-  background-color: #EACCA8;
+  background-color: #F2E2D0;
 }
 
 .linkConfigDrawer{
