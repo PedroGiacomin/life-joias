@@ -32,11 +32,17 @@
   width: 100%;
 }
 
+.imagemHomeContainer{
+  padding-right: 11%;
+  padding-left: 11%;
+  background-color: #DCDCDC;
+}
+
 .imagemHome{
-  height: 80vh;
+  height: 56vh;
   background-size: cover;
-  background-position: center center;
-  background-image: url(../../images/img-home.jpg);
+  background-position: center;
+  background-image: url(../../images/img-home-last.jpg);
 }
 
 .sobre{
@@ -63,11 +69,25 @@
   .imagemHome{
     height: 40vh;
   }
+
+  .imagemHomeContainer{
+    padding-right: inherit;
+    padding-left: inherit;
+    background-color:inherit;
+  }
+
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
   .imagemHome{
     height: 30vh;
   }
+
+  .imagemHomeContainer{
+    padding-right: inherit;
+    padding-left: inherit;
+    background-color:inherit;
+  }
+
 }
 

@@ -13,7 +13,7 @@ function Home(){
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 2000 },
-      items: 5
+      items: 3
     },
     desktop: {
       breakpoint: { max: 2000, min: 1200 },
@@ -102,23 +102,24 @@ function Home(){
   return(
     <>
     <div className="base">
-      <div className="imagemHome"/>
-        
-        <div className="titleContainer">
-          <h2>Mais vendidas</h2>
-        </div>
-        <div className="carrosselContainer">
-          <Carousel className="carrossel"
-            responsive={responsive}
-            centerMode={true}
-            infinite
-            >
+      <div className="imagemHomeContainer">
+        <div className="imagemHome"/>
+      </div>
+      <div className="titleContainer">
+        <h2>Mais vendidas</h2>
+      </div>
+      <div className="carrosselContainer">
+        <Carousel className="carrossel"
+          responsive={responsive}
+          centerMode={true}
+          infinite
+          >
 
-            {/*Passa o produto por props para o componente Cartao*/}
-            {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
-              
-          </Carousel>
-        </div>
+          {/*Passa o produto por props para o componente Cartao*/}
+          {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
+            
+        </Carousel>
+      </div>
       </div>
 
       <div className="sobre">
