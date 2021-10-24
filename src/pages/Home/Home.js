@@ -16,11 +16,11 @@ function Home(){
       items: 3
     },
     desktop: {
-      breakpoint: { max: 2000, min: 1200 },
+      breakpoint: { max: 2000, min: 1024 },
       items: 3
     },
     tablet: {
-      breakpoint: { max: 1200, min: 850 },
+      breakpoint: { max: 1024, min: 850 },
       items: 2
     },
     mobile: {
@@ -116,7 +116,7 @@ function Home(){
             responsive={responsive}
             centerMode={true}
             infinite
-            
+            removeArrowOnDeviceType={[ "mobile"]}
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
