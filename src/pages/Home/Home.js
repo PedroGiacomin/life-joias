@@ -101,36 +101,63 @@ function Home(){
 
   return(
     <>
-    <div className="base">
-      <div className="imagemHomeContainer">
-        <div className="imagemHome"/>
-      </div>
-      <div className="titleContainer">
-        <h2>Mais vendidas</h2>
-      </div>
-      <div className="carrosselContainer">
-        <Carousel className="carrossel"
-          responsive={responsive}
-          centerMode={true}
-          infinite
-          >
+      <div className="base">
 
-          {/*Passa o produto por props para o componente Cartao*/}
-          {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
-            
-        </Carousel>
-      </div>
-      </div>
+        <div className="imagemHomeContainer">
+          <div className="imagemHome"/>
+        </div>
+        
+        {/* Primeiro carrossel */}
+        <div className="titleContainer">
+          <h2>Mais vendidas</h2>
+        </div>
+        <div className="carrosselContainer">
+          <Carousel className="carrossel"
+            responsive={responsive}
+            centerMode={true}
+            infinite
+            >
+
+            {/*Passa o produto por props para o componente Cartao*/}
+            {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
+              
+          </Carousel>
+        </div>
+      
 
       <div className="sobre">
-        <h2 className="sobreTitle">Sobre a loja</h2>
-        <p className="sobreContent">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-          when an unknown printer took a galley of type and scrambled it to make a type 
-          specimen book. It has survived not only five centuries, but also the leap into 
-          electronic typesetting, remaining essentially unchanged. It was popularised in 
-          the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div className="sobreContent">
+          <h2 className="sobreTitle">Sobre a loja</h2>
+          <p className="sobreText">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book. It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged. It was popularised in 
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+        <div className="sobreImg"/>
+      </div>
+
+      {/* Segundo carrossel */}
+      <div className="titleContainer">
+          <h2>Novidades</h2>
+        </div>
+        <div className="carrosselContainer">
+          <Carousel className="carrossel"
+            responsive={responsive}
+            centerMode={true}
+            infinite
+            >
+
+            {/*Passa o produto por props para o componente Cartao*/}
+            {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
+              
+          </Carousel>
+        </div>
+
       </div>
     </>
   );
