@@ -37,7 +37,7 @@ function Menu(){
           <List className="drawerList">
 
             <div className="logoDrawerContainer">
-              <img className="logoDrawer" src="./imagens/Logo.png"/>
+              <img onClick={() => handleClick("/home")} className="logoDrawer" src="./imagens/Logo.png"/>
             </div>
 
             <Link className="linkConfigDrawer" to="Jóias"> 
@@ -81,7 +81,7 @@ function Menu(){
           </IconButton>
         </div>
 
-        <img className="logo" src="./imagens/Logo.png"/>
+        <img onClick={() => handleClick("/home")} className="logo" src="./imagens/Logo.png"/>
         <div className="iconContainer">
           <IconButton onClick={() => handleProfButton(isLogado)}>
             <BsPersonCircle className="icone"/>
