@@ -116,6 +116,7 @@ function Home(){
             responsive={responsive}
             centerMode={true}
             infinite
+            
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
@@ -142,7 +143,7 @@ function Home(){
       </div>
 
       {/* Segundo carrossel */}
-      <div className="titleContainer">
+        <div className="titleContainer">
           <h2>Novidades</h2>
         </div>
         <div className="carrosselContainer">

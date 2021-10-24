@@ -17,17 +17,15 @@
 
 .carrosselContainer{
   display: flex;
-  justify-content: space-around;
   background-color: #F2E2D0;
   padding: 10px 10px 10px 10px;
-  margin-left: 11%;
-  margin-right: 11%;
+  margin-left: 7%;
+  margin-right: 7%;
   margin-bottom: 5vh;
 }
 
 .carrossel{
   display: flex;
-  justify-content: space-around;
   align-items: center;
   height: 100%;
   width: 100%;
