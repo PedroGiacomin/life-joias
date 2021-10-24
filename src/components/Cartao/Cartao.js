@@ -13,7 +13,7 @@ function Cartao({produto}){
           
           <div className="prodImage"/>
           
-          <CardContent>
+      
       
             <Typography className="nomeCard" gutterBottom variant="h5" align="center">
               {produto.nome}
@@ -23,9 +23,9 @@ function Cartao({produto}){
               R$ {produto.preco}
             </Typography>
 
-          </CardContent>
+        
 
-          <Button size="medium" 
+          <Button 
             variant="contained"
             className="myButton">
             Comprar

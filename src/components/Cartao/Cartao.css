@@ -15,7 +15,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   
   padding-bottom: 2vh;
@@ -34,6 +34,7 @@
 }
 
 .precoCard{
+  padding-bottom: 1vh;
   font-size: 2vh !important;
 }
 
@@ -51,6 +52,24 @@
   background-size: cover;
   background-position: center center;
   background-image: url(../../images/anel1.jpg);
+}
+
+@media(max-width: 600px){
+  .cardContainer{
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+    width: 100% ;
+  }
+
+  /* Nao consegui diminuir o tamanho do botao aaaaaa*/
+  .myButton{
+    background-color: #F2E2D0 !important;
+    color: black !important;
+    font-family: 'Didact Gothic', sans-serif !important;
+    font-size: 0.9em;
+    
+  }
 }
 
 /*@media(max-width: 560px){

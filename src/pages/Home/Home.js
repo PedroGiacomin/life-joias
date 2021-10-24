@@ -112,7 +112,8 @@ function Home(){
           <h2>Mais vendidas</h2>
         </div>
         <div className="carrosselContainer">
-          <Carousel className="carrossel"
+          <Carousel 
+            className="carrossel"
             responsive={responsive}
             centerMode={true}
             infinite
