@@ -69,8 +69,26 @@ function Carrinho(){
             </div>
 
             <div className="precoFinal">
-              <p className="freteTitle">Subtotal</p>
+              <p className="freteTitle">Total</p>
 
+              <div className="onePrice">
+                <p>Subtotal</p>
+                <p>R$ 11,90</p>
+              </div>
+
+              <div className="onePrice">
+                <p>Frete</p>
+                <p>R$ 0,00</p>
+              </div>
+
+              <div className="onePriceEspecial">
+                <p>Total do Pedido</p>
+                <p>R$ 11,90</p>
+              </div>
+
+              
+              
+              
             </div>
           </div>
           <Button variant="primary" className="botaoFinalizar">

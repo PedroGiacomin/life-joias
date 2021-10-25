@@ -32,6 +32,8 @@
   flex-wrap: wrap;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
+  padding-right: 5vw;
+  padding-left: 5vw;
   height: 25vh;
   width: 100%;
 }
@@ -111,14 +113,13 @@
 
 .freteArea{
   height: 100%;
-  flex-grow: 0.5;
+  flex-grow: 0.4;
 
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: 5vw;
+  padding-right: 2vw;
   padding-top: 1vh;
-  margin-left: 2vw;
   
-
+  
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -127,7 +128,7 @@
 .freteTitle{
   font-size: 1.2em;
   font-weight: bold;
-  padding-bottom: 1vh;
+  padding-bottom: 1.5vh;
 }
 
 .cepInput{
@@ -136,7 +137,8 @@
   
   height: 5vh;
   width: 100%;
-  
+
+  font-size: 1em;
 }
 
 .botaoCalcular{
@@ -157,11 +159,28 @@
   height: 100%;
   flex-grow: 1;
   padding-left: 1vw;
-  padding-right: 1vw;
+  padding-right: 5vw;
   padding-top: 1vh;
   display: flex;
   flex-direction: column;
   border-left: 1px solid #E5E5E5;
+}
+
+.onePrice{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1vh;
+  font-size: 1em;
+}
+
+.onePriceEspecial{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1vh;
+  font-size: 1em;
+  font-weight: bold;
+  border-top: 1px solid #E5E5E5;
+  margin-top: 1vh;
 }
 
 .botaoFinalizar{
@@ -176,6 +195,8 @@
   font-size: 1em;
   border-width: 1px;
   cursor: pointer;
+
+  margin-right: 5vw;
 
   text-transform: uppercase;
 }
