@@ -86,8 +86,8 @@ function Menu(){
           <IconButton onClick={() => handleProfButton(isLogado)}>
             <BsPersonCircle className="icone"/>
           </IconButton>
-          {/*Por enquanto vai para o login, mas eh temporario*/}
-          <IconButton onClick={() => handleClick("/login")}>
+          
+          <IconButton onClick={() => handleClick("/carrinho")}>
             <BsHandbag className="icone"/>
           </IconButton>
           <IconButton onClick={() => handleClick("/login")}>
