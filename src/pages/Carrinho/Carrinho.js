@@ -1,6 +1,7 @@
 import React from "react";
 import {BsTrashFill} from "react-icons/bs";
 import { IconButton } from "@material-ui/core";
+import Button from 'react-bootstrap/Button'
 
 import "./Carrinho.css"
 
@@ -52,6 +53,21 @@ function Carrinho(){
           {ItemCarrinho()}
           {ItemCarrinho()}
           {ItemCarrinho()}
+
+          <div className="endCompra">
+            <div className="freteArea">
+              <p className="freteTitle">Calcule o frete</p>
+              <p className="freteCep">CEP</p>
+              
+              <input className="cepInput"/>
+              <Button className="botaoCalcular">Calcular</Button>
+            </div>
+
+            <div className="precoFinal">
+
+            </div>
+
+          </div>
 
 
         </div>
