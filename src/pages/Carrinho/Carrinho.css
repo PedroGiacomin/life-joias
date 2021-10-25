@@ -40,9 +40,7 @@
 
 /*Width da imagem eh igual a height do itemCarrinho para ficar quadrado */
 .imgItem{
-  width: 25vh;
   height: 100%;
-  border: 1px solid #000000;
 }
 
 .nomeItem{

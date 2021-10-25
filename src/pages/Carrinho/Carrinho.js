@@ -3,28 +3,31 @@ import {BsTrashFill} from "react-icons/bs";
 import { IconButton } from "@material-ui/core";
 import Button from 'react-bootstrap/Button'
 
+
 import "./Carrinho.css";
 
+/**Os produtos do carrinho sao passados num array. Cada objeto 
+  *possui: id; nome; endereco de imagem; preco; tamanho(so aneis)*/
 const produtos = [ 
   {
     id: "anel1",
     nome: "Anel Splindow",
+    img: "./imagens/anel1.jpg",
     preco: 159.90,
-    img: "../../images/anel1.jpg",
     tamanho: 15
   },
   {
     id: "colar1",
     nome: "Colar Sanctum",
     preco: 159.90,
-    img: "../../images/colar1.jpg",
+    img: "./imagens/anel1.jpg",
     tamanho: 15
   },
   {
     id: "relogio1",
     nome: "Relogio Bifrost",
     preco: 159.90,
-    img: "../../images/relogio1.jpg"
+    img: "./imagens/anel1.jpg"
   },
 ]
 
@@ -39,11 +42,14 @@ function ItemCarrinho(produto){
   return(
     <>
       <div className="itemCarrinho">
-        <img 
+        
+        <img
           className="imgItem"
-          src="./anel1.jpg"
-          alt="Anel 1"/>
-
+          src={produto.img}
+          alt={produto.nome}
+        />
+        
+      
         <div className="nomeItem">
           <p className="itemText">{produto.nome}</p>  
 
