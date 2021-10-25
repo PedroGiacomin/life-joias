@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+.baseCarrinho{
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+.caixaCarrinho{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 11vw;
+  padding-right: 11vw;
+  margin-bottom: 2vh;
+  width: 100%;
+}
+
+.titleCarrinho{
+  font-size: 5vh;
+  padding-top: 2vh;
+  padding-bottom: 5vh;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.itemCarrinho{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  height: 25vh;
+  width: 100%;
+}
+
+/*Width da imagem eh igual a height do itemCarrinho para ficar quadrado */
+.imgItem{
+  width: 25vh;
+  height: 100%;
+  border: 1px solid #000000;
+}
+
+.nomeItem{
+  align-self: flex-start;
+  padding-top: 2vh;
+}
+
+.precoItem{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  align-self: flex-start;
+  padding-top: 2vh;
+  padding-right: 2vw;
+  flex-grow: 0.2;
+}
+
+.quantItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  padding-top: 2vh;
+}
+
+.quantInput{
+  width: 75px;
+  height: 35px;
+  text-align: center;
+  font-size: 1em;
+  border-width: 1px;
+  border-color: #000000;
+  border-radius: 90px;
+}
+
+.itemText{
+  font-size: 1.5em;
+}
+
+.itemSubtext{
+  font-size: 0.9em;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+}
+
+.itemMidtext{
+  font-size: 1.2em;
+}
+
+.iconeTrash{
+  color: #343434;
+}
+
+.endCompra{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #E5E5E5;
+  border-left: inherit;
+  border-right: inherit;
+  margin-top: 2vh;
+
+  height: 25vh;
+  width: 100%;
+}
+
+.freteArea{
+  height: 100%;
+  flex-grow: 0.4;
+
+  padding-left: 5vw;
+  padding-right: 2vw;
+  padding-top: 1vh;
+  
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.freteTitle{
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-bottom: 1.5vh;
+}
+
+.cepInput{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  
+  height: 5vh;
+  width: 100%;
+
+  font-size: 1em;
+}
+
+.botaoCalcular{
+  width: 9vw;
+  height: 5vh;
+  align-self: flex-end;
+
+  text-transform: uppercase;
+  background-color: #E1BE98;
+  border-width: 1px;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 90px;
+  font-size: 1em;
+}
+
+.precoFinal{
+  height: 100%;
+  flex-grow: 1;
+  padding-left: 1vw;
+  padding-right: 5vw;
+  padding-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #E5E5E5;
+}
+
+.onePrice{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1vh;
+  font-size: 1em;
+}
+
+.onePriceEspecial{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1vh;
+  font-size: 1em;
+  font-weight: bold;
+  border-top: 1px solid #E5E5E5;
+  margin-top: 1vh;
+}
+
+.botaoFinalizar{
+  align-self: flex-end;
+  margin-top: 1vh;
+  width: 15vw;
+  height: 6vh;
+
+  background-color: #E1BE98;
+  color: #ffffff;
+  border-radius: 90px;
+  font-size: 1em;
+  border-width: 1px;
+  cursor: pointer;
+
+  margin-right: 5vw;
+
+  text-transform: uppercase;
+}
