@@ -60,14 +60,22 @@ function Carrinho(){
               <p className="freteCep">CEP</p>
               
               <input className="cepInput"/>
-              <Button className="botaoCalcular">Calcular</Button>
+              
+              <Button variant="primary" 
+                className="botaoCalcular">
+                Calcular
+              </Button>
+              <p>Frete: </p>
             </div>
 
             <div className="precoFinal">
+              <p className="freteTitle">Subtotal</p>
 
             </div>
-
           </div>
+          <Button variant="primary" className="botaoFinalizar">
+            Finalizar pedido
+          </Button>
 
 
         </div>
