@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+.baseCarrinho{
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+.caixaCarrinho{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 11vw;
+  padding-right: 11vw;
+  margin-bottom: 2vh;
+  width: 100%;
+}
+
+.titleCarrinho{
+  font-size: 5vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.itemCarrinho{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  height: 25vh;
+  width: 100%;
+}
+
+/*Width da imagem eh igual a height do itemCarrinho para ficar quadrado */
+.imgItem{
+  width: 25vh;
+  height: 100%;
+  border: 1px solid #000000;
+}
+
+.nomeItem{
+  align-self: flex-start;
+  padding-top: 2vh;
+}
+
+.precoItem{
+  align-self: flex-start;
+  padding-top: 2vh;
+  padding-right: 2vw;
+}
+
+.quantItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  padding-top: 2vh;
+}
+
+.quantInput{
+  width: 75px;
+  height: 35px;
+  text-align: center;
+  font-size: 1em;
+  border-width: 1px;
+  border-color: #000000;
+  border-radius: 90px;
+  
+}
+
+.itemText{
+  font-size: 1.5em;
+}
+
+.itemSubtext{
+  font-size: 0.9em;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+}
+
+.itemMidtext{
+  font-size: 1.2em;
+}
+
