@@ -1,4 +1,6 @@
 import React from "react";
+import {BsTrashFill} from "react-icons/bs";
+import { IconButton } from "@material-ui/core";
 
 import "./Carrinho.css"
 
@@ -28,6 +30,10 @@ function ItemCarrinho(){
           <p className="itemMidtext">R$ 0,00</p>
         </div>
 
+        <IconButton>
+          <BsTrashFill className="iconeTrash" size={15}/>
+        </IconButton>
+
       </div>
     </>
   )
@@ -42,6 +48,9 @@ function Carrinho(){
         <div className="caixaCarrinho">
           <h2 className="titleCarrinho">Carrinho de Compras</h2>
 
+          {ItemCarrinho()}
+          {ItemCarrinho()}
+          {ItemCarrinho()}
           {ItemCarrinho()}
 
 
