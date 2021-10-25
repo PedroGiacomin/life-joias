@@ -1,12 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import {BsTrashFill} from "react-icons/bs";
 import { IconButton } from "@material-ui/core";
 import Button from 'react-bootstrap/Button'
 
-import "./Carrinho.css"
+import "./Carrinho.css";
+
+const produtos = [ 
+  {
+    id: "anel1",
+    nome: "Anel Splindow",
+    preco: 159.90,
+    img: "../../images/anel1.jpg",
+    tamanho: 15
+  },
+  {
+    id: "colar1",
+    nome: "Colar Sanctum",
+    preco: 159.90,
+    img: "../../images/colar1.jpg",
+    tamanho: 15
+  },
+  {
+    id: "relogio1",
+    nome: "Relogio Bifrost",
+    preco: 159.90,
+    img: "../../images/relogio1.jpg"
+  },
+]
 
 
-function ItemCarrinho(){
+function ItemCarrinho(produto){
+
+  const [quantidade, setQuantidade] = useState();
+  produto.quantidade = quantidade;
+  
+  console.log(produto);
 
   return(
     <>
@@ -17,18 +45,20 @@ function ItemCarrinho(){
           alt="Anel 1"/>
 
         <div className="nomeItem">
-          <p className="itemText">Nome item</p>
-          <p className="itemSubtext">Tamanho: 15</p>
+          <p className="itemText">{produto.nome}</p>  
+
+          {/**Tentar um js aqui para mostrar ou nao o tamanho*/}
+          <p className="itemSubtext">Tamanho: {produto.tamanho}</p>
         </div>
 
         <div className="quantItem">
           <p className="itemSubtext">Quantidade</p>
-          <input className="quantInput"/>
+          <input className="quantInput" onChange={(e) => {setQuantidade(e.target.value)}}/>
         </div>
 
         <div className="precoItem">
           <p className="itemSubtext">Preço</p>
-          <p className="itemMidtext">R$ 0,00</p>
+          <p className="itemMidtext">{produto.preco}</p>
         </div>
 
         <IconButton>
@@ -48,11 +78,13 @@ function Carrinho(){
       <div className="baseCarrinho">
         <div className="caixaCarrinho">
           <h2 className="titleCarrinho">Carrinho de Compras</h2>
-
-          {ItemCarrinho()}
-          {ItemCarrinho()}
-          {ItemCarrinho()}
-          {ItemCarrinho()}
+          
+          {produtos.map((prod) => {
+            return (
+              ItemCarrinho(prod)
+            )
+          })
+          }
 
           <div className="endCompra">
             <div className="freteArea">
