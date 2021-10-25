@@ -12,31 +12,36 @@
   height: 100%;
   padding-top: 50px;
   padding-bottom: 25px;
-  font-size: 2vh;
+  font-size: 3.5vh;
 }
 
 .carrosselContainer{
   display: flex;
-  justify-content: space-around;
   background-color: #F2E2D0;
   padding: 10px 10px 10px 10px;
-  margin-left: 11%;
-  margin-right: 11%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 5vh;
 }
 
 .carrossel{
   display: flex;
-  justify-content: space-around;
   align-items: center;
   height: 100%;
   width: 100%;
 }
 
+.imagemHomeContainer{
+  padding-right: 11%;
+  padding-left: 11%;
+  background-color: #DCDCDC;
+}
+
 .imagemHome{
-  height: 80vh;
+  height: 56vh;
   background-size: cover;
-  background-position: center center;
-  background-image: url(../../images/img-home.jpg);
+  background-position: center;
+  background-image: url(../../images/img-home-last.jpg);
 }
 
 .sobre{
@@ -44,30 +49,97 @@
   padding-left: 11%;
   padding-right: 11%;
   padding-top: 4vh;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
   margin-top: 5%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .sobreTitle{
-  font-size: 1.3em;
+  font-size: 2em;
   font-weight: lighter;
   padding-bottom: 20px;
-
 }
 
 .sobreContent{
-  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  padding-bottom: 2vh;
 }
 
-@media screen and (max-width: 960px) {
+.sobreText{
+  font-size: 1em;
+  width: 30vw;
+  text-align: justify;
+}
+
+.sobreImg{
+  width: 450px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../images/sobre-img.jpg);  
+}
+
+@media screen and (max-width: 1024px) {
   .imagemHome{
     height: 40vh;
   }
+
+  .imagemHomeContainer{
+    padding-right: inherit;
+    padding-left: inherit;
+    background-color:inherit;
+  }
+
+  .sobreText{
+    width: 450px;
+  }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
   .imagemHome{
     height: 30vh;
   }
+
+  .imagemHomeContainer{
+    padding-right: inherit;
+    padding-left: inherit;
+    background-color:inherit;
+  }
+
+  .sobreImg{
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../images/sobre-img.jpg);  
+  }
+
+  .sobreText{
+    width: 300px;
+  }
+
 }
+
+@media screen and (max-width: 400px) {
+
+  .sobreImg{
+    width: 240px;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../images/sobre-img.jpg);  
+  }
+
+  .sobreText{
+    width: 240px;
+  }
+
+}
+
 
