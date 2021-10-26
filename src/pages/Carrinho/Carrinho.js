@@ -49,28 +49,28 @@ function ItemCarrinho(produto){
           alt={produto.nome}
         />
         
-      
-        <div className="nomeItem">
-          <p className="itemText">{produto.nome}</p>  
+        <div className="contentItem">
+          <div className="nomeItem">
+            <p className="itemText">{produto.nome}</p>  
 
-          {/**Tentar um js aqui para mostrar ou nao o tamanho*/}
-          <p className="itemSubtext">Tamanho: {produto.tamanho}</p>
+            {/**Tentar um js aqui para mostrar ou nao o tamanho*/}
+            <p className="itemSubtext">Tamanho: {produto.tamanho}</p>
+          </div>
+
+          <div className="quantItem">
+            <p className="itemSubtext">Quantidade</p>
+            <input className="quantInput" onChange={(e) => {setQuantidade(e.target.value)}}/>
+          </div>
+
+          <div className="precoItem">
+            <p className="itemSubtext">Preço</p>
+            <p className="itemMidtext">{produto.preco}</p>
+          </div>
+
+          <IconButton>
+            <BsTrashFill className="iconeTrash" size={15}/>
+          </IconButton>
         </div>
-
-        <div className="quantItem">
-          <p className="itemSubtext">Quantidade</p>
-          <input className="quantInput" onChange={(e) => {setQuantidade(e.target.value)}}/>
-        </div>
-
-        <div className="precoItem">
-          <p className="itemSubtext">Preço</p>
-          <p className="itemMidtext">{produto.preco}</p>
-        </div>
-
-        <IconButton>
-          <BsTrashFill className="iconeTrash" size={15}/>
-        </IconButton>
-
       </div>
     </>
   )
