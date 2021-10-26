@@ -66,11 +66,11 @@ function ItemCarrinho(produto){
             <p className="itemSubtext">Preço</p>
             <p className="itemMidtext">{produto.preco}</p>
           </div>
-
-          <IconButton>
-            <BsTrashFill className="iconeTrash" size={15}/>
-          </IconButton>
         </div>
+
+        <IconButton>
+          <BsTrashFill className="iconeTrash" size={15}/>
+        </IconButton>
       </div>
     </>
   )

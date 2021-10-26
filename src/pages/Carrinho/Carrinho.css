@@ -30,8 +30,8 @@
   align-items: center;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
-  padding-right: 5vw;
-  padding-left: 5vw;
+  padding-right: 2vw;
+  padding-left: 2vw;
   height: 25vh;
   max-height: 50vh;
   width: 100%;
@@ -39,11 +39,10 @@
 
 .contentItem{
   display: flex;
-  justify-content:space-between;
+  justify-content:space-around;
   flex-wrap: wrap;
   
-  padding-right: 5vw;
-  padding-left: 5vw;
+
   height: 25vh;
   width: 100%;
 
@@ -57,7 +56,8 @@
 }
 
 .nomeItem{
-
+  padding-right: 2vw;
+  padding-left: 2vw;
 }
 
 .precoItem{
@@ -66,6 +66,7 @@
   align-items: flex-end;
   
   padding-right: 2vw;
+  padding-left: 2vw;
   flex-grow: 0.2;
 }
 
@@ -73,7 +74,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  padding-right: 2vw;
+  padding-left: 2vw;
 }
 
 .quantInput{
@@ -87,11 +89,11 @@
 }
 
 .itemText{
-  font-size: 1.5em;
+  font-size: 3.5vh;
 }
 
 .itemSubtext{
-  font-size: 0.9em;
+  font-size: 1.9vh;
   padding-bottom: 1vh;
   padding-top: 1vh;
 }
