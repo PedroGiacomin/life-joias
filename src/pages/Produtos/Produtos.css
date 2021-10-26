@@ -1,18 +1,10 @@
 .containerProdutos{  
-    display: flex;  
-    flex-direction: column;  
+    display: list-item;  
+    flex-direction: row; 
+    align-items: center; 
     margin-left: 16px;  
     margin-right: 16px; 
-  }  
-  
-  .exibeProdutos{
-    height: 33vh;
-    width: 80vw;
-    color: #343434;
-    display: flex;
-    justify-content: center
-     
-  }
+  } 
   
   .baseProdutos{  
     height: 100%;  
@@ -22,8 +14,9 @@
   }  
     
   .inputsProdutos {  
-    display: flex;  
-    flex-direction: column;  
+    display: list-item;  
+    flex-direction: row; 
+    align-items: center;  
     margin-left: 16px;  
     margin-right: 16px;  
   }
