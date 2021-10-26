@@ -28,10 +28,12 @@ function Login() {
             <Form.Control type="email" placeholder="e-mail" onChange={(e)=>setPassword(e.target.value)}
             />
           </Form.Group>
+          <div className = ".espacoLogin"/>
           <Form.Group className="mb-3" controlId="formGroupPassword">
             <Form.Label></Form.Label>
             <Form.Control type="password" placeholder="digite sua senha" onChange={(e)=>setPassword(e.target.value)} 
             />
+          <div className = ".espacoLogin"/>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>Esqueceu sua senha?</Form.Label>

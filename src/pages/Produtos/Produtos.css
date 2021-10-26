@@ -1,5 +1,5 @@
 .containerProdutos{  
-    display: list-item;  
+    display: inline;  
     flex-direction: row; 
     align-items: center; 
     margin-left: 16px;  
@@ -7,16 +7,42 @@
   } 
   
   .baseProdutos{  
+    display: inline-block;
     height: 100%;  
     display: flex;  
-    align-items: center;  
-    justify-content: center;  
+    align-items: stretch;  
+    justify-content: left;  
+  }  
+
+  .containerBarrinha{  
+    display: grid;
+    height: 100%;  
+    display: flex;  
+    align-items: stretch;  
+    justify-content: left;  
+  }  
+
+  .containerInfos{  
+    display: inline-block;
+    height: 100%;  
+    display: flex;  
+    align-items: stretch;  
+    justify-content: left;  
   }  
     
   .inputsProdutos {  
-    display: list-item;  
+    display: inline-block;  
     flex-direction: row; 
     align-items: center;  
     margin-left: 16px;  
     margin-right: 16px;  
+  }
+
+  .botaoCompra{
+    font-size: 1em;
+    align-self: flex-start;
+    background-color: #EACCA8;
+    border-color: #EACCA8;
+    box-shadow: inherit;
+    border-radius: 6px;
   }
