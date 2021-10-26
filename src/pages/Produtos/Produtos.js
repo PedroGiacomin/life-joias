@@ -6,7 +6,7 @@ import "./Produtos.css"
 
 function Produtos(){
 
-  return(<h1>Semijóias</h1>);
+  return(<h1>Anel Splindow</h1>);
  
   
 };
