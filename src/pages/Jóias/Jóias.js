@@ -8,7 +8,7 @@ import "./Jóias.css"
 const card = [
 {
   id: 1,
-  img: "./imagens/anel1.jpg",
+  foto: "./imagens/anel1.jpg",
   nome: "Anel Splindow",
   preço: "189,90",
     
@@ -16,11 +16,52 @@ const card = [
 
 {
   id: 1,
-  img:"../../public/anel1.jpg",
+  foto: "./imagens/anel1.jpg",
   nome: "Anel Splindow",
   preço: "189,90",
     
 },
+
+{
+  id: 1,
+  foto: "./imagens/anel1.jpg",
+  nome: "Anel Splindow",
+  preço: "189,90",
+    
+},
+
+{
+  id: 1,
+  foto: "./imagens/anel1.jpg",
+  nome: "Anel Splindow",
+  preço: "189,90",
+    
+},
+
+{
+  id: 1,
+  foto: "./imagens/anel1.jpg",
+  nome: "Anel Splindow",
+  preço: "189,90",
+    
+},
+
+{
+  id: 1,
+  foto: "./imagens/anel1.jpg",
+  nome: "Anel Splindow",
+  preço: "189,90",
+    
+},
+
+{
+  id: 1,
+  foto: "./imagens/anel1.jpg",
+  nome: "Anel Splindow",
+  preço: "189,90",
+    
+},
+
 
  
 
@@ -35,7 +76,6 @@ function Jóias(){
    </div>
    
    <div className="joias"> 
-   <h2 className="mjoias">Jóias</h2>
    <p className="tjoias">Usar joias é uma forma de marcar o seu estilo, agregando personalidade à sua imagem. Clássico, moderno, divertido... seja qual for o seu estilo, temos a joia ideal para compor o seu look.</p>
     </div>
     
@@ -44,6 +84,7 @@ function Jóias(){
     
     <div className="cFiltroJoias">  
        <List>
+         <ListItem><h4>Filtro</h4></ListItem>
          <ListItem button>
            <ListItemText className= "filtroJoias">
                <h4>Colares</h4>
