@@ -1,0 +1,28 @@
+.containerLogin{  
+  display: flex;  
+  flex-direction: column;  
+  margin-left: 16px;  
+  margin-right: 16px; 
+}  
+
+.espacoLogin{
+  height: 33vh;
+  width: 80vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;    
+}
+
+.baseLogin {  
+  height: 100%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+}  
+  
+.inputsLogin {  
+  display: flex;  
+  flex-direction: column;  
+  margin-left: 16px;  
+  margin-right: 16px;  
+}

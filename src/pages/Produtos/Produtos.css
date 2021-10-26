@@ -1,0 +1,29 @@
+.containerProdutos{  
+    display: flex;  
+    flex-direction: column;  
+    margin-left: 16px;  
+    margin-right: 16px; 
+  }  
+  
+  .exibeProdutos{
+    height: 33vh;
+    width: 80vw;
+    color: #343434;
+    display: flex;
+    justify-content: center
+     
+  }
+  
+  .baseProdutos{  
+    height: 100%;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+  }  
+    
+  .inputsProdutos {  
+    display: flex;  
+    flex-direction: column;  
+    margin-left: 16px;  
+    margin-right: 16px;  
+  }
