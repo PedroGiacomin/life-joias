@@ -18,13 +18,13 @@ function Footer(){
     <footer className= "finalpag">
      <img className="logo2" src="./imagens/Logo.png"/>
      <div className="iconContainer2">
-          <IconButton onClick={() => handleClick("/login")}>
+          <IconButton >
             <BsFacebook className="icone"/>
           </IconButton>
-          <IconButton onClick={() => handleClick("/login")}>
+          <IconButton>
             <BsInstagram className="icone"/>
           </IconButton>
-          <IconButton onClick={() => handleClick("/login")}>
+          <IconButton >
             <BsWhatsapp className="icone"/>
           </IconButton>
         </div>

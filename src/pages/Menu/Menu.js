@@ -113,7 +113,9 @@ function Menu(){
         <h4>Alianças</h4> 
       </Link>   
       <Link className="linkConfig" to="Blog"> 
-        <h4>Blog</h4>
+
+      <h4>Blog</h4>
+
       </Link>       
       
       </navbar>

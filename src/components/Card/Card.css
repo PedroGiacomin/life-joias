@@ -1,0 +1,39 @@
+.cardProduto{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background-color: #ffff;
+width: 15vw;
+-webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
+-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
+box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
+align-items: center;
+padding-bottom: 1.5vh;
+}
+
+.cardFotoProduto{
+width: 100%;
+
+}
+
+.cardNomeProduto{
+font-size: 1.2em;
+overflow: hidden;
+
+}
+
+.cardPreço{
+  font-size: 1em;
+  padding-bottom: 2vh;
+}
+
+
+@media (max-width: 430px){
+    .cardNomeProduto{
+    font-size: 1.1rem
+    }
+    .cardPreço{ 
+      font-size: 0.8rem;
+    }
+
+}
