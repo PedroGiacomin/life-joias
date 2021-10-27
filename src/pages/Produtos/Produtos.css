@@ -38,6 +38,14 @@
     margin-right: 16px;  
   }
 
+  .containerFoto {  
+    display: inline-block;  
+    flex-direction: row; 
+    align-items: center;  
+    margin-left: 16px;  
+    margin-right: 16px;  
+  }
+
   .botaoCompra{
     font-size: 1em;
     align-self: flex-start;

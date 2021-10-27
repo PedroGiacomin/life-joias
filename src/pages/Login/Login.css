@@ -30,3 +30,12 @@
   margin-left: 16px;  
   margin-right: 16px;  
 }
+
+.botaoLogin{
+  font-size: 1em;
+  align-self: center;
+  background-color: #EACCA8;
+  border-color: #EACCA8;
+  box-shadow: inherit;
+  border-radius: 6px;
+}

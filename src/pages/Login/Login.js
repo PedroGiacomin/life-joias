@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import {useHistory} from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import "./Login.css";
 
 function Login() {
@@ -38,7 +39,9 @@ function Login() {
           <Form.Group className="mb-3">
             <Form.Label>Esqueceu sua senha?</Form.Label>
           </Form.Group>
-          <button variant="primary" onClick={login}>ENTRAR</button>{'Não possui cadastro? Cadastre-se agora'}  
+          <Button className="botaoLogin" variant="primary" size="lg">
+            Entrar
+          </Button>{' '}
           </div>
         </Form>
       </div>
