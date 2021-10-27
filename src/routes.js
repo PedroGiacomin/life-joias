@@ -32,6 +32,7 @@ function Routes(){
           <Route path="/Blog" component={Blog}/>
           <Route path="/Alianças" component={Alianças}/>
           <Route path="/Produtos" component={Produtos}/>
+          <Route path="/carrinho" component={Carrinho}/>
           
           {/*Se nao acha uma rota valida, volta pro login*/}
           <Route component={() => <Redirect to="/home"/>}/>
