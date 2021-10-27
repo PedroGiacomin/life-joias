@@ -12,6 +12,7 @@ import Relógios from "./pages/Relógios";
 import Blog from "./pages/Blog";
 import Alianças from "./pages/Alianças"
 import Footer from "./pages/Footer";
+import Carrinho from "./pages/Carrinho";
 
 function Routes(){
 
@@ -29,6 +30,7 @@ function Routes(){
           <Route path="/Relógios" component={Relógios}/>
           <Route path="/Blog" component={Blog}/>
           <Route path="/Alianças" component={Alianças}/>
+          <Route path="/carrinho" component={Carrinho}/>
           
           {/*Se nao acha uma rota valida, volta pro login*/}
           <Route component={() => <Redirect to="/home"/>}/>
