@@ -1,6 +1,7 @@
 .containerLogin{  
   margin-bottom: 6vh;
   margin-top: 6vh;
+  display: flex;
   flex-direction: column;  
   margin-left: 16px;  
   margin-right: 16px; 

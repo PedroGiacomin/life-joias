@@ -15,12 +15,7 @@ function Produtos(){
   <div className="containerProdutos">
     <h2>Anel Splindow</h2>
     <div className="containerBarrinha">
-    <Breadcrumb>
-      <Breadcrumb.Item href="./Home">Life /</Breadcrumb.Item>
-      <Breadcrumb.Item href="./Jóias">Jóias /</Breadcrumb.Item>
-      <Breadcrumb.Item href="#">Aneis /</Breadcrumb.Item>
-    <Breadcrumb.Item active>Anel Splindow</Breadcrumb.Item>
-    </Breadcrumb>
+
     </div>
     <img src="/imagens/anel1.jpg" width="320" height="205" alt="Anel Splindow"></img> 
     <div className="containerInfos">
