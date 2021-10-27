@@ -22,7 +22,6 @@ function Login() {
     <div className="baseLogin">
       <div className = "containerLogin">
         <Form>
-          <img src="/imagens/Logo.png" width="320" height="205" alt="Life Joias"></img> 
           <div className="inputsLogin">
           <Form.Group className="mb-3" controlId="formGroupEmail">
             <Form.Label></Form.Label>

@@ -1,11 +1,14 @@
 .containerLogin{  
-  display: flex;  
+  margin-bottom: 6vh;
+  margin-top: 6vh;
   flex-direction: column;  
   margin-left: 16px;  
   margin-right: 16px; 
 }  
 
 .espacoLogin{
+  margin-bottom: 6vh;
+  margin-top: 6vh;
   height: 33vh;
   width: 80vw;
   display: flex;  
@@ -16,6 +19,8 @@
 }
 
 .baseLogin {  
+  margin-bottom: 2vh;
+  margin-top: 2vh;
   height: 100%;  
   display: flex;  
   align-items: center;  
