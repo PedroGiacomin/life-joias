@@ -46,34 +46,17 @@ const card = [
     
 },
 
-{
-  id: 1,
-  foto: "./imagens/anel1.jpg",
-  nome: "Anel Splindow",
-  preço: "189,90",
-    
-},
-
-{
-  id: 1,
-  foto: "./imagens/anel1.jpg",
-  nome: "Anel Splindow",
-  preço: "189,90",
-    
-},
-
-
- 
 
 ]
+
 
 function Jóias(){
 
   return(
    <>
-   <div className="baseJoias">
    <div className="fotojoias">
    </div>
+   <div className="baseJoias">
    
    <div className="joias"> 
    <p className="tjoias">Usar joias é uma forma de marcar o seu estilo, agregando personalidade à sua imagem. Clássico, moderno, divertido... seja qual for o seu estilo, temos a joia ideal para compor o seu look.</p>
