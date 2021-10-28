@@ -1,56 +1,99 @@
 .containerProdutos{  
-    display: inline;  
     flex-direction: row; 
     align-items: center; 
     margin-left: 16px;  
     margin-right: 16px; 
+    width: 100%;
+    height: 100%;
+    align-self: flex-start;
+    margin-bottom: 5vh;
+    justify-items: stretch;
+    padding: px;
+    display: grid;
+    grid-column-gap: 1vw;
+    grid-row-gap: 2vw;
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 6fr));
   } 
   
-  .baseProdutos{  
-    display: inline-block;
-    height: 100%;  
-    display: flex;  
-    align-items: stretch;  
-    justify-content: left;  
-  }  
-
-  .containerBarrinha{  
-    display: grid;
-    height: 100%;  
-    display: flex;  
-    align-items: stretch;  
-    justify-content: left;  
-  }  
-
   .containerInfos{  
-    display: inline-block;
-    height: 100%;  
-    display: flex;  
+    float: left;
+    flex-direction: column; 
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 8vh;
+    margin-top: 8vh;
+    height: 50%;  
+    display: internal;  
     align-items: stretch;  
     justify-content: left;  
+  }  
+
+  .containerBotao{  
+    float: left;
+    flex-direction: column; 
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 8vh;
+    margin-top: 8vh;
+    height: 100%;  
+    align-items: stretch;  
+    justify-content: left;  
+    padding: px;
   }  
     
   .inputsProdutos {  
-    display: inline-block;  
-    flex-direction: row; 
-    align-items: center;  
-    margin-left: 16px;  
-    margin-right: 16px;  
+    display: inline-flex;
+    flex-direction: column; 
+    align-items: center; 
+    align-items: stretch; 
+    width: 100%;
+    margin-bottom: 8vh;
+    margin-top: 2vh;
+    margin-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 20px
   }
 
-  .containerFoto {  
-    display: inline-block;  
-    flex-direction: row; 
-    align-items: center;  
-    margin-left: 16px;  
-    margin-right: 16px;  
+  .baseFoto {  
+    display: box;
+    flex-direction: column;
+    align-items: stretch; 
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px
+  }
+
+  .Default-select-example{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    width: 100%;
+    float:left;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 20px
+  }
+
+  .mb-3 {  
+    display: flex;
+    flex-direction: column;
+    display: inline-flex;
+    flex-direction: column; 
+    align-items: column;
+    align-items: column; 
+    float:left;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 20px
   }
 
   .botaoCompra{
     font-size: 1em;
+    display: column; 
     align-self: flex-start;
+    align-items: center;  
     background-color: #EACCA8;
     border-color: #EACCA8;
     box-shadow: inherit;
-    border-radius: 6px;
+    border-radius: 2px;
   }
