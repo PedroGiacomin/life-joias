@@ -20,20 +20,24 @@ function Login() {
 
   return(
     <div className="baseLogin">
+      
       <div className = "containerLogin">
-        <Form>
-          <div className="inputsLogin">
-          <Form.Group className="mb-3" controlId="formGroupEmail">
+        <div className = "baseTitulo">
+      <h2>Login</h2>
+
+      </div>
+       
+          <Form.Group className="inputEspaco" controlId="formGroupEmail">
             <Form.Label></Form.Label>
             <Form.Control type="email" placeholder="e-mail" onChange={(e)=>setPassword(e.target.value)}
             />
           </Form.Group>
-          <div className = ".espacoLogin"/>
+          <div className = ".inputEspaco"/>
           <Form.Group className="mb-3" controlId="formGroupPassword">
             <Form.Label></Form.Label>
             <Form.Control type="password" placeholder="digite sua senha" onChange={(e)=>setPassword(e.target.value)} 
             />
-          <div className = ".espacoLogin"/>
+          <div className = ".inputEspaco"/>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>Esqueceu sua senha?</Form.Label>
@@ -42,8 +46,8 @@ function Login() {
             Entrar
           </Button>{' '}
           </div>
-        </Form>
-      </div>
+       
+      
     </div>
   );
 }

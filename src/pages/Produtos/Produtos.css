@@ -36,9 +36,13 @@
     margin-bottom: 8vh;
     margin-top: 8vh;
     height: 100%;  
+    border-radius: 90px;
     align-items: stretch;  
     justify-content: left;  
     padding: px;
+    cursor: pointer;
+   
+    text-transform: uppercase;
   }  
     
   .inputsProdutos {  

@@ -2,14 +2,37 @@
   margin-bottom: 8vh;
   margin-top: 8vh;
   display: flex;
+  font-size: 1em;
   flex-direction: column;  
   margin-left: 16px;  
   margin-right: 16px; 
+  align-items: center;
 }  
+
+.inputEspaco{
+  height: 25px;
+  background-color: #F2E2D0;
+  border-style: inherit;
+  border-radius: 5px;
+  box-shadow:  1px 1px 1px #C4C4C4;
+  font-size: 1em;
+}
+
+.baseTitulo{  
+  margin-bottom: 8vh;
+  margin-top: 8vh;
+  display: flex;
+  font-size: 2em;
+  flex-direction: column;  
+  margin-left: 16px;  
+  margin-right: 16px; 
+  align-items: center;
+} 
 
 .espacoLogin{
   margin-bottom: 8vh;
   margin-top: 8vh;
+  font-size: 1em;
   height: 33vh;
   width: 80vw;
   display: flex;  
@@ -23,6 +46,7 @@
   margin-bottom: 8vh;
   margin-top: 8vh;
   height: 100%;  
+  font-size: 1em;
   display: flex;  
   align-items: center;  
   justify-content: center;  
@@ -36,7 +60,20 @@
   justify-content: center; 
   margin-left: 2vh;  
   margin-right: 2vh; 
+
   
+  
+}
+
+
+.dadoInput{
+  height: 25px;
+  width: 100%;
+  background-color: #F2E2D0;
+  border-style: inherit;
+  border-radius: 5px;
+  box-shadow:  1px 1px 1px #C4C4C4;
+  font-size: 1em;
 }
 
 .botaoLogin{
