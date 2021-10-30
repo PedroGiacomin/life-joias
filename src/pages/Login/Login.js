@@ -70,13 +70,20 @@ function inputBoxSenha(nomeShow, nome){
 
     
           <Form.Group className="mb-3">
+          <div className="linkConfigDrawerEsq">
             <Form.Label>Esqueceu sua senha?</Form.Label>
+          </div>
+
           </Form.Group>
           
           <Button className="botaoLogin" variant="primary" size="lg">
             Entrar
           </Button>{' '}
+
+          <div className="linkConfigDrawerCad">
+            <Form.Label>Não Possui Cadastro? Cadastre-se agora</Form.Label>
           </div>
+        </div>
        
       
     </div>

@@ -78,10 +78,11 @@
 .caixaLogin{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding-left: 10%;
   padding-right: 15%;
   margin-bottom: 2vh;
+  justify-content: center; 
   width: 50vw;
 }
 
@@ -90,18 +91,51 @@
   padding-top: 10px;
   padding-bottom: 30px;
   align-items: center;
+  align-self: center;
  
 }
 
 .baseLogin {  
-  margin-bottom: 8vh;
-  margin-top: 8vh;
-  height: 100%;  
+  
+  height: 72vh;  
   font-size: 1em;
   display: flex;  
   align-items: center;  
   justify-content: center;  
 }  
+
+.linkConfigDrawerEsq{
+  display: right;
+  justify-content: right;
+ 
+  width: 100%;
+  text-decoration: none;
+  color: #343434;
+  font-size: 1em;
+
+  padding-top: 1vh;
+  padding-bottom: 1vh;  
+}
+
+.linkConfigDrawerCad{
+  display: right;
+  justify-content: right;
+  display: flex;  
+  font-size: 1em;
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;
+  
+
+
+  width: 80%;
+  text-decoration: none;
+  color: #343434;
+  font-size: 0.8em;
+
+  padding-top: 1vh;
+  padding-bottom: 1vh;  
+}
   
 .inputsLogin {  
   display: flex;  
@@ -127,11 +161,17 @@
   font-size: 1em;
 }
 
+
 .botaoLogin{
-  font-size: 1em;
+  width: 9vw;
+  height: 5vh;
   align-self: center;
-  background-color: #EACCA8;
-  border-color: #EACCA8;
-  box-shadow: inherit;
-  border-radius: 5px;
+
+  text-transform: uppercase;
+  background-color: #E1BE98;
+  border-width: 1px;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 90px;
+  font-size: 1em;
 }
