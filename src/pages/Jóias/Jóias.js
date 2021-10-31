@@ -8,23 +8,23 @@ import "./Jóias.css"
 const card = [
 {
   id: 1,
-  foto: "./imagens/anel1.jpg",
-  nome: "Anel Splindow",
+  foto: "./imagens/image (1).png",
+  nome: "Pulseira com Pingentes",
+  preço: "489,90",
+    
+},
+
+{
+  id: 1,
+  foto: "./imagens/anel de flor ouro.webp",
+  nome: "Anel FLor",
   preço: "189,90",
     
 },
 
 {
   id: 1,
-  foto: "./imagens/anel1.jpg",
-  nome: "Anel Splindow",
-  preço: "189,90",
-    
-},
-
-{
-  id: 1,
-  foto: "./imagens/anel1.jpg",
+  foto: "./imagens/image.png",
   nome: "Anel Splindow",
   preço: "189,90",
     
@@ -67,7 +67,9 @@ function Jóias(){
     
     <div className="cFiltroJoias">  
        <List>
-         <ListItem><h4>Filtro</h4></ListItem>
+         <ListItem className="filtroJoias">
+           <h4>Filtro</h4>
+           </ListItem>
          <ListItem button>
            <ListItemText className= "filtroJoias">
                <h4>Colares</h4>
