@@ -14,6 +14,7 @@ import Alianças from "./pages/Alianças"
 import Footer from "./pages/Footer";
 import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
+import Produto1 from "./pages/Produto1";
 
 function Routes(){
 
@@ -33,6 +34,7 @@ function Routes(){
           <Route path="/Alianças" component={Alianças}/>
           <Route path="/Produtos" component={Produtos}/>
           <Route path="/carrinho" component={Carrinho}/>
+          <Route path="/Produto1" component={Produto1}/>
           
           {/*Se nao acha uma rota valida, volta pro login*/}
           <Route component={() => <Redirect to="/home"/>}/>
