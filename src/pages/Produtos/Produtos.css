@@ -1,8 +1,9 @@
 .containerProdutos{  
+    display: inline-block;
     flex-direction: row; 
     align-items: center; 
-    margin-left: 16px;  
-    margin-right: 16px; 
+    margin-left: 40vh;  
+    margin-right: 40vh; 
     width: 100%;
     height: 100%;
     align-self: flex-start;
@@ -16,30 +17,71 @@
   } 
   
   .containerInfos{  
-    float: left;
+    
+    display: inline-block;
     flex-direction: column; 
-    font-size: 1em;
+    font-size: 1.2em;
     font-family: 'Oswald', sans-serif;
-    margin-bottom: 8vh;
-    margin-top: 8vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
     height: 50%;  
     display: internal;  
     align-items: stretch;  
     justify-content: left;  
+    padding-top: 5vh;
+    padding-bottom: 5vh; 
   }  
 
-  .containerBotao{  
-    float: left;
+  .containerPreco{  
+    
+    display: inline-block;
+    
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+    
+  } 
+
+  .dadosQuantPreco{  
+    display: inline-table;
+    
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+     
+    align-items: stretch;  
+    justify-content: center; 
+      
+  } 
+  
+  .containerNome{  
+    
     flex-direction: column; 
     font-size: 1em;
     font-family: 'Oswald', sans-serif;
-    margin-bottom: 8vh;
-    margin-top: 8vh;
-    height: 100%;  
-    border-radius: 90px;
-    align-items: stretch;  
-    justify-content: left;  
-    padding: px;
+    height: 50%;  
+    align-items: center;  
+    justify-content: center; 
+    padding-top: 1vh;
+    padding-bottom: 1vh;  
+  } 
+
+  .baseFoto {  
+    
+    flex-direction: column;
+    align-items: stretch; 
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 20px
+  }
+
+
+  .containerBotao{  
+    
+    display: box;
+    flex-direction: column; 
+    align-items: center; 
+    align-items: stretch; 
+    padding: 20px;
+    padding-bottom: 20px;
     cursor: pointer;
    
     text-transform: uppercase;
@@ -50,12 +92,19 @@
     flex-direction: column; 
     align-items: center; 
     align-items: stretch; 
-    width: 100%;
-    margin-bottom: 8vh;
-    margin-top: 2vh;
-    margin-left: 16px;
-    padding-top: 10px;
-    padding-bottom: 20px
+    padding: 20px;
+    border-radius: 60px;
+    padding-bottom: 20px;
+  }
+
+  .containerTamanho {  
+    display: inline-flex;
+    flex-direction: column; 
+    align-items: center; 
+    align-items: stretch; 
+    border-radius: 60px;  
+    padding: 20px;
+    padding-bottom: 20px;
   }
 
   .baseFoto {  
@@ -76,6 +125,7 @@
     display: flex;
     padding-top: 10px;
     padding-bottom: 20px
+    
   }
 
   .mb-3 {  
@@ -88,16 +138,19 @@
     float:left;
     display: flex;
     padding-top: 10px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
   }
 
   .botaoCompra{
-    font-size: 1em;
-    display: column; 
-    align-self: flex-start;
-    align-items: center;  
-    background-color: #EACCA8;
-    border-color: #EACCA8;
-    box-shadow: inherit;
-    border-radius: 2px;
+  width: 20vw;
+  height: 5vh;
+  align-self: center;
+
+  text-transform: uppercase;
+  background-color: #E1BE98;
+  border-width: 1px;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 60px;
+  font-size: 1em;
   }
