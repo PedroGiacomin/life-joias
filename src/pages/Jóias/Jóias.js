@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Card from "../../components/Card";
 import {List, ListItem, ListItemText} from '@material-ui/core';
 
-
 import "./Jóias.css"
+import api from "../../services/api";
 
-const card = [
+let card = [
 {
   id: 1,
   foto: "./imagens/anel1.jpg",
@@ -45,13 +45,57 @@ const card = [
   preço: "189,90",
     
 },
-
-
 ]
 
-
 function Jóias(){
+  
+  const [joiasMostradas, setJoiasMostradas] = useState([]);
+  
+  //Pega as joias TODAS do backend
+  async function getJoias(subcategoria = false){
+    try {
+      
+      const response = undefined;
+      if(subcategoria)
+        response = await api.get(`/products?product_categoria=joia&product_subcategoria=${subcategoria}`);
+      else  
+        response = await api.get('/products?product_categoria=joia');
+        
+      
+        console.log(response.data);
+      const aux = [...response.data];
 
+      setJoiasMostradas(aux);
+      console.log(joiasMostradas);
+      console.log("BATATINHA");
+
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado");   
+    }
+  }
+
+  async function getJoias(){
+    try {
+      const response = await api.get('/products?product_categoria=joia');
+      console.log(response.data);
+      const aux = [...response.data];
+
+      setJoiasMostradas(aux);
+      console.log(joiasMostradas);
+      console.log("BATATINHA");
+
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado");   
+    }
+  }
+
+  useEffect(() => {
+    getJoias();
+    }, []
+  );
+  
   return(
    <>
    <div className="fotojoias">
@@ -103,8 +147,7 @@ function Jóias(){
       </div>   
 
       <div className="cardContainer">
-       {card.map((card) => (<Card key={card.id} 
-          card={card}/>)) }
+       {joiasMostradas.map((joia) => (<Card card={joia}/>)) }
 
       </div>
       </div>
