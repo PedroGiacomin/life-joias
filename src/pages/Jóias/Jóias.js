@@ -50,40 +50,24 @@ let card = [
 function Jóias(){
   
   const [joiasMostradas, setJoiasMostradas] = useState([]);
-  
+  const [subcategoria, setSubcategoria] = useState();
+
   //Pega as joias TODAS do backend
-  async function getJoias(subcategoria = false){
-    try {
-      
-      const response = undefined;
-      if(subcategoria)
-        response = await api.get(`/products?product_categoria=joia&product_subcategoria=${subcategoria}`);
-      else  
-        response = await api.get('/products?product_categoria=joia');
-        
-      
-        console.log(response.data);
-      const aux = [...response.data];
-
-      setJoiasMostradas(aux);
-      console.log(joiasMostradas);
-      console.log("BATATINHA");
-
-    } catch (error) {
-      console.warn(error);
-      alert("Algo deu errado");   
-    }
-  }
-
   async function getJoias(){
     try {
-      const response = await api.get('/products?product_categoria=joia');
-      console.log(response.data);
+      
+      let response;
+
+      if(subcategoria){
+        response = await api.get(`/products?product_categoria=joia&product_subcategoria=${subcategoria}`);
+      }
+      else{
+        response = await api.get("/products?product_categoria=joia");
+      }
+            
       const aux = [...response.data];
 
       setJoiasMostradas(aux);
-      console.log(joiasMostradas);
-      console.log("BATATINHA");
 
     } catch (error) {
       console.warn(error);
@@ -95,6 +79,10 @@ function Jóias(){
     getJoias();
     }, []
   );
+
+  useEffect(() => {
+    getJoias();
+  }, [subcategoria]);
   
   return(
    <>
@@ -111,8 +99,8 @@ function Jóias(){
     
     <div className="cFiltroJoias">  
        <List>
-         <ListItem><h4>Filtro</h4></ListItem>
-         <ListItem button>
+         <ListItem onClick={() => setSubcategoria()}><h4>Filtro</h4></ListItem>
+         <ListItem button onClick={() => setSubcategoria("colar")}>
            <ListItemText className= "filtroJoias">
                <h4>Colares</h4>
            </ListItemText>
@@ -120,7 +108,7 @@ function Jóias(){
        </List>
 
        <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("brinco")}>
            <ListItemText className= "filtroJoias">
            <h4>Brinco</h4>
            </ListItemText>
@@ -128,7 +116,7 @@ function Jóias(){
        </List>
 
        <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("pulseira")}>
            <ListItemText className= "filtroJoias">
            <h4>Pulseiras</h4>
            </ListItemText>
@@ -136,7 +124,7 @@ function Jóias(){
        </List>
   
        <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("anel")}>
            <ListItemText className= "filtroJoias">
            <h4>Anéis</h4>
            </ListItemText>
@@ -147,7 +135,10 @@ function Jóias(){
       </div>   
 
       <div className="cardContainer">
-       {joiasMostradas.map((joia) => (<Card card={joia}/>)) }
+      {
+        joiasMostradas &&
+        joiasMostradas.map((joia) => (<Card card={joia}/>)) 
+      }
 
       </div>
       </div>
