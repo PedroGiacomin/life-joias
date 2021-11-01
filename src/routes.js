@@ -14,6 +14,8 @@ import Alianças from "./pages/Alianças"
 import Footer from "./pages/Footer";
 import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
+import Produto1 from "./pages/Produto1";
+import Produto2 from "./pages/Produto2";
 
 import { isAuthenticated } from "./services/auth";
 
@@ -48,6 +50,8 @@ function Routes(){
           <Route path="/Alianças" component={Alianças}/>
           <Route path="/Produtos" component={Produtos}/>
           <Route path="/carrinho" component={Carrinho}/>
+          <Route path="/Produto1" component={Produto1}/>
+          <Route path="/Produto2" component={Produto2}/>
           
           {/*Se nao acha uma rota valida, volta pro login*/}
           <Route component={() => <Redirect to="/home"/>}/>

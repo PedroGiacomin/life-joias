@@ -1,0 +1,213 @@
+.gradeProduto{
+    
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #E5E5E5;
+    
+    
+  }
+.containerProduto1{  
+    
+    grid-template-columns: repeat(auto-fill, minmax(24vw, 1fr));
+  } 
+
+  .infoContentTam{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: 51vh;
+    
+    
+  padding-right: 25%;
+  
+ 
+  margin-top: 5%;
+  }
+  
+.infoContent{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: 55vh;
+    
+    
+  padding-right: 25%;
+  padding-top: 1vh;
+ 
+  
+  }
+
+  .describeTitle{
+    font-weight: lighter;
+    font-size: 1em;
+   
+  }
+  
+  .infoDesc1{
+    font-weight: lighter;
+    font-size: 0.8em;
+   
+    text-align: justify;
+  }
+  .infoDesc2{
+    font-weight: lighter;
+    font-size: 0.8em;
+   
+    text-align: justify;
+  }
+  .infoDesc3{
+    font-weight: lighter;
+    font-size: 0.8em;
+    
+    text-align: justify;
+  }
+  
+  .containerInfos1{  
+    
+    display: inline;
+    flex-direction: column; 
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+    
+    
+    display: internal;  
+    align-items: stretch;  
+    justify-content: left;  
+    
+  }  
+
+  .containerPreco1{  
+    display: inline-flex;
+    flex-direction: column; 
+    align-items: left; 
+    padding-left: 105px;
+    
+  } 
+
+  .dadosQuantPreco1{  
+    display: inline;
+    padding: stretch;
+   
+    font-size: 1em;
+    font-family: 'Oswald', sans-serif;
+     
+    align-items: baseline;  
+    justify-content: center; 
+      
+  } 
+  .itemSubtext2{  
+   
+    font-size: 1.3em;
+    font-weight: lighter;
+    padding-top: 1.5vh;
+    align-items: baseline;  
+    justify-content: center; 
+    
+      
+  } 
+  
+  .containerNome1{  
+    
+    flex-direction: column; 
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
+    height: 100%;  
+    align-items: center;  
+    justify-content: center; 
+  
+    padding-bottom: 1vh;  
+  } 
+
+ 
+  .containerBotao1{  
+    
+   
+    flex-direction: column;
+    align-self: stretch;
+    width: 55vw;
+  height: 5vh;
+    
+  padding-right: 25%;
+  
+  }  
+    
+  .inputsProduto1 {  
+    display: inline-flex;
+    flex-direction: column; 
+    align-items: left; 
+    border-radius: 60px;
+    
+  }
+
+
+  .baseFoto1 {  
+    
+    flex-direction: column;
+    align-items: stretch; 
+    width: 60%;
+    
+    padding-bottom: 20vh;
+  }
+
+  .Default-select-example{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    width: 50%;
+    float:left;
+    display: flex;
+    
+    
+    
+  }
+
+  .mb-3 {  
+    display: flex;
+    flex-direction: column;
+    
+    align-items: column; 
+    float:left;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .inputQuant {  
+    width: 20vw;
+    height: 5vh;
+    align-self: center;
+    border-width: 1px;
+    cursor: pointer;
+    border-radius: 60px;
+    font-size: 1em;
+    
+  }
+
+  .containerTamanho {  
+    width: 26vw;
+    height: 5vh;
+  align-self: left;
+
+  cursor: pointer;
+  
+  border-radius: 60px;
+  font-size: 1.2em;
+   
+  padding-bottom: 2vh;
+  
+  }
+  .botaoCompra1{
+  width: 21vw;
+  height: 5vh;
+  align-self: stretch;
+
+  background-color: #E1BE98;
+  border-width: 1px;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 60px;
+  font-size: 1.2em;
+  
+  }
