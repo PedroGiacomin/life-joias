@@ -43,17 +43,16 @@
   color: black !important;
   font-family: 'Didact Gothic', sans-serif !important;
   border-radius: 90px !important;
-  width: 50% !important;
+  width: 45% !important;
 }
 
 /*Solucao que encontrei para colocar imagem, estah como imagem de fundo
 */
 .prodImageCartao{
   width: 80%;
- 
 }
 
-@media(max-width: 600px){
+@media(max-width: 850px){
   .cardContainerCarrossel{
     display: flex;
     justify-content: center;
@@ -70,8 +69,7 @@
   }
 
   .prodImageCartao{
-    width: 100%;
-   
+    width: 100%; 
   }
 }
 

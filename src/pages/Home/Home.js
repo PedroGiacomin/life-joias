@@ -82,7 +82,7 @@ function Home(){
             responsive={responsive}
             centerMode={true}
             infinite
-            removeArrowOnDeviceType={[ "mobile"]}
+            removeArrowOnDeviceType={[ "mobile", "tablet"]}
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
@@ -117,6 +117,7 @@ function Home(){
             responsive={responsive}
             centerMode={true}
             infinite
+            removeArrowOnDeviceType={[ "mobile", "tablet"]}
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
