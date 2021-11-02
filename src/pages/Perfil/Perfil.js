@@ -39,6 +39,7 @@ function Perfil(){
           type="input" 
           defaultValue={dado} 
           readOnly={!podeEditar}
+          style={podeEditar ? {backgroundColor:"#E5E5E5"}: {backgroundColor:"#F2E2D0"}}
           plaintext 
         />
         {/**Inserir aqui uma logica para liberar a escrita somente quando
@@ -53,12 +54,15 @@ function Perfil(){
     return(
     <>
       <Form.Group className="mb-3" className="inputBoxShort">
-        <Form.Label className="nomeInput">{nome}</Form.Label>
+        <Form.Label className="nomeInput">
+          {nome}
+        </Form.Label>
         <Form.Control 
           className="dadoInput"
           type="input" 
           defaultValue={dado} 
-          readOnly={!podeEditar}
+          readOnly={!podeEditar} 
+          style={podeEditar ? {backgroundColor:"#E5E5E5"}: {backgroundColor:"#F2E2D0"}}
           plaintext 
         />
       </Form.Group>
@@ -100,11 +104,13 @@ function Perfil(){
         {/**Um botao que permite edicao e o outro que salva as alteracoes*/}
         <div className="doisBotoesPerfil">
           <Button className="botaoPerfil" variant="primary" size="lg"
-            onClick={() => {setPodeEditar(true)}}>
+            onClick={() => {setPodeEditar(true)}}
+            style={{ display: !podeEditar ? "block" : "none" }}>
             Editar Dados
           </Button>{' '}
           <Button id="salvar" className="botaoPerfil" variant="primary" size="lg"
-            onClick={() => {setPodeEditar(false)}}>
+            onClick={() => {setPodeEditar(false)}}
+            style={{ display: podeEditar ? "block" : "none" }}>
             Salvar
           </Button>{' '}
         </div>

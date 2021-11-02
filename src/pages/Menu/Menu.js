@@ -5,6 +5,7 @@ import {HiMenu} from "react-icons/hi";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import "./Menu.css"
+import { borderBottom } from "@material-ui/system";
 
 /**Menu é header + navbar. */
 function Menu(){

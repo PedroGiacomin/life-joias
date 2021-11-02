@@ -8,22 +8,18 @@ function Cartao({produto}){
   return(
     <>
       {/**A div envolta do Card eh uma flexbox para centralizar os itens */}
-      <div className="cardContainer">
+      <div className="cardContainerCarrossel">
         <Card className="myCard">
           
-          <div className="prodImage"/>
-          
+        <img className="prodImageCartao" src={produto.img}/>
       
-      
-            <Typography className="nomeCard" gutterBottom variant="h5" align="center">
-              {produto.nome}
-            </Typography>
+          <Typography className="nomeCard" gutterBottom variant="h5" align="center">
+            {produto.nome}
+          </Typography>
 
-            <Typography  className="precoCard" align="center" variant="h6">
-              R$ {produto.preco}
-            </Typography>
-
-        
+          <Typography  className="precoCard" align="center" variant="h6">
+            R$ {produto.preco}
+          </Typography>
 
           <Button 
             variant="contained"

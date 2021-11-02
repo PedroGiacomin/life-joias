@@ -35,68 +35,33 @@ function Home(){
       id: "anel1",
       nome: "Anel Splindow",
       preco: 159.90,
-      img: "../../images/anel1.jpg"
+      img: "./imagens/anel1.jpg"
     },
     {
-      id: "colar1",
-      nome: "Colar Sanctum",
+      id: "anel2",
+      nome: "Anel Sanctum",
       preco: 159.90,
-      img: "../../images/colar1.jpg"
+      img: "./imagens/anel2.jpg"
     },
     {
-      id: "relogio1",
-      nome: "Relogio Bifrost",
+      id: "anel3",
+      nome: "Anel Bifrost",
       preco: 159.90,
-      img: "../../images/relogio1.jpg"
+      img: "./imagens/anel3.png"
     },
     {
-      id: "alianca1",
-      nome: "Alianças Santorum",
+      id: "brinco1",
+      nome: "Brincos Santorum",
       preco: 159.90,
-      img: "../../images/alianca1.jpg"
+      img: "./imagens/brinco1.png"
     },
     {
       id: "anel1",
       nome: "Anel Splindow",
       preco: 159.90,
-      img: "../../images/anel1.jpg"
+      img: "./imagens/anel1.jpg"
     },
-    {
-      id: "colar1",
-      nome: "Colar Sanctum",
-      preco: 159.90,
-      img: "../../images/colar1.jpg"
-    },
-    {
-      id: "relogio1",
-      nome: "Relogio Bifrost",
-      preco: 159.90,
-      img: "../../images/relogio1.jpg"
-    },
-    {
-      id: "alianca1",
-      nome: "Alianças Santorum",
-      preco: 159.90,
-      img: "../../images/alianca1.jpg"
-    },
-    {
-      id: "colar1",
-      nome: "Colar Sanctum",
-      preco: 159.90,
-      img: "../../images/colar1.jpg"
-    },
-    {
-      id: "relogio1",
-      nome: "Relogio Bifrost",
-      preco: 159.90,
-      img: "../../images/relogio1.jpg"
-    },
-    {
-      id: "alianca1",
-      nome: "Alianças Santorum",
-      preco: 159.90,
-      img: "../../images/alianca1.jpg"
-    }
+
   ]
 
   return(
@@ -117,7 +82,7 @@ function Home(){
             responsive={responsive}
             centerMode={true}
             infinite
-            removeArrowOnDeviceType={[ "mobile"]}
+            removeArrowOnDeviceType={[ "mobile", "tablet"]}
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
@@ -152,6 +117,7 @@ function Home(){
             responsive={responsive}
             centerMode={true}
             infinite
+            removeArrowOnDeviceType={[ "mobile", "tablet"]}
             >
 
             {/*Passa o produto por props para o componente Cartao*/}

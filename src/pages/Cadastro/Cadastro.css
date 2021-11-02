@@ -24,12 +24,12 @@
   align-items: flex-start;
   padding-left: 10%;
   padding-right: 15%;
-  margin-bottom: 2vh;
+  margin-bottom: 8vh;
   width: 50vw;
 }
 
 .titleCad{
-  font-size: 5vh;
+  font-size: 2.5em;
   padding-top: 10px;
   padding-bottom: 30px;
   font-family: 'Oswald', sans-serif;
@@ -78,10 +78,19 @@
 }
 
 .botaoCad{
-  font-size: 1em;
-  align-self: flex-end;
+  font-size: 1.2em;
+  align-self: center;
   background-color: #EACCA8;
   border-color: #EACCA8;
   box-shadow: inherit;
-  border-radius: 5px;
+  border-radius: 90px;
+  width: 50%;
+
+}
+
+@media screen and (max-width: 1024px){
+  .caixaCad{
+    padding: inherit;
+    width: 80%;
+  }
 }
