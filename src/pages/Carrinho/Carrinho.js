@@ -7,12 +7,6 @@ import api from "../../services/api";
 
 import "./Carrinho.css";
 
-/**Os produtos do carrinho sao passados num array. Cada objeto 
-  *possui: id; nome; endereco de imagem; preco; tamanho(so aneis)*/
-const produtos = [ 
-
-]
-
 function ItemCarrinho(produto){
 
   const [quantidade, setQuantidade] = useState();
@@ -62,7 +56,15 @@ function ItemCarrinho(produto){
 
 function Carrinho(){
 
-  let cartItens = JSON.parse(localStorage.getItem('cartItens'));
+  const [cartItens, setCartItens] = useState(JSON.parse(localStorage.getItem('cartItens')));
+
+  function updatePosDelete(){
+    setCartItens(JSON.parse(localStorage.getItem('cartItens')));
+  }
+
+  useEffect(() =>{
+    updatePosDelete();
+  }, []);
 
   return(
     <>
@@ -75,7 +77,7 @@ function Carrinho(){
             return (
               ItemCarrinho(prod)
             )
-          })
+            })
           }
 
           <div className="endCompra">

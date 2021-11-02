@@ -35,8 +35,8 @@ export const deleteItem = (itemId) =>{
   //String --> array
   let cartItens = JSON.parse(localStorage.getItem('cartItens') || '[]');
   
-  //tira elemento do array
-  cartItens = arrayRemove(cartItens, itemId);
+  cartItens.splice(cartItens.findIndex(e => e.product_id === itemId), 1);
+
   localStorage.setItem('cartItens', JSON.stringify(cartItens));
 }
 
