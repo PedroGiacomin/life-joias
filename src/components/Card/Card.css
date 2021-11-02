@@ -3,12 +3,9 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 background-color: #ffff;
-width: 14vw;
--webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
--moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
+width: 90%;
 align-items: center;
-padding-bottom: 1.5vh;
+padding-bottom: 2vh;
 }
 
 .cardFotoProduto{
