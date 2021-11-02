@@ -8,7 +8,7 @@ function Cartao({produto}){
   return(
     <>
       {/**A div envolta do Card eh uma flexbox para centralizar os itens */}
-      <div className="cardContainer">
+      <div className="cardContainerCarrossel">
         <Card className="myCard">
           
         <img className="prodImageCartao" src={produto.img}/>
