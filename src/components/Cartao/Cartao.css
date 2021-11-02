@@ -1,10 +1,10 @@
 /*Fonte Didact Gothic*/
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
-.cardContainer{
+.cardContainerCarrossel{
   display: flex;
   justify-content: center;
-  height: 50vh;
+  height: 50vmin;
   min-width: 20vw;
 }
 
@@ -42,20 +42,21 @@
   background-color: #F2E2D0 !important;
   color: black !important;
   font-family: 'Didact Gothic', sans-serif !important;
+  border-radius: 90px !important;
+  width: 45% !important;
 }
 
 /*Solucao que encontrei para colocar imagem, estah como imagem de fundo
 */
 .prodImageCartao{
-  width: 100%;
- 
+  width: 80%;
 }
 
-@media(max-width: 600px){
-  .cardContainer{
+@media(max-width: 850px){
+  .cardContainerCarrossel{
     display: flex;
     justify-content: center;
-    height: 35vh;
+    height: 38vh;
     width: 100% ;
   }
 
@@ -64,8 +65,11 @@
     background-color: #F2E2D0 !important;
     color: black !important;
     font-family: 'Didact Gothic', sans-serif !important;
-    font-size: 0.9em;
-    
+    font-size: 0.6em !important;
+  }
+
+  .prodImageCartao{
+    width: 100%; 
   }
 }
 

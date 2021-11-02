@@ -16,7 +16,7 @@
   align-items: flex-start;
   padding-left: 10%;
   padding-right: 15%;
-  margin-bottom: 2vh;
+  margin-bottom: 10vh;
   width: 50vw;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .titlePerfil{
-  font-size: 5vh;
+  font-size: 2.5em;
   padding-top: 10px;
   padding-bottom: 30px;
   font-family: 'Oswald', sans-serif;
@@ -128,4 +128,11 @@
   align-self: flex-end;
   font-size: 0.8em;
   color: #343434;
+}
+
+@media screen and (max-width: 1024px){
+  .caixaPerfil{
+    padding: inherit;
+    width: 80%;
+  }
 }

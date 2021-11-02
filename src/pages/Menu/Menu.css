@@ -72,7 +72,7 @@
 
   padding-top: 1.5vh;
   padding-bottom: 1.5vh;  
-  border-bottom: 1px solid #F2E2D0 ;
+  border-bottom: 1px solid #EACCA8 ;
 }
 
 /*Desliga a drawer acima de 1024*/
@@ -89,6 +89,13 @@
 @media(max-width:1023px){
   .linknavbar{
     display: none;
+  }
+}
+
+@media(max-width: 850px){
+  .cabecalho{
+    padding-left: 3%;
+    padding-right: 3%;
   }
 }
 
