@@ -1,8 +1,14 @@
 import { Button, cardHeaderClasses } from "@material-ui/core";
 import React from "react";
+import { addItemToCart } from "../../services/cart-handle";
 
 import "./Card.css"
- 
+
+function handleClickCompra(produto){
+  addItemToCart(produto);
+  console.log(localStorage.getItem('cartItens'))
+}
+
 function Card({card}){
     return( 
     <> 
@@ -11,7 +17,7 @@ function Card({card}){
           <img className="cardFotoProduto" src={card.product_imagem}/>
           <div className="cardNomeProduto">{card.product_nome}</div>
           <div className="cardPreço">{card.product_preco}</div>
-          <Button>Comprar</Button>
+          <Button onClick={() => handleClickCompra(card)}>Comprar</Button>
       </div>
       
     </>

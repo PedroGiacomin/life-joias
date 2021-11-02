@@ -32,31 +32,31 @@ function Home(){
   //Produtos mais vendidos
   const maisVendidas=[
     {
-      id: "anel1",
+      id: "1",
       nome: "Anel Splindow",
       preco: 159.90,
       img: "./imagens/anel1.jpg"
     },
     {
-      id: "anel2",
+      id: "2",
       nome: "Anel Sanctum",
       preco: 159.90,
       img: "./imagens/anel2.jpg"
     },
     {
-      id: "anel3",
+      id: "3",
       nome: "Anel Bifrost",
       preco: 159.90,
       img: "./imagens/anel3.png"
     },
     {
-      id: "brinco1",
+      id: "5",
       nome: "Brincos Santorum",
       preco: 159.90,
       img: "./imagens/brinco1.png"
     },
     {
-      id: "anel1",
+      id: "4",
       nome: "Anel Splindow",
       preco: 159.90,
       img: "./imagens/anel1.jpg"

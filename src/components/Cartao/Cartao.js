@@ -1,7 +1,11 @@
 import React from "react";
 import { Card, CardMedia, CardContent, Typography, CardActions, Button} from "@material-ui/core";
-
+import { addItemToCart } from "../../services/cart-handle";
 import "./Cartao.css";
+
+function handleClickCompra(produtoId){
+  addItemToCart(produtoId);
+}
 
 function Cartao({produto}){
 
@@ -23,7 +27,8 @@ function Cartao({produto}){
 
           <Button 
             variant="contained"
-            className="myButton">
+            className="myButton"
+            onClick={() => handleClickCompra(produto.id)}>
             Comprar
           </Button>
           
