@@ -1,30 +1,36 @@
-import React, { Component, useEffect, useState } from "react";
+
+import React, { Component, useState, useEffect } from "react";
+import { AppBar, Drawer, IconButton } from "@material-ui/core";
+
 import Card from "../../components/Card";
-import {List, ListItem, ListItemText} from '@material-ui/core';
+import {List, ListItem, ListItemText } from '@material-ui/core';
+import {AiFillFilter} from "react-icons/ai"
 
 import "./Jóias.css"
 import api from "../../services/api";
 
+
 let card = [
+
 {
   id: 1,
-  foto: "./imagens/anel1.jpg",
-  nome: "Anel Splindow",
+  foto: "./imagens/image (1).png",
+  nome: "Pulseira com Pingentes",
+  preço: "489,90",
+    
+},
+
+{
+  id: 1,
+  foto: "./imagens/anel de flor ouro.webp",
+  nome: "Anel FLor",
   preço: "189,90",
     
 },
 
 {
   id: 1,
-  foto: "./imagens/anel1.jpg",
-  nome: "Anel Splindow",
-  preço: "189,90",
-    
-},
-
-{
-  id: 1,
-  foto: "./imagens/anel1.jpg",
+  foto: "./imagens/image.png",
   nome: "Anel Splindow",
   preço: "189,90",
     
@@ -47,7 +53,16 @@ let card = [
 },
 ]
 
+
+
+
+
 function Jóias(){
+  
+   const[open, setOpen]= useState(false) 
+    function handle(isopen){
+    setOpen(isopen);
+  }
   
   const [joiasMostradas, setJoiasMostradas] = useState([]);
   const [subcategoria, setSubcategoria] = useState();
@@ -84,6 +99,7 @@ function Jóias(){
     getJoias();
   }, [subcategoria]);
   
+
   return(
    <>
    <div className="fotojoias">
@@ -99,10 +115,14 @@ function Jóias(){
     
     <div className="cFiltroJoias">  
        <List>
-         <ListItem onClick={() => setSubcategoria()}><h4>Filtro</h4></ListItem>
+    
+         <ListItem className="filtroJoias" onClick={() => setSubcategoria()}>
+           <h3>Filtro</h3>
+           </ListItem>
          <ListItem button onClick={() => setSubcategoria("colar")}>
+
            <ListItemText className= "filtroJoias">
-               <h4>Colares</h4>
+               <h4>Anéis</h4>
            </ListItemText>
          </ListItem>
        </List>
@@ -118,7 +138,7 @@ function Jóias(){
        <List>
          <ListItem button onClick={() => setSubcategoria("pulseira")}>
            <ListItemText className= "filtroJoias">
-           <h4>Pulseiras</h4>
+           <h4>Colares</h4>
            </ListItemText>
          </ListItem>
        </List>
@@ -126,11 +146,54 @@ function Jóias(){
        <List>
          <ListItem button onClick={() => setSubcategoria("anel")}>
            <ListItemText className= "filtroJoias">
-           <h4>Anéis</h4>
+           <h4>Pulseiras</h4>
            </ListItemText>
          </ListItem>
        </List>
 
+      </div>
+      
+      <div className="filtroRJoias">
+      <AppBar position="static" style={{backgroundColor: "white"}}>
+        <IconButton onClick={()=>handle(!open)}>
+        <AiFillFilter></AiFillFilter>
+        </IconButton>
+      </AppBar>
+        <Drawer open={open} onClose={()=>handle(false)}>
+        <List>
+         <ListItem className="filtroJoias">
+           <h3>Filtro</h3>
+           </ListItem>
+           </List>
+         <List>
+           <ListItem button>
+           <ListItemText className= "filtroJoias">
+               <h4>Anéis</h4>
+           </ListItemText>
+           </ListItem>
+         </List>
+         <List>
+         <ListItem button>
+           <ListItemText className= "filtroJoias">
+           <h4>Brinco</h4>
+           </ListItemText>
+         </ListItem>
+       </List>
+       <List>
+         <ListItem button>
+           <ListItemText className= "filtroJoias">
+           <h4>Colares</h4>
+           </ListItemText>
+         </ListItem>
+       </List>
+       <List>
+         <ListItem button>
+           <ListItemText className= "filtroJoias">
+           <h4>Pulseiras</h4>
+           </ListItemText>
+         </ListItem>
+       </List>
+         </Drawer>
       </div>
       </div>   
 
@@ -143,7 +206,7 @@ function Jóias(){
       </div>
       </div>
 
-
+      
 
        </div>
 </>

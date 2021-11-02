@@ -3,22 +3,22 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 background-color: #ffff;
-width: 15vw;
--webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
--moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0);
+width: 90%;
 align-items: center;
-padding-bottom: 1.5vh;
+padding-bottom: 2vh;
 }
 
 .cardFotoProduto{
-width: 100%;
+width: 80%;
+margin-top: 1em;
+margin-bottom: 1em;
 
 }
 
 .cardNomeProduto{
-font-size: 1.2em;
+font-size: 1.1em;
 overflow: hidden;
+justify-content: center;
 
 }
 
@@ -26,14 +26,14 @@ overflow: hidden;
   font-size: 1em;
   padding-bottom: 2vh;
 }
-
+ 
 
 @media (max-width: 430px){
     .cardNomeProduto{
     font-size: 1.1rem
     }
     .cardPreço{ 
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
 
 }

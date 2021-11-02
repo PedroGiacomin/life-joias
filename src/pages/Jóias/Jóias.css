@@ -1,70 +1,141 @@
-.fotojoias{
-    height: 33vh;
-    width: 100vw;
-    background-image: url('ijlog.png');
+  .fotojoias{
+    height: 30vh;
+    width: 100%;
+   background-image: url('ijlog.png');
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;    
     
-}
-
-.joias{  
-    padding-top: 0.5vh;
-    padding-bottom: 3vh;
-    margin-top: 3%;
-  }
-  
-  .mjoias{
-    font-size: 1.9em;
-    padding-left: 5%;
   }
   
   .tjoias{
     font-size: 1.3em;
     padding-left: 1.5%;
     padding-right: 1.5%;
+    padding-top: 2%;
   }
 
-.baseJoias{
+  .baseJoias{
   padding-left: 11%;
   padding-right: 11%;
-}
+  }
 
  .dFiltroJoias{
    margin-top: 2%;
    width: 10vw;
    height: 60vw;
- }
+  }
 
  .containerFiltro{
    display: flex;
+  }
+
+  .cFiltroJoias{
+    top: 10%;
+    bottom: 20%;
+    height: 17%;
+  }
+
+  .filtroJoias{
+    color: #343434;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .cardContainer{
+    margin-top: 4%;
+    background-color: #F2E2D0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10vh;
+    justify-items: center;
+    padding: 2%;
+    display: grid;
+    grid-column-gap: 1.4vw;
+    grid-row-gap: 1.9vw;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-left: 4%;
+  }
+
+  @media (max-width: 400px){
+    .tjoias{
+    font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 1500px){
+    .tjoias{
+    font-size: 1.2rem;
+    }
+
+    .fotojoias{
+      height: 35vh;
+      width: 100%;
+      background-image: url('ijlog.png');
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat; 
+    
+    }
+
+}
+
+@media(max-width:850px){
+  .fotojoias{
+    height: 17vh;
+    width: 100%;
+    background-image: url('ijlog.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
   
- }
+  }
 
-.cFiltroJoias{
-top: 10%;
-bottom: 20%;
-height: 17vw;
+} 
 
+@media(max-width:350px){
+  .fotojoias{
+    height: 10vh;
+    width: 100%;
+    background-image: url('ijlog.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+  
+  }
 
+} 
+
+@media(max-width:750px){
+  .fotojoias{
+    height: 15vh;
+    width: 100%;
+    background-image: url('ijlog.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+  
+  }
+
+} 
+
+ @media(max-width:550px){
+  .cFiltroJoias{
+    display: none;
+  }
+
+} 
+
+@media(min-width:551px){
+  .filtroRJoias{
+    display: none;
+
+  }
 }
 
-.filtroJoias{
-  color: #343434;
-  display: flex;
-  justify-content: center;
-}
-
-
-.cardContainer{
+.filtroRJoias{
   background-color: #F2E2D0;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 5vh;
-  justify-items: center;
-  padding: 25px;
-  display: grid;
-  grid-column-gap: 1vw;
-  grid-row-gap: 2vw;
-  grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+ margin-top: 100%;
 }
+
