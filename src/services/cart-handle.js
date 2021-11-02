@@ -18,7 +18,7 @@ export const addItemToCart = (item) =>{
   //String --> array
   let cartItens = JSON.parse(localStorage.getItem('cartItens') || '[]');
   //Add elemento ao array
-  if(!cartItens.includes(item.product_id))
+  if(!cartItens.some(e => e.product_id === item.product_id))
     cartItens.push(item);
 
   //Array --> String e salva no local storage
