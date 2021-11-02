@@ -1,7 +1,7 @@
   .fotojoias{
     height: 30vh;
     width: 100%;
-    background-image: url('ijlog.png');
+   background-image: url('ijlog.png');
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;    
@@ -58,8 +58,84 @@
     margin-left: 4%;
   }
 
+  @media (max-width: 400px){
+    .tjoias{
+    font-size: 1.1rem;
+    }
+  }
 
+  @media (max-width: 1500px){
+    .tjoias{
+    font-size: 1.2rem;
+    }
 
+    .fotojoias{
+      height: 35vh;
+      width: 100%;
+      background-image: url('ijlog.png');
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat; 
+    
+    }
 
+}
 
+@media(max-width:850px){
+  .fotojoias{
+    height: 17vh;
+    width: 100%;
+    background-image: url('ijlog.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+  
+  }
+
+} 
+
+@media(max-width:350px){
+  .fotojoias{
+    height: 10vh;
+    width: 100%;
+    background-image: url('ijlog.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+  
+  }
+
+} 
+
+@media(max-width:750px){
+  .fotojoias{
+    height: 15vh;
+    width: 100%;
+    background-image: url('ijlog.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+  
+  }
+
+} 
+
+ @media(max-width:550px){
+  .cFiltroJoias{
+    display: none;
+  }
+
+} 
+
+@media(min-width:551px){
+  .filtroRJoias{
+    display: none;
+
+  }
+}
+
+.filtroRJoias{
+  background-color: #F2E2D0;
+ margin-top: 100%;
+}
 

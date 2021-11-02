@@ -1,9 +1,13 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import { AppBar, Drawer, IconButton } from "@material-ui/core";
 import Card from "../../components/Card";
-import {List, ListItem, ListItemText} from '@material-ui/core';
+import {List, ListItem, ListItemText } from '@material-ui/core';
+import {AiFillFilter} from "react-icons/ai"
 
 
 import "./Jóias.css"
+
+
 
 const card = [
 {
@@ -50,7 +54,13 @@ const card = [
 ]
 
 
+
+
 function Jóias(){
+   const[open, setOpen]= useState(false) 
+    function handle(isopen){
+    setOpen(isopen);
+  }
 
   return(
    <>
@@ -68,11 +78,11 @@ function Jóias(){
     <div className="cFiltroJoias">  
        <List>
          <ListItem className="filtroJoias">
-           <h4>Filtro</h4>
+           <h3>Filtro</h3>
            </ListItem>
          <ListItem button>
            <ListItemText className= "filtroJoias">
-               <h4>Colares</h4>
+               <h4>Anéis</h4>
            </ListItemText>
          </ListItem>
        </List>
@@ -88,7 +98,7 @@ function Jóias(){
        <List>
          <ListItem button>
            <ListItemText className= "filtroJoias">
-           <h4>Pulseiras</h4>
+           <h4>Colares</h4>
            </ListItemText>
          </ListItem>
        </List>
@@ -96,11 +106,54 @@ function Jóias(){
        <List>
          <ListItem button>
            <ListItemText className= "filtroJoias">
-           <h4>Anéis</h4>
+           <h4>Pulseiras</h4>
            </ListItemText>
          </ListItem>
        </List>
 
+      </div>
+      
+      <div className="filtroRJoias">
+      <AppBar position="static" style={{backgroundColor: "white"}}>
+        <IconButton onClick={()=>handle(!open)}>
+        <AiFillFilter></AiFillFilter>
+        </IconButton>
+      </AppBar>
+        <Drawer open={open} onClose={()=>handle(false)}>
+        <List>
+         <ListItem className="filtroJoias">
+           <h3>Filtro</h3>
+           </ListItem>
+           </List>
+         <List>
+           <ListItem button>
+           <ListItemText className= "filtroJoias">
+               <h4>Anéis</h4>
+           </ListItemText>
+           </ListItem>
+         </List>
+         <List>
+         <ListItem button>
+           <ListItemText className= "filtroJoias">
+           <h4>Brinco</h4>
+           </ListItemText>
+         </ListItem>
+       </List>
+       <List>
+         <ListItem button>
+           <ListItemText className= "filtroJoias">
+           <h4>Colares</h4>
+           </ListItemText>
+         </ListItem>
+       </List>
+       <List>
+         <ListItem button>
+           <ListItemText className= "filtroJoias">
+           <h4>Pulseiras</h4>
+           </ListItemText>
+         </ListItem>
+       </List>
+         </Drawer>
       </div>
       </div>   
 
@@ -111,7 +164,7 @@ function Jóias(){
       </div>
       </div>
 
-
+      
 
        </div>
 </>
