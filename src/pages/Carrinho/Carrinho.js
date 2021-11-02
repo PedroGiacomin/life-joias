@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {BsTrashFill} from "react-icons/bs";
 import { IconButton } from "@material-ui/core";
 import Button from 'react-bootstrap/Button'
-
+import { cleanCart } from "../../services/cart-handle";
 
 import "./Carrinho.css";
 

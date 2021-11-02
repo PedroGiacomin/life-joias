@@ -6,10 +6,24 @@ export const addItemToCart = (itemId) =>{
   //String --> array
   let cartItens = JSON.parse(localStorage.getItem('cartItens') || '[]');
   //Add elemento ao array
-  cartItens.push(itemId);
+  if(!cartItens.includes(itemId))
+    cartItens.push(itemId);
 
   //Array --> String e salva no local storage
   localStorage.setItem('cartItens', JSON.stringify(cartItens));
 };
 
+//Limpa o carrinho
+export const cleanCart = () =>{
+  localStorage.setItem('cartItens', '[]');
+}
 
+//Deleta item do carrinho
+export const deleteItem = (itemId) =>{
+  //String --> array
+  let cartItens = JSON.parse(localStorage.getItem('cartItens') || '[]');
+  
+  //tira elemento do array
+  cartItens.splice(itemId,);
+
+}
