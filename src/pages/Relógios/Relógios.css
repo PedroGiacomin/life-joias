@@ -1,0 +1,8 @@
+.fotorelogios{
+  height: 30vh;
+  width: 100%;
+  background-image: url('logRelogio.png');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;    
+}
