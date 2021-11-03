@@ -22,7 +22,7 @@ function Cartao({produto}){
           </Typography>
 
           <Typography  className="precoCard" align="center" variant="h6">
-            R$ {produto.product_preco}
+            {(produto.product_preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
           </Typography>
 
           <Button 
