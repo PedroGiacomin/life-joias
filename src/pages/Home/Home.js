@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import {Card} from '@material-ui/core';
 import Cartao from "../../components/Cartao";
 import api from "../../services/api";
+import { useState } from "react";
 
 import "react-multi-carousel/lib/styles.css";
 import "./Home.css"
@@ -32,24 +33,41 @@ function Home(){
 
   //Produtos mais vendidos
   
-  let maisVendidas = [];
-  async function preencheMaisVendidas(id){
+  const [maisVendidas, setMaisVendidas] = useState([]);
+
+  //Recebe um array de ids para preencher
+  async function pegaUma(id){
     try {
-      const response = await api.get(`/products/${id}`);
-      const aux = [...response.data];
-      maisVendidas.push(aux[0]);
-    } catch (error) {
+        const response = await api.get(`/products/${id}`);
+        const aux = [...response.data];
+        return aux;
+    }
+  
+    catch (error) {
       console.warn(error);
       alert("Algo deu errado");      
     }
   }
 
-  preencheMaisVendidas(5);
-  preencheMaisVendidas(8);
-  preencheMaisVendidas(27);
-  preencheMaisVendidas(56);
-  preencheMaisVendidas(17);
-  preencheMaisVendidas(14);
+  function preencheMaisVendidas(ids){
+
+      let resultArray = [];
+      ids.map((id) => {
+        
+        const aux = pegaUma(id);
+        aux.then(
+          resultArray.push(aux),
+          console.log("Algo deu errado") 
+        )
+      })
+      console.log(resultArray);
+      setMaisVendidas(resultArray);
+      
+  }
+
+  useEffect(() => {
+    preencheMaisVendidas([5, 8, 27, 56, 17, 14]);
+  }, [])
 
   return(
     <>
@@ -111,7 +129,7 @@ function Home(){
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
-            {console.log(maisVendidas)}
+          
             {
               maisVendidas &&
               maisVendidas.map((prod) => {return <Cartao produto={prod}/>})
