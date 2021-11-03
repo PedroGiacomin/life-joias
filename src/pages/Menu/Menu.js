@@ -45,10 +45,6 @@ function Menu(){
               <h4 className="categoriaDrawer">Jóias</h4>
             </Link>    
 
-            <Link className="linkConfigDrawer" to="Semijóias"> 
-              <h4>Semijóias</h4> 
-            </Link>
-
             <Link className="linkConfigDrawer" to="Relógios"> 
               <h4>Relógios</h4> 
             </Link> 
@@ -58,8 +54,9 @@ function Menu(){
             </Link>  
 
             <Link className="linkConfigDrawer" to="Blog"> 
-              <h4>Blog</h4>
-            </Link> 
+              <h4>Blog</h4> 
+            </Link>  
+            
 
           </List>
         </SwipeableDrawer>
@@ -104,20 +101,18 @@ function Menu(){
       <Link className="linkConfig" to="Jóias"> 
         <h4>Jóias</h4>
       </Link>    
-      <Link className="linkConfig" to="Semijóias"> 
-        <h4>Semijóias</h4> 
-      </Link>   
+     
       <Link className="linkConfig" to="Relógios"> 
         <h4>Relógios</h4> 
-      </Link>   
+      </Link>  
+
       <Link className="linkConfig" to="Alianças"> 
         <h4>Alianças</h4> 
-      </Link>   
+      </Link>  
+
       <Link className="linkConfig" to="Blog"> 
-
-      <h4>Blog</h4>
-
-      </Link>       
+        <h4>Blog</h4> 
+      </Link>   
       
       </navbar>
     </>
