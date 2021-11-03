@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import {Card} from '@material-ui/core';
 import Cartao from "../../components/Cartao";
@@ -31,39 +31,49 @@ function Home(){
     }
   };
 
-  //Produtos mais vendidos
-  const teste = [
-    {
-      product_categoria: "joia",
-      product_descricao: "Um diamante cintilante destaca a forma tradicional e atemporal deste anel. Use este anel de diamante sozinho ou combine-o com outros anéis Life para fazer uma declaração de atitude.",
-      product_id: 5,
-      product_imagem: "./imagens/anel5.png",
-      product_nome: "Anel Swiftie",
-      product_preco: 1300,
-      product_quantidade: null,
-      product_subcategoria: "anel",
-      product_tamanho: 15
-    }
-  ]
+  const [maisVendidas, setMaisVendidas] = useState([]);
 
-  const [maisVendidas, setMaisVendidas] = useState([])
-  async function preencheMaisVendidas(id){
+  //Pega as joias TODAS do backend
+  async function getMaisVendidas(){
     try {
-      const response = await api.get(`/products/${id}`);
-      const aux = [...response.data];
       
-      const aux2 = maisVendidas.concat(aux);
-      console.log(aux2);
-      //setMaisVendidas(aux2);
+      const response = await api.get(`/products?product_categoria=joia&product_subcategoria=anel`);
+      const aux = [...response.data];
+
+      setMaisVendidas(aux);
 
     } catch (error) {
       console.warn(error);
-      alert("Algo deu errado");      
+      alert("Algo deu errado");   
     }
   }
 
-  preencheMaisVendidas(5);
-  
+  useEffect(() => {
+    getMaisVendidas();
+    }, []
+  );
+
+  const [destaques, setDestaques] = useState([]);
+
+  //Pega as joias TODAS do backend
+  async function getDestaques(){
+    try {
+      
+      const response = await api.get('/products?product_categoria=joia&product_subcategoria=colar');
+      const aux = [...response.data];
+
+      setDestaques(aux);
+
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado");   
+    }
+  }
+
+  useEffect(() => {
+      getDestaques();
+    }, []
+  );
 
   return(
     <>
@@ -121,17 +131,14 @@ function Home(){
             responsive={responsive}
             centerMode={true}
             infinite
-            removeArrowOnDeviceType={[ "mobile", "tablet"]}
+            removeArrowOnDeviceType={[ "mobile", "tablet" ]}
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
-            {console.log(maisVendidas[1])}
-            {() =>{
-              let maisVendidasAux = maisVendidas;
-              console.log(maisVendidasAux)
-              maisVendidasAux.map((prod) => {return <Cartao produto={prod}/>})
-            }}
-              
+            { 
+              destaques &&
+              destaques.map((prod) => {return <Cartao produto={prod}/>})
+            }
           </Carousel>
         </div>
 
