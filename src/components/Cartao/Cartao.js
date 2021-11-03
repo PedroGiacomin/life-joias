@@ -15,20 +15,20 @@ function Cartao({produto}){
       <div className="cardContainerCarrossel">
         <Card className="myCard">
           
-        <img className="prodImageCartao" src={produto.img}/>
+        <img className="prodImageCartao" src={produto.product_image}/>
       
           <Typography className="nomeCard" gutterBottom variant="h5" align="center">
-            {produto.nome}
+            {produto.product_nome}
           </Typography>
 
           <Typography  className="precoCard" align="center" variant="h6">
-            R$ {produto.preco}
+            R$ {produto.product_preco}
           </Typography>
 
           <Button 
             variant="contained"
             className="myButton"
-            onClick={() => handleClickCompra(produto.id)}>
+            onClick={() => handleClickCompra(produto.product_id)}>
             Comprar
           </Button>
           

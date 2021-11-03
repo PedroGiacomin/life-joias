@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from 'react-multi-carousel';
 import {Card} from '@material-ui/core';
 import Cartao from "../../components/Cartao";
+import api from "../../services/api";
 
 import "react-multi-carousel/lib/styles.css";
 import "./Home.css"
@@ -30,39 +31,25 @@ function Home(){
   };
 
   //Produtos mais vendidos
-  const maisVendidas=[
-    {
-      id: "1",
-      nome: "Anel Splindow",
-      preco: 159.90,
-      img: "./imagens/anel1.jpg"
-    },
-    {
-      id: "2",
-      nome: "Anel Sanctum",
-      preco: 159.90,
-      img: "./imagens/anel2.jpg"
-    },
-    {
-      id: "3",
-      nome: "Anel Bifrost",
-      preco: 159.90,
-      img: "./imagens/anel3.png"
-    },
-    {
-      id: "5",
-      nome: "Brincos Santorum",
-      preco: 159.90,
-      img: "./imagens/brinco1.png"
-    },
-    {
-      id: "4",
-      nome: "Anel Splindow",
-      preco: 159.90,
-      img: "./imagens/anel1.jpg"
-    },
+  
+  let maisVendidas = [];
+  async function preencheMaisVendidas(id){
+    try {
+      const response = await api.get(`/products/${id}`);
+      const aux = [...response.data];
+      maisVendidas.push(aux[0]);
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado");      
+    }
+  }
 
-  ]
+  preencheMaisVendidas(5);
+  preencheMaisVendidas(8);
+  preencheMaisVendidas(27);
+  preencheMaisVendidas(56);
+  preencheMaisVendidas(17);
+  preencheMaisVendidas(14);
 
   return(
     <>
@@ -86,8 +73,11 @@ function Home(){
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
-            {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
-              
+            { 
+              maisVendidas &&
+              maisVendidas.map((prod) => {return <Cartao produto={prod}/>})
+            }
+    
           </Carousel>
         </div>
       
@@ -121,7 +111,11 @@ function Home(){
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
-            {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
+            {console.log(maisVendidas)}
+            {
+              maisVendidas &&
+              maisVendidas.map((prod) => {return <Cartao produto={prod}/>})
+            }
               
           </Carousel>
         </div>
