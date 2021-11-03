@@ -3,6 +3,7 @@ import Carousel from 'react-multi-carousel';
 import {Card} from '@material-ui/core';
 import Cartao from "../../components/Cartao";
 import api from "../../services/api";
+import { useState } from "react";
 
 import "react-multi-carousel/lib/styles.css";
 import "./Home.css"
@@ -31,13 +32,30 @@ function Home(){
   };
 
   //Produtos mais vendidos
-  
-  let maisVendidas = [];
+  const teste = [
+    {
+      product_categoria: "joia",
+      product_descricao: "Um diamante cintilante destaca a forma tradicional e atemporal deste anel. Use este anel de diamante sozinho ou combine-o com outros anéis Life para fazer uma declaração de atitude.",
+      product_id: 5,
+      product_imagem: "./imagens/anel5.png",
+      product_nome: "Anel Swiftie",
+      product_preco: 1300,
+      product_quantidade: null,
+      product_subcategoria: "anel",
+      product_tamanho: 15
+    }
+  ]
+
+  const [maisVendidas, setMaisVendidas] = useState([])
   async function preencheMaisVendidas(id){
     try {
       const response = await api.get(`/products/${id}`);
       const aux = [...response.data];
-      maisVendidas.push(aux[0]);
+      
+      const aux2 = maisVendidas.concat(aux);
+      console.log(aux2);
+      //setMaisVendidas(aux2);
+
     } catch (error) {
       console.warn(error);
       alert("Algo deu errado");      
@@ -45,11 +63,7 @@ function Home(){
   }
 
   preencheMaisVendidas(5);
-  preencheMaisVendidas(8);
-  preencheMaisVendidas(27);
-  preencheMaisVendidas(56);
-  preencheMaisVendidas(17);
-  preencheMaisVendidas(14);
+  
 
   return(
     <>
@@ -111,11 +125,12 @@ function Home(){
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
-            {console.log(maisVendidas)}
-            {
-              maisVendidas &&
-              maisVendidas.map((prod) => {return <Cartao produto={prod}/>})
-            }
+            {console.log(maisVendidas[1])}
+            {() =>{
+              let maisVendidasAux = maisVendidas;
+              console.log(maisVendidasAux)
+              maisVendidasAux.map((prod) => {return <Cartao produto={prod}/>})
+            }}
               
           </Carousel>
         </div>

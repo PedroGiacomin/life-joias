@@ -15,7 +15,7 @@ function Cartao({produto}){
       <div className="cardContainerCarrossel">
         <Card className="myCard">
           
-        <img className="prodImageCartao" src={produto.product_image}/>
+        <img className="prodImageCartao" src={produto.product_imagem}/>
       
           <Typography className="nomeCard" gutterBottom variant="h5" align="center">
             {produto.product_nome}
