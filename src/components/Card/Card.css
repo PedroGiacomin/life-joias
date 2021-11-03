@@ -24,9 +24,17 @@ justify-content: center;
 
 .cardPreço{
   font-size: 1em;
+  padding-top: 5px;
   padding-bottom: 2vh;
 }
  
+.cardBotao{
+  background-color: #F2E2D0 !important;
+  color: black !important;
+  font-family: 'Didact Gothic', sans-serif !important;
+  border-radius: 90px !important;
+  width: 45% !important;
+}
 
 @media (max-width: 430px){
     .cardNomeProduto{
