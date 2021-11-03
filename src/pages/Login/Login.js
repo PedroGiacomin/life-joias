@@ -3,6 +3,8 @@ import { Form } from "react-bootstrap";
 import {useHistory} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import api from '../../services/api'
+import { login } from "../../services/auth";
+
 import "./Login.css";
 
 function Login() {
@@ -11,20 +13,26 @@ function Login() {
   const history = useHistory();
 
   
-  async function login(){
+  async function handleLogin(){
     
     try {
       //post recebe a rota e o corpo da requisicao
       const response = await api.post('/login', {user_email, user_senha});
-      console.log(response);
+      alert("Bem vindo à Life Joias!");
+      login(response.data.accessToken);
+      history.push('home');
 
     }catch (error) {
-      console.log(user_email);
-      console.log(user_senha);
+      if(error.response.status === 403){
+        alert("Credenciais Inválidas!")
+      }
+      else{
+        alert(error.response.data.notification);
+      }
       console.warn(error);
-      alert("Deu esse erro amigo: " + error.message);
+      
     }
-    //history.push('home');
+    
    
   }
 
@@ -88,7 +96,7 @@ function Login() {
             </Form.Group>
             
             <Button className="botaoLogin" variant="primary" size="lg"
-              onClick={() => login()}>
+              onClick={() => handleLogin()}>
               Entrar
             </Button>{' '}
 
