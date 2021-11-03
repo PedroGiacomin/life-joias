@@ -9,42 +9,83 @@ function Login() {
   const [password, setPassword] = useState();
   const history = useHistory();
   
-  function login(){
-    //temos que estabelecer um suposto usuario para demonstrar que o login funciona
+function Logar(){
+    
     if(email == "emailcadastrado@life.com.br" && password == "senhacadastrada"){
       alert("Bem vindo à Life Joias");
       history.push("home");
     }else alert("Acesso negado: dados incorretos");
-  }
+}
+
+function inputBoxEmail(nomeShow, nome){
+    return(
+    <>
+      <Form.Group className="mb-3" className="formGroupPassword">
+        <Form.Label className="nomeInputLogin">{nomeShow}</Form.Label>
+        <Form.Control 
+          className="dadoInputLogin"
+          type="input" 
+          name={nome}
+          
+        />
+       
+      </Form.Group>
+    </>
+    )
+}  
+
+function inputBoxSenha(nomeShow, nome){
+  return(
+  <>
+    <Form.Group className="mb-3" className="formGroupPassword">
+      <Form.Label className="nomeInputLogin">{nomeShow}</Form.Label>
+      <Form.Control 
+        className="dadoInputLogin"
+        type="password" 
+        name={nome}
+        
+      />
+     
+    </Form.Group>
+  </>
+  )
+}
 
 
   return(
-    <div className="baseLogin">
-      <div className = "containerLogin">
-        <Form>
-          <img src="/imagens/Logo.png" width="320" height="205" alt="Life Joias"></img> 
-          <div className="inputsLogin">
-          <Form.Group className="mb-3" controlId="formGroupEmail">
-            <Form.Label></Form.Label>
-            <Form.Control type="email" placeholder="e-mail" onChange={(e)=>setPassword(e.target.value)}
+<div className="baseLogin">
+        <div className="caixaLogin">
+          <h2 className="titleLogin">Login</h2>
+         
+          <Form className="formLogin">
+            
+            {inputBoxEmail("Email", "email")}
+            <Form type="email" placeholder="e-mail" onChange={(e)=>setEmail(e.target.value)}
             />
-          </Form.Group>
-          <div className = ".espacoLogin"/>
-          <Form.Group className="mb-3" controlId="formGroupPassword">
-            <Form.Label></Form.Label>
-            <Form.Control type="password" placeholder="digite sua senha" onChange={(e)=>setPassword(e.target.value)} 
+            {inputBoxSenha("Senha", "senha")}
+            <Form type="password" placeholder="e-mail" onChange={(e)=>setPassword(e.target.value)}
             />
-          <div className = ".espacoLogin"/>
-          </Form.Group>
+        
+          </Form>
+
+    
           <Form.Group className="mb-3">
+          <div className="linkConfigDrawerEsq">
             <Form.Label>Esqueceu sua senha?</Form.Label>
+          </div>
+
           </Form.Group>
+          
           <Button className="botaoLogin" variant="primary" size="lg">
             Entrar
           </Button>{' '}
+
+          <div className="linkConfigDrawerCad">
+            <Form.Label>Não Possui Cadastro? Cadastre-se agora</Form.Label>
           </div>
-        </Form>
-      </div>
+        </div>
+       
+      
     </div>
   );
 }
