@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from 'react-multi-carousel';
 import {Card} from '@material-ui/core';
 import Cartao from "../../components/Cartao";
+import api from "../../services/api";
+import { useState } from "react";
 
 import "react-multi-carousel/lib/styles.css";
 import "./Home.css"
@@ -29,40 +31,49 @@ function Home(){
     }
   };
 
-  //Produtos mais vendidos
-  const maisVendidas=[
-    {
-      id: "1",
-      nome: "Anel Splindow",
-      preco: 159.90,
-      img: "./imagens/anel1.jpg"
-    },
-    {
-      id: "2",
-      nome: "Anel Sanctum",
-      preco: 159.90,
-      img: "./imagens/anel2.jpg"
-    },
-    {
-      id: "3",
-      nome: "Anel Bifrost",
-      preco: 159.90,
-      img: "./imagens/anel3.png"
-    },
-    {
-      id: "5",
-      nome: "Brincos Santorum",
-      preco: 159.90,
-      img: "./imagens/brinco1.png"
-    },
-    {
-      id: "4",
-      nome: "Anel Splindow",
-      preco: 159.90,
-      img: "./imagens/anel1.jpg"
-    },
+  const [maisVendidas, setMaisVendidas] = useState([]);
 
-  ]
+  //Pega as joias TODAS do backend
+  async function getMaisVendidas(){
+    try {
+      
+      const response = await api.get(`/products?product_categoria=joia&product_subcategoria=anel`);
+      const aux = [...response.data];
+
+      setMaisVendidas(aux);
+
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado");   
+    }
+  }
+
+  useEffect(() => {
+    getMaisVendidas();
+    }, []
+  );
+
+  const [destaques, setDestaques] = useState([]);
+
+  //Pega as joias TODAS do backend
+  async function getDestaques(){
+    try {
+      
+      const response = await api.get('/products?product_categoria=joia&product_subcategoria=colar');
+      const aux = [...response.data];
+
+      setDestaques(aux);
+
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado");   
+    }
+  }
+
+  useEffect(() => {
+      getDestaques();
+    }, []
+  );
 
   return(
     <>
@@ -86,8 +97,11 @@ function Home(){
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
-            {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
-              
+            { 
+              maisVendidas &&
+              maisVendidas.map((prod) => {return <Cartao produto={prod}/>})
+            }
+    
           </Carousel>
         </div>
       
@@ -117,12 +131,14 @@ function Home(){
             responsive={responsive}
             centerMode={true}
             infinite
-            removeArrowOnDeviceType={[ "mobile", "tablet"]}
+            removeArrowOnDeviceType={[ "mobile", "tablet" ]}
             >
 
             {/*Passa o produto por props para o componente Cartao*/}
-            {maisVendidas.map((prod) => {return <Cartao produto={prod}/>})}
-              
+            { 
+              destaques &&
+              destaques.map((prod) => {return <Cartao produto={prod}/>})
+            }
           </Carousel>
         </div>
 

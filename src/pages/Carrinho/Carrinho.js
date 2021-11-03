@@ -10,7 +10,7 @@ import "./Carrinho.css";
 function ItemCarrinho(produto){
 
   const [quantidade, setQuantidade] = useState();
-  produto.quantidade = quantidade;
+  produto.product_quantidade = quantidade;
 
   function handleDelete(prod){
     deleteItem(prod.product_id);
