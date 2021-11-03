@@ -119,28 +119,28 @@ function Jóias(){
            </ListItem>
            </List>
          <List>
-           <ListItem button>
+           <ListItem button onClick={() => setSubcategoria("anel")}>
            <ListItemText className= "filtroJoias">
                <h4>Anéis</h4>
            </ListItemText>
            </ListItem>
          </List>
          <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("brinco")}>
            <ListItemText className= "filtroJoias">
            <h4>Brinco</h4>
            </ListItemText>
          </ListItem>
        </List>
        <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("colar")}>
            <ListItemText className= "filtroJoias">
            <h4>Colares</h4>
            </ListItemText>
          </ListItem>
        </List>
        <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("pulseira")}>
            <ListItemText className= "filtroJoias">
            <h4>Pulseiras</h4>
            </ListItemText>
