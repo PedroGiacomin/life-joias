@@ -53,10 +53,6 @@ let card = [
 },
 ]
 
-
-
-
-
 function Jóias(){
   
    const[open, setOpen]= useState(false) 
@@ -119,7 +115,7 @@ function Jóias(){
          <ListItem className="filtroJoias" onClick={() => setSubcategoria()}>
            <h3>Filtro</h3>
            </ListItem>
-         <ListItem button onClick={() => setSubcategoria("colar")}>
+         <ListItem button onClick={() => setSubcategoria("anel")}>
 
            <ListItemText className= "filtroJoias">
                <h4>Anéis</h4>
@@ -136,7 +132,7 @@ function Jóias(){
        </List>
 
        <List>
-         <ListItem button onClick={() => setSubcategoria("pulseira")}>
+         <ListItem button onClick={() => setSubcategoria("colar")}>
            <ListItemText className= "filtroJoias">
            <h4>Colares</h4>
            </ListItemText>
@@ -144,7 +140,7 @@ function Jóias(){
        </List>
   
        <List>
-         <ListItem button onClick={() => setSubcategoria("anel")}>
+         <ListItem button onClick={() => setSubcategoria("pulseira")}>
            <ListItemText className= "filtroJoias">
            <h4>Pulseiras</h4>
            </ListItemText>
