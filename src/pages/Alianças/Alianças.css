@@ -1,0 +1,141 @@
+.fotoalianças{
+    height: 30vh;
+    width: 100%;
+   background-image: url('logoaliança.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;    
+    
+  }
+  
+  .talianças{
+    font-size: 1.3em;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 2%;
+  }
+
+  .basealianças{
+  padding-left: 11%;
+  padding-right: 11%;
+  }
+
+ .dFiltroAlianças{
+   margin-top: 2%;
+   width: 10vw;
+   height: 60vw;
+  }
+
+ .containerFiltro{
+   display: flex;
+  }
+
+  .cFiltroAlianças{
+    top: 10%;
+    bottom: 20%;
+    height: 17%;
+  }
+
+  .filtroAlianças{
+    color: #343434;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .cardContainer{
+    margin-top: 4%;
+    background-color: #F2E2D0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10vh;
+    justify-items: center;
+    padding: 2%;
+    display: grid;
+    grid-column-gap: 1.4vw;
+    grid-row-gap: 1.9vw;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-left: 4%;
+  }
+
+  @media (max-width: 400px){
+    .talianças{
+    font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 1500px){
+    .talianças{
+    font-size: 1.2rem;
+    }
+
+    .fotoalianças{
+      height: 35vh;
+      width: 100%;
+      background-image: url('logoaliança.png');
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat; 
+    
+    }
+
+}
+
+@media(max-width:850px){
+  .fotoalianças{
+    height: 17vh;
+    width: 100%;
+    background-image: url('logoaliança.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+  
+  }
+
+} 
+
+@media(max-width:350px){
+  .fotoalianças{
+    height: 10vh;
+    width: 100%;
+    background-image: url('logoaliança.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+  
+  }
+
+} 
+
+@media(max-width:750px){
+  .fotoalianças{
+    height: 15vh;
+    width: 100%;
+    background-image: url('logoaliança.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; 
+  
+  }
+
+} 
+
+ @media(max-width:550px){
+  .cFiltroAlianças{
+    display: none;
+  }
+
+} 
+
+@media(min-width:551px){
+  .filtroRAlianças{
+    display: none;
+
+  }
+}
+
+.filtroRAlianças{
+  background-color: #F2E2D0;
+ margin-top: 100%;
+}
+
