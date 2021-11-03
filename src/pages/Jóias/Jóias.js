@@ -9,50 +9,6 @@ import {AiFillFilter} from "react-icons/ai"
 import "./Jóias.css"
 import api from "../../services/api";
 
-
-let card = [
-
-{
-  id: 1,
-  foto: "./imagens/image (1).png",
-  nome: "Pulseira com Pingentes",
-  preço: "489,90",
-    
-},
-
-{
-  id: 1,
-  foto: "./imagens/anel de flor ouro.webp",
-  nome: "Anel FLor",
-  preço: "189,90",
-    
-},
-
-{
-  id: 1,
-  foto: "./imagens/image.png",
-  nome: "Anel Splindow",
-  preço: "189,90",
-    
-},
-
-{
-  id: 1,
-  foto: "./imagens/anel1.jpg",
-  nome: "Anel Splindow",
-  preço: "189,90",
-    
-},
-
-{
-  id: 1,
-  foto: "./imagens/anel1.jpg",
-  nome: "Anel Splindow",
-  preço: "189,90",
-    
-},
-]
-
 function Jóias(){
   
    const[open, setOpen]= useState(false) 
@@ -103,7 +59,8 @@ function Jóias(){
    <div className="baseJoias">
    
    <div className="joias"> 
-   <p className="tjoias">Usar joias é uma forma de marcar o seu estilo, agregando personalidade à sua imagem. Clássico, moderno, divertido... seja qual for o seu estilo, temos a joia ideal para compor o seu look.</p>
+   <p className="tjoias">
+     Usar joias é uma forma de marcar o seu estilo, agregando personalidade à sua imagem. Clássico, moderno, divertido... seja qual for o seu estilo, temos a joia ideal para compor o seu look.</p>
     </div>
     
     <div className="containerFiltro">
@@ -162,28 +119,28 @@ function Jóias(){
            </ListItem>
            </List>
          <List>
-           <ListItem button>
+           <ListItem button onClick={() => setSubcategoria("anel")}>
            <ListItemText className= "filtroJoias">
                <h4>Anéis</h4>
            </ListItemText>
            </ListItem>
          </List>
          <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("brinco")}>
            <ListItemText className= "filtroJoias">
            <h4>Brinco</h4>
            </ListItemText>
          </ListItem>
        </List>
        <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("colar")}>
            <ListItemText className= "filtroJoias">
            <h4>Colares</h4>
            </ListItemText>
          </ListItem>
        </List>
        <List>
-         <ListItem button>
+         <ListItem button onClick={() => setSubcategoria("pulseira")}>
            <ListItemText className= "filtroJoias">
            <h4>Pulseiras</h4>
            </ListItemText>

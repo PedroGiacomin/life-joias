@@ -16,8 +16,8 @@ function Card({card}){
     
           <img className="cardFotoProduto" src={card.product_imagem}/>
           <div className="cardNomeProduto">{card.product_nome}</div>
-          <div className="cardPreço">{card.product_preco}</div>
-          <Button onClick={() => handleClickCompra(card)}>Comprar</Button>
+          <div className="cardPreço">{(card.product_preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+          <Button className="cardBotao" onClick={() => handleClickCompra(card)}>Comprar</Button>
       </div>
       
     </>
