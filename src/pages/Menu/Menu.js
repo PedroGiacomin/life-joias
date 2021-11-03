@@ -18,15 +18,6 @@ function Menu(){
     history.push(pathName);
   }
 
-  //DUVIDA: Como fazer esse bool ter o valor que queremos
-  const isLogado = false;
-
-  //Define para que pag o botao de perfil vai mandar
-  function handleProfButton(logged){
-    const pathName = (logged ? "/perfil" : "/login");
-    handleClick(pathName);
-  }
-
   function drawer(){
     return(
       <SwipeableDrawer 
@@ -81,7 +72,7 @@ function Menu(){
 
         <img onClick={() => handleClick("/home")} className="logo" src="./imagens/Logo.png"/>
         <div className="iconContainer">
-          <IconButton onClick={() => handleProfButton(isLogado)}>
+          <IconButton onClick={() => handleClick("/perfil")}>
             <BsPersonCircle className="icone"/>
           </IconButton>
           

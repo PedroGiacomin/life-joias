@@ -15,6 +15,21 @@ import Footer from "./pages/Footer";
 import Carrinho from "./pages/Carrinho";
 import Produtos from "./pages/Produtos";
 
+import { isAuthenticated } from "./services/auth";
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={props =>
+      isAuthenticated() ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to={{ pathname: "/login", state: { from: props.location } }} />
+      )
+    }
+  />
+);
+
 function Routes(){
 
   return(
@@ -25,7 +40,7 @@ function Routes(){
           <Route path="/login" component={Login}/>
           <Route path="/home" component={Home}/>
           <Route path="/cadastro" component={Cadastro}/>
-          <Route path="/perfil" component={Perfil}/>
+          <PrivateRoute path="/perfil" component={Perfil}/>
           <Route path="/Jóias" component={Jóias}/>
           <Route path="/Semijóias" component={Semijóias}/>
           <Route path="/Relógios" component={Relógios}/>
