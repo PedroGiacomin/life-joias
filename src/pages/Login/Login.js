@@ -2,50 +2,111 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import {useHistory} from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import api from '../../services/api'
+import { login } from "../../services/auth";
+
 import "./Login.css";
 
 function Login() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [user_email, setEmail] = useState();
+  const [user_senha, setPassword] = useState();
   const history = useHistory();
+
   
-  function login(){
-    //temos que estabelecer um suposto usuario para demonstrar que o login funciona
-    if(email == "emailcadastrado@life.com.br" && password == "senhacadastrada"){
-      alert("Bem vindo à Life Joias");
-      history.push("home");
-    }else alert("Acesso negado: dados incorretos");
+  async function handleLogin(){
+    
+    try {
+      //post recebe a rota e o corpo da requisicao
+      const response = await api.post('/login', {user_email, user_senha});
+      alert("Bem vindo à Life Joias!");
+      login(response.data.accessToken);
+      history.push('home');
+
+    }catch (error) {
+      if(error.response.status === 403){
+        alert("Credenciais Inválidas!")
+      }
+      else{
+        alert(error.response.data.notification);
+      }
+      console.warn(error);
+      
+    }
+    
+   
+  }
+
+  function inputBoxEmail(nomeShow, nome){
+      return(
+      <>
+        <Form.Group className="mb-3" className="formGroupPassword">
+          <Form.Label className="nomeInputLogin">{nomeShow}</Form.Label>
+          <Form.Control 
+            className="dadoInputLogin"
+            type="input" 
+            name={nome}
+            onChange={(e)=>setEmail(e.target.value)}
+          />
+        
+        </Form.Group>
+      </>
+      )
+  }  
+
+  function inputBoxSenha(nomeShow, nome){
+    return(
+    <>
+      <Form.Group className="mb-3" className="formGroupPassword">
+        <Form.Label className="nomeInputLogin">{nomeShow}</Form.Label>
+        <Form.Control 
+          className="dadoInputLogin"
+          type="password" 
+          name={nome}
+          onChange={(e)=>setPassword(e.target.value)}
+        />
+      
+      </Form.Group>
+    </>
+    )
   }
 
 
-  return(
-    <div className="baseLogin">
-      <div className = "containerLogin">
-        <Form>
-          <img src="/imagens/Logo.png" width="320" height="205" alt="Life Joias"></img> 
-          <div className="inputsLogin">
-          <Form.Group className="mb-3" controlId="formGroupEmail">
-            <Form.Label></Form.Label>
-            <Form.Control type="email" placeholder="e-mail" onChange={(e)=>setPassword(e.target.value)}
-            />
-          </Form.Group>
-          <div className = ".espacoLogin"/>
-          <Form.Group className="mb-3" controlId="formGroupPassword">
-            <Form.Label></Form.Label>
-            <Form.Control type="password" placeholder="digite sua senha" onChange={(e)=>setPassword(e.target.value)} 
-            />
-          <div className = ".espacoLogin"/>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Esqueceu sua senha?</Form.Label>
-          </Form.Group>
-          <Button className="botaoLogin" variant="primary" size="lg">
-            Entrar
-          </Button>{' '}
+    return(
+  <div className="baseLogin">
+          <div className="caixaLogin">
+            <h2 className="titleLogin">Login</h2>
+          
+            <Form className="formLogin">
+              
+              {inputBoxEmail("Email", "email")}
+              <Form type="email" placeholder="e-mail"
+              />
+              {inputBoxSenha("Senha", "senha")}
+              <Form type="password" placeholder="e-mail" 
+              />
+          
+            </Form>
+
+      
+            <Form.Group className="mb-3">
+            <div className="linkConfigDrawerEsq">
+              <Form.Label>Esqueceu sua senha?</Form.Label>
+            </div>
+
+            </Form.Group>
+            
+            <Button className="botaoLogin" variant="primary" size="lg"
+              onClick={() => handleLogin()}>
+              Entrar
+            </Button>{' '}
+
+            <div className="linkConfigDrawerCad">
+              <Form.Label>Não Possui Cadastro? Cadastre-se agora</Form.Label>
+            </div>
           </div>
-        </Form>
+        
+        
       </div>
-    </div>
-  );
+    );
 }
 export default Login;
