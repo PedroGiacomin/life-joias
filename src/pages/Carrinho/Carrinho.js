@@ -9,8 +9,8 @@ import "./Carrinho.css";
 
 function ItemCarrinho(produto){
 
-  const [quantidade, setQuantidade] = useState();
-  produto.product_quantidade = quantidade;
+  //const [quantidade, setQuantidade] = useState();
+  //produto.product_quantidade = quantidade;
 
   function handleDelete(prod){
     deleteItem(prod.product_id);
@@ -34,10 +34,10 @@ function ItemCarrinho(produto){
             <p className="itemSubtext">Tamanho: {produto.product_tamanho}</p>
           </div>
 
-          <div className="quantItem">
+          {/*<div className="quantItem">
             <p className="itemSubtext">Quantidade</p>
             <input className="quantInput" onChange={(e) => {setQuantidade(e.target.value)}}/>
-          </div>
+          </div>*/}
 
           <div className="precoItem">
             <p className="itemSubtext">Preço</p>
@@ -56,10 +56,10 @@ function ItemCarrinho(produto){
 
 function Carrinho(){
 
-  const [cartItens, setCartItens] = useState(JSON.parse(localStorage.getItem('cartItens')));
+  const [cartItens, setCartItens] = useState(JSON.parse(sessionStorage.getItem('cartItens')));
 
   function updatePosDelete(){
-    setCartItens(JSON.parse(localStorage.getItem('cartItens')));
+    setCartItens(JSON.parse(sessionStorage.getItem('cartItens')));
   }
 
   useEffect(() =>{

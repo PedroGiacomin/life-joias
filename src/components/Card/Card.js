@@ -6,7 +6,7 @@ import "./Card.css"
 
 function handleClickCompra(produto){
   addItemToCart(produto);
-  console.log(localStorage.getItem('cartItens'))
+  alert("Item adicionado ao carrinho!");
 }
 
 function Card({card}){
