@@ -13,7 +13,7 @@ function ItemCarrinho(produto){
   //produto.product_quantidade = quantidade;
 
   function handleDelete(prod){
-    deleteItem(prod.product_id);
+    deleteItem(prod);
   }
 
   return(
