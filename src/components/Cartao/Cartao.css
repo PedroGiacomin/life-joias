@@ -50,6 +50,7 @@
 */
 .prodImageCartao{
   width: 80%;
+  cursor: pointer;
 }
 
 @media(max-width: 850px){

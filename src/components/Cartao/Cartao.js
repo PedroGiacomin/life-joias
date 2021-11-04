@@ -2,13 +2,21 @@ import React from "react";
 import { Card, CardMedia, CardContent, Typography, CardActions, Button} from "@material-ui/core";
 import { addItemToCart } from "../../services/cart-handle";
 import "./Cartao.css";
+import { useHistory } from "react-router";
+
 
 function handleClickCompra(produtoId){
   addItemToCart(produtoId);
   alert("Item adicionado ao carrinho!");
 }
 
+function handleClickCartao(){
+  alert('clicou');
+}
+
 function Cartao({produto}){
+
+
 
   return(
     <>
@@ -16,7 +24,7 @@ function Cartao({produto}){
       <div className="cardContainerCarrossel">
         <Card className="myCard">
           
-        <img className="prodImageCartao" src={produto.product_imagem}/>
+        <img className="prodImageCartao" src={produto.product_imagem} onClick={() => handleClickCartao()}/>
       
           <Typography className="nomeCard" gutterBottom variant="h5" align="center">
             {produto.product_nome}
