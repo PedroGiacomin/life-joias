@@ -5,15 +5,19 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Button from "react-bootstrap/Button";
 import Cartao from "../../components/Cartao";
 import CardGroup from 'react-bootstrap/CardGroup';
+import { getProdutoAtual } from "../../services/product-handle";
 
 
 import "./Produtos.css"
 
 function Produtos(){
 
+  const prod = getProdutoAtual();
+
   return(
   <div className="containerProdutos">
-    <h2>Anel Splindow</h2>
+
+    <h2>{prod.product_nome}</h2>
     <div className="containerBarrinha">
     <Breadcrumb>
       <Breadcrumb.Item href="./Home">Life /</Breadcrumb.Item>
@@ -25,7 +29,7 @@ function Produtos(){
     <img src="/imagens/anel1.jpg" width="320" height="205" alt="Anel Splindow"></img> 
     <div className="containerInfos">
     <Form.Label>Preço  </Form.Label>
-    <Form.Label>R$143,90</Form.Label>
+    <Form.Label>{prod.product_preco}</Form.Label>
     <form className="inputsProdutos"/>
     <Form.Group className="mb-3">
             <Form.Label>Quantidade</Form.Label>
