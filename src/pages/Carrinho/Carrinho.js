@@ -31,7 +31,10 @@ function ItemCarrinho(produto){
             <p className="itemText">{produto.product_nome}</p>  
 
             {/**Tentar um js aqui para mostrar ou nao o tamanho*/}
-            <p className="itemSubtext">Tamanho: {produto.product_tamanho}</p>
+            <p className="itemSubtext"
+              style={{ display: (produto.product_tamanho == null) ? "none" : "block"}}>
+              Tamanho: {produto.product_tamanho}
+            </p>
           </div>
 
           {/*<div className="quantItem">
@@ -41,7 +44,7 @@ function ItemCarrinho(produto){
 
           <div className="precoItem">
             <p className="itemSubtext">Preço</p>
-            <p className="itemMidtext">{produto.product_preco}</p>
+            <p className="itemMidtext">{(produto.product_preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
           </div>
         </div>
 
@@ -114,7 +117,8 @@ function Carrinho(){
      
             </div>
           </div>
-          <Button variant="primary" className="botaoFinalizar">
+          <Button variant="primary" className="botaoFinalizar"
+            onClick>
             Finalizar pedido
           </Button>
 
