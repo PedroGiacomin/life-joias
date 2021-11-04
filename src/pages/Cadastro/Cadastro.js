@@ -82,7 +82,7 @@ function Cadastro(){
       alert("Cadastro Finalizado!");
       history.push('login');
     } catch (error) {
-      alert("Algo deu errado!")
+      alert("Algo deu errado!");
     }
   }
 
