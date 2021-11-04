@@ -53,6 +53,7 @@ function Routes(){
           <Route path="/Produto1" component={Produto1}/>
           <Route path="/Produto2" component={Produto2}/>
           
+          
           {/*Se nao acha uma rota valida, volta pro login*/}
           <Route component={() => <Redirect to="/home"/>}/>
         </Switch>

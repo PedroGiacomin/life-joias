@@ -13,6 +13,7 @@ function Produto2(){
   <div className="containerProduto1">
     <div className="baseFoto1">
     
+
        <img src="/imagens/anel1.png" width="400" height="400" alt="Colar de Prata Maggy"></img> 
     </div>
     
