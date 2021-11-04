@@ -33,7 +33,7 @@ function Menu(){
             </div>
 
             <Link className="linkConfigDrawer" to="Jóias"> 
-              <h4 className="categoriaDrawer">Jóias</h4>
+              <h4 className="categoriaDrawer">Joias</h4>
             </Link>    
 
             <Link className="linkConfigDrawer" to="Relógios"> 
@@ -90,7 +90,7 @@ function Menu(){
       <navbar className="linknavbar"> 
       
       <Link className="linkConfig" to="Jóias"> 
-        <h4>Jóias</h4>
+        <h4>Joias</h4>
       </Link>    
      
       <Link className="linkConfig" to="Relógios"> 
