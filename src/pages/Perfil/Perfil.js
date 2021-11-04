@@ -2,11 +2,18 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
-
+import { logout } from "../../services/auth";
 import "./Perfil.css"
 import { Link } from "react-router-dom";
 
+
+
 function Perfil(){
+
+  function handleLogout(){
+    logout();
+    alert("Até logo!!")
+  }
 
   //Objeto de teste
   const pessoa = {
@@ -114,7 +121,7 @@ function Perfil(){
             Salvar
           </Button>{' '}
         </div>
-        <Link to="/" className="deletarPerfil">Deletar perfil</Link>
+        <Link to="/home" onClick={() => handleLogout()} className="deletarPerfil">Logout</Link>
       </div>
     </div>
   );
