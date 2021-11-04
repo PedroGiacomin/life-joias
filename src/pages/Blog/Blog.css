@@ -1,0 +1,140 @@
+
+.fotoblog{
+    height: 30vh;
+    width: 100%;
+   background-image: url('logblog.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;    
+    
+  }
+
+
+  .sobreblog{
+    
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+    margin-top: 5%;
+  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .sobreTitleblog{
+    font-size: 2em;
+    font-weight: lighter;
+    padding-bottom: 20px;
+  }
+  
+  .sobreContentblog{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding-bottom: 2vh;
+  }
+  
+  .sobreTextblog{
+    font-size: 1.3em;
+    width: 30vw;
+    text-align: justify;
+  }
+  
+  .sobreImgblog{
+    width: 450px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('gravação.jpg');    
+
+  }
+
+  .sobreImgblog1{
+    width: 450px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 31%;
+    background-image: url('conservacao-aliancas.png');  
+  }
+
+  .sobreblog1{
+    padding-left: 11%;
+    padding-right: 11%;
+    margin-top: 5%;
+
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+  
+  .sobreTitleblog1{
+    font-size: 2em;
+    font-weight: lighter;
+    background-position: center;
+    padding-bottom: 20px;
+    margin-left: 25%;
+    
+  }
+  
+  .sobreTextblog1{
+    font-size: 1.3em;
+    padding-top: 2vh;
+    background-position: center center;
+  }
+
+
+  .sobreblog2{
+    
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+    margin-top: 5%;
+  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .sobreTitleblog2{
+    font-size: 2em;
+    font-weight: lighter;
+    padding-bottom: 20px;
+  }
+  
+  .sobreContentblog2{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding-bottom: 2vh;
+  }
+  
+  .sobreTextblog2{
+    font-size: 1.3em;
+    width: 35vw;
+    
+  }
+  
+  .sobreImgblog2{
+    width: 450px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('tipos_de_ouro_diferencas_e_composicoes.jpg');    
+
+  }
+
+  .sobreblog3{
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 5vh;
+  }
+
+  .sobreTextblog3{
+    font-size: 1.3em;
+    background-position: center;
+  }
