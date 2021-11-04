@@ -31,6 +31,9 @@
   padding-bottom: 15px;
 }
 
+.inputLogin2{
+  margin-bottom: 3vh;
+}
 
 .formLogin{
   display: flex;
@@ -163,8 +166,8 @@
 
 
 .botaoLogin{
-  width: 9vw;
-  height: 5vh;
+  width: 13vw;
+  height: 6vh;
   align-self: center;
 
   text-transform: uppercase;
@@ -174,4 +177,19 @@
   color: #ffffff;
   border-radius: 90px;
   font-size: 1em;
+}
+
+@media  (max-width: 850px) {
+  .caixaLogin{
+    
+    padding: inherit;
+    margin-bottom: 2vh;
+    justify-content: center; 
+    width: 50vw;
+  }
+
+  .botaoLogin{
+    width: 40vw;
+    align-self: center;
+  }
 }
