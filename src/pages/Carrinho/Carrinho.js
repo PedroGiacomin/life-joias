@@ -92,6 +92,12 @@ function Carrinho(){
         <div className="caixaCarrinho">
           <h2 className="titleCarrinho">Carrinho de Compras</h2>
           
+          <div className="carrinhoVazio"
+            style={{ display: (cartItens.length) ? "none" : "flex"}}>
+
+              <p className="textoVazio">Seu carrinho está vazio :(</p>
+            </div>
+
           { cartItens &&
             cartItens.map((prod) => {
             return (
