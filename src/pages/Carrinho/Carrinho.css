@@ -39,7 +39,7 @@
 
 .contentItem{
   display: flex;
-  justify-content:space-around;
+  justify-content:space-between;
   flex-wrap: wrap;
   
   height: 25vh;
@@ -55,6 +55,7 @@
 }
 
 .nomeItem{
+  width: 20vw;
   padding-right: 2vw;
   padding-left: 2vw;
 }
@@ -64,14 +65,16 @@
   flex-direction: column;
   align-items: flex-end;
   
+  margin-right: 5vw;
   padding-right: 2vw;
   padding-left: 2vw;
-  flex-grow: 0.2;
+  width: 10vw;
 }
 
 .quantItem{
   display: flex;
   flex-direction: column;
+  width: 10vw;
   align-items: center;
   padding-right: 2vw;
   padding-left: 2vw;
@@ -204,6 +207,20 @@
   cursor: pointer;
   margin-right: 5vw;
   text-transform: uppercase;
+}
+
+.carrinhoVazio{
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  padding-bottom: 6vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.textoVazio{
+  text-align: center;
+  font-size: 5vh;
 }
 
 @media screen and (max-width: 600px) {

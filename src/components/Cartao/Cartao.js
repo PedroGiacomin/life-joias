@@ -5,6 +5,7 @@ import "./Cartao.css";
 
 function handleClickCompra(produtoId){
   addItemToCart(produtoId);
+  alert("Item adicionado ao carrinho!");
 }
 
 function Cartao({produto}){
@@ -28,7 +29,7 @@ function Cartao({produto}){
           <Button 
             variant="contained"
             className="myButton"
-            onClick={() => handleClickCompra(produto.product_id)}>
+            onClick={() => handleClickCompra(produto)}>
             Comprar
           </Button>
           
