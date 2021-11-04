@@ -9,8 +9,12 @@ import "./Carrinho.css";
 
 function ItemCarrinho(produto){
 
-  //const [quantidade, setQuantidade] = useState();
-  //produto.product_quantidade = quantidade;
+  // const [quantidade, setQuantidade] = useState(1);
+
+  // async function updateQuantidade(prodId, quant){
+
+
+  // }
 
   function handleDelete(prod){
     deleteItem(prod);
@@ -37,10 +41,14 @@ function ItemCarrinho(produto){
             </p>
           </div>
 
-          {/*<div className="quantItem">
+          <div className="quantItem">
             <p className="itemSubtext">Quantidade</p>
-            <input className="quantInput" onChange={(e) => {setQuantidade(e.target.value)}}/>
-          </div>*/}
+            <input className="quantInput" 
+              defaultValue={1}
+              onChange={(e) => {
+                //setQuantidade(e.target.value);  
+              }}/>
+          </div>
 
           <div className="precoItem">
             <p className="itemSubtext">Preço</p>
@@ -60,14 +68,23 @@ function ItemCarrinho(produto){
 function Carrinho(){
 
   const [cartItens, setCartItens] = useState(JSON.parse(sessionStorage.getItem('cartItens')));
+  const [subTotal, setSubtotal] = useState(0);
 
   function updatePosDelete(){
     setCartItens(JSON.parse(sessionStorage.getItem('cartItens')));
   }
 
   useEffect(() =>{
+    calculaSubtotal();
     updatePosDelete();
   }, []);
+
+  function calculaSubtotal(){
+    let aux = subTotal;
+    cartItens.map((prod) => {
+      aux = aux + prod.product_preco});
+    setSubtotal(aux);
+  }
 
   return(
     <>
@@ -94,7 +111,7 @@ function Carrinho(){
                 className="botaoCalcular">
                 Calcular
               </Button>
-              <p>Frete: </p>
+          
             </div>
 
             <div className="precoFinal">
@@ -102,7 +119,7 @@ function Carrinho(){
 
               <div className="onePrice">
                 <p>Subtotal</p>
-                <p>R$ 11,90</p>
+                <p>{subTotal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
               </div>
 
               <div className="onePrice">
@@ -112,7 +129,7 @@ function Carrinho(){
 
               <div className="onePriceEspecial">
                 <p>Total do Pedido</p>
-                <p>R$ 11,90</p>
+                <p>{subTotal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
               </div>
      
             </div>
