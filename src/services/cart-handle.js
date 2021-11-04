@@ -11,6 +11,7 @@ function arrayRemove(arr, value) {
   
 }
 
+
 export const addItemToCart = (item) =>{
   //Pega o array de itens, se nao tiver cria um vazio
  

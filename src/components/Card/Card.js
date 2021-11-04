@@ -6,15 +6,9 @@ import { useHistory } from "react-router";
 
 import "./Card.css"
 
-function handleClickCompra(produto){
-  addItemToCart(produto);
-  alert("Item adicionado ao carrinho!");
-}
-
 function handleClickCartao(produto, history){
-  
   addProdutoAtual(produto);
-  history.push('Produtos')
+  history.push('Produto2')
 }
 
 function Card({card}){
@@ -28,7 +22,7 @@ function Card({card}){
           <img className="cardFotoProduto" src={card.product_imagem} onClick={() => handleClickCartao(card, history)}/>
           <div className="cardNomeProduto">{card.product_nome}</div>
           <div className="cardPreço">{(card.product_preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
-          <Button className="cardBotao" onClick={() => handleClickCompra(card)}>Comprar</Button>
+          <Button className="cardBotao" onClick={() => handleClickCartao(card, history)}>Comprar</Button>
       </div>
       
     </>

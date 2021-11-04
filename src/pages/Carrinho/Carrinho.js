@@ -67,7 +67,7 @@ function ItemCarrinho(produto){
 
 function Carrinho(){
 
-  const [cartItens, setCartItens] = useState(JSON.parse(sessionStorage.getItem('cartItens')));
+  const [cartItens, setCartItens] = useState([]);
   const [subTotal, setSubtotal] = useState(0);
 
   function updatePosDelete(){
@@ -88,6 +88,7 @@ function Carrinho(){
 
   return(
     <>
+    {console.log(cartItens)}
       <div className="baseCarrinho">
         <div className="caixaCarrinho">
           <h2 className="titleCarrinho">Carrinho de Compras</h2>

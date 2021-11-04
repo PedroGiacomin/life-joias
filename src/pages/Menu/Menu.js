@@ -4,6 +4,7 @@ import {BsPersonCircle, BsHandbag, BsHeart, BsFacebook, BsInstagram, BsWhatsapp}
 import {HiMenu} from "react-icons/hi";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
+import { startCart } from "../../services/cart-handle";
 import "./Menu.css"
 import { borderBottom } from "@material-ui/system";
 
@@ -76,7 +77,9 @@ function Menu(){
             <BsPersonCircle className="icone"/>
           </IconButton>
           
-          <IconButton onClick={() => handleClick("/carrinho")}>
+          <IconButton onClick={() => {
+            handleClick("/carrinho");
+          }}>
             <BsHandbag className="icone"/>
           </IconButton>
           <IconButton onClick={() => handleClick("/login")}>

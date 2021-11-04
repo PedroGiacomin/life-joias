@@ -17,7 +17,7 @@ function handleClickCompra(produtoId){
 function handleClickCartao(produto, history){
   
   addProdutoAtual(produto);
-  history.push('Produtos');
+  history.push('Produto2');
 }
 
 function Cartao({produto}){
@@ -30,7 +30,7 @@ function Cartao({produto}){
       <div className="cardContainerCarrossel">
         <Card className="myCard">
           
-        <img className="prodImageCartao" src={produto.product_imagem} onClick={() => handleClickCartao(produto, history)}/>
+        <img src={produto.product_imagem} onClick={() => handleClickCartao(produto, history)}/>
       
           <Typography className="nomeCard" gutterBottom variant="h5" align="center">
             {produto.product_nome}
