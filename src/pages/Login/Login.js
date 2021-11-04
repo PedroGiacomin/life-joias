@@ -4,6 +4,7 @@ import {useHistory} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import api from '../../services/api'
 import { login } from "../../services/auth";
+import {Link} from "react-router-dom"
 
 import "./Login.css";
 
@@ -39,8 +40,8 @@ function Login() {
   function inputBoxEmail(nomeShow, nome){
       return(
       <>
-        <Form.Group className="mb-3" className="formGroupPassword">
-          <Form.Label className="nomeInputLogin">{nomeShow}</Form.Label>
+        <Form.Group className="mb-3" className="inputLogin2">
+          <Form.Label className="nomeInputLogin2">{nomeShow}</Form.Label>
           <Form.Control 
             className="dadoInputLogin"
             type="input" 
@@ -56,7 +57,7 @@ function Login() {
   function inputBoxSenha(nomeShow, nome){
     return(
     <>
-      <Form.Group className="mb-3" className="formGroupPassword">
+      <Form.Group className="mb-3" className="inputLogin2">
         <Form.Label className="nomeInputLogin">{nomeShow}</Form.Label>
         <Form.Control 
           className="dadoInputLogin"
@@ -88,12 +89,12 @@ function Login() {
             </Form>
 
       
-            <Form.Group className="mb-3">
+        {/*<Form.Group className="mb-3">
             <div className="linkConfigDrawerEsq">
               <Form.Label>Esqueceu sua senha?</Form.Label>
             </div>
 
-            </Form.Group>
+            </Form.Group>*/}
             
             <Button className="botaoLogin" variant="primary" size="lg"
               onClick={() => handleLogin()}>
@@ -101,7 +102,10 @@ function Login() {
             </Button>{' '}
 
             <div className="linkConfigDrawerCad">
-              <Form.Label>Não Possui Cadastro? Cadastre-se agora</Form.Label>
+              <Form.Label>
+                Não possui cadastro? 
+              </Form.Label>
+              <Link to="/cadastro" > Cadastre-se agora</Link>
             </div>
           </div>
         
