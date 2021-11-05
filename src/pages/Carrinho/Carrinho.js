@@ -62,6 +62,7 @@ function Carrinho(){
 
   const [cartItens, setCartItens] = useState([]);
   const [subTotal, setSubtotal] = useState(0);
+  const [soma, setSoma] = useState(false);
 
   function updatePosDelete(){
     setCartItens(JSON.parse(sessionStorage.getItem('cartItens')));
@@ -70,12 +71,15 @@ function Carrinho(){
   useEffect(() =>{
     calculaSubtotal();
     updatePosDelete();
-  }, []);
+    
+  }, [soma]);
 
   function calculaSubtotal(){
     let aux = subTotal;
+    setSoma(true);
+
     cartItens.map((prod) => {
-      aux = aux + prod.product_preco});
+      aux = aux + prod.product_preco * prod.product_quantidade});
     setSubtotal(aux);
   }
 
