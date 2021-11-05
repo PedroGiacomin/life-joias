@@ -110,13 +110,17 @@ function Home(){
         <div className="sobreContent">
           <h2 className="sobreTitle">Sobre a loja</h2>
           <p className="sobreText">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries, but also the leap into 
-            electronic typesetting, remaining essentially unchanged. It was popularised in 
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          A paixão por metais preciosos e o fascínio por gemas naturais motivaram Fernanda dos Santos Mattos a inaugurar a primeira loja, em Contagem.
+A sofisticação de Life joias, foi a inspiração
+para a criação de um projeto que, em pouco tempo,
+tornou-se referência no cenário joalheiro.
+
+Hoje, na direção corporativa e criativa, Fernanda dos Santos Mattos imprime frescor à marca, promovendo um diálogo entre o tradicional e o contemporâneo
+e revigora a experiência de compra.
+
+A busca pela excelência e o apreço pelo capital humano são os pilares
+para a perenidade e o sucesso. Após tantas conquistas, ainda seguimos
+com o mesmo desejo de ir cada vez mais longe.
           </p>
         </div>
         <div className="sobreImg"/>
