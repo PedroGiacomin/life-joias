@@ -4,65 +4,19 @@ import { IconButton } from "@material-ui/core";
 import Button from 'react-bootstrap/Button'
 import { cleanCart, deleteItem } from "../../services/cart-handle";
 import api from "../../services/api";
+import ItemCarrinho from "../../components/ItemCart"
 
 import "./Carrinho.css";
 
-function ItemCarrinho(produto){
-
-  function handleDelete(prod){
-    deleteItem(prod);
-  }
-
-  return(
-    <>
-      <div className="itemCarrinho">
-        {console.log(produto)}
-        <img
-          className="imgItem"
-          src={produto.product_imagem}
-          alt={produto.product_nome}
-        />
-        
-        <div className="contentItem">
-          <div className="nomeItem">
-            <p className="itemText">{produto.product_nome}</p>  
-
-            {/**Tentar um js aqui para mostrar ou nao o tamanho*/}
-            <p className="itemSubtext"
-              style={{ display: (produto.product_tamanho == null) ? "none" : "block"}}>
-              Tamanho: {15}
-            </p>
-          </div>
-
-          <div className="quantItem">
-            <p className="itemSubtext">Quantidade</p>
-            <input className="quantInput" 
-              defaultValue={1}
-              readOnly
-              />
-
-          </div>
-
-          <div className="precoItem">
-            <p className="itemSubtext">Preço</p>
-            <p className="itemMidtext">{(produto.product_preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
-          </div>
-        </div>
-
-        <IconButton onClick={() => handleDelete(produto.product_id)}>
-          <BsTrashFill className="iconeTrash" size={15}/>
-        </IconButton>
-      </div>
-    </>
-  )
-}
 
 
 function Carrinho(){
 
+  const [excluiu, setExcluiu] = useState(false);
   const [cartItens, setCartItens] = useState([]);
   const [subTotal, setSubtotal] = useState(0);
-
+  const [soma, setSoma] = useState(false);
+  
   function updatePosDelete(){
     setCartItens(JSON.parse(sessionStorage.getItem('cartItens')));
   }
@@ -70,12 +24,20 @@ function Carrinho(){
   useEffect(() =>{
     calculaSubtotal();
     updatePosDelete();
-  }, []);
+  }, [soma]);
+
+  useEffect(() =>{
+    updatePosDelete();
+  }, [excluiu]);
+
 
   function calculaSubtotal(){
+    
     let aux = subTotal;
-    cartItens.map((prod) => {
-      aux = aux + prod.product_preco});
+    setSoma(true);
+
+    cartItens.forEach((prod) => {
+      aux = aux + prod.product_preco * prod.product_quantidade});
     setSubtotal(aux);
   }
 
@@ -94,7 +56,8 @@ function Carrinho(){
           { cartItens &&
             cartItens.map((prod) => {
             return (
-              ItemCarrinho(prod)
+              <ItemCarrinho produto={prod} excluiu={excluiu} setExcluiu={setExcluiu} setSubtotal={setSubtotal} subTotal={subTotal}/>
+              
             )
             })
           }

@@ -54,9 +54,10 @@ function Produto2(){
     
     handleAddQuant(produto.product_id, quantidade);
     
-    //handleAddTam(produto.product_id, tamanho);
+    if(produto.product_tamanho !== null)
+      handleAddTam(produto.product_id, tamanho);
     
-    addItemToCart(produto);
+    addItemToCart(produto, quantidade, tamanho);
     alert("Item adicionado ao carrinho!");
   }
 
