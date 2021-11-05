@@ -9,13 +9,6 @@ import "./Carrinho.css";
 
 function ItemCarrinho(produto){
 
-  // const [quantidade, setQuantidade] = useState(1);
-
-  // async function updateQuantidade(prodId, quant){
-
-
-  // }
-
   function handleDelete(prod){
     deleteItem(prod);
   }
@@ -23,7 +16,7 @@ function ItemCarrinho(produto){
   return(
     <>
       <div className="itemCarrinho">
-        
+        {console.log(produto)}
         <img
           className="imgItem"
           src={produto.product_imagem}
@@ -44,10 +37,10 @@ function ItemCarrinho(produto){
           <div className="quantItem">
             <p className="itemSubtext">Quantidade</p>
             <input className="quantInput" 
-              defaultValue={1}
-              onChange={(e) => {
-                //setQuantidade(e.target.value);  
-              }}/>
+              defaultValue={produto.product_quantidade}
+              readOnly
+              />
+
           </div>
 
           <div className="precoItem">
