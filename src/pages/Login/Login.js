@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import {useHistory} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import api from '../../services/api'
-import { login } from "../../services/auth";
+import { login, saveEmail} from "../../services/auth";
 import {Link} from "react-router-dom"
 
 import "./Login.css";
@@ -19,6 +19,8 @@ function Login() {
     try {
       //post recebe a rota e o corpo da requisicao
       const response = await api.post('/login', {user_email, user_senha});
+      console.log(user_email);
+      saveEmail(user_email);
       alert("Bem vindo à Life Joias!");
       login(response.data.accessToken);
       history.push('home');
