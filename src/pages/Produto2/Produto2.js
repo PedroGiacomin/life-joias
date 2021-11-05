@@ -50,10 +50,12 @@ function Produto2(){
     }
   }
 
-  function handleClickAddCarrinho(produto){
+ function handleClickAddCarrinho(produto){
     
     handleAddQuant(produto.product_id, quantidade);
-    handleAddTam(produto.product_id, tamanho);
+    
+    //handleAddTam(produto.product_id, tamanho);
+    
     addItemToCart(produto);
     alert("Item adicionado ao carrinho!");
   }
@@ -75,6 +77,7 @@ function Produto2(){
      <p className="itemSubtext" >Quantidade</p>
      
         <input className="quantInput" onChange={handleInputChange}/>
+        {console.log(quantidade)}
         
      </form>
           
