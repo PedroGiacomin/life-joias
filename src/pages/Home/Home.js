@@ -110,17 +110,15 @@ function Home(){
         <div className="sobreContent">
           <h2 className="sobreTitle">Sobre a loja</h2>
           <p className="sobreText">
-          A paixão por metais preciosos e o fascínio por gemas naturais motivaram Fernanda dos Santos Mattos a inaugurar a primeira loja, em Contagem.
-A sofisticação de Life joias, foi a inspiração
-para a criação de um projeto que, em pouco tempo,
-tornou-se referência no cenário joalheiro.
-
-Hoje, na direção corporativa e criativa, Fernanda dos Santos Mattos imprime frescor à marca, promovendo um diálogo entre o tradicional e o contemporâneo
-e revigora a experiência de compra.
-
-A busca pela excelência e o apreço pelo capital humano são os pilares
-para a perenidade e o sucesso. Após tantas conquistas, ainda seguimos
-com o mesmo desejo de ir cada vez mais longe.
+          A paixão por metais preciosos e o fascínio por gemas naturais motivaram Fernanda dos Santos Mattos e Yasmim Carla Machado Ribeiro a inaugurarem a primeira loja, em Contagem.
+          A sofisticação de Life joias, foi a inspiração
+          para a criação de um projeto que, em pouco tempo,
+          tornou-se referência no cenário joalheiro.
+          Hoje, na direção corporativa e criativa, Fernanda dos Santos Mattos e Yasmim Carla Machado Ribeiro imprimem frescor à marca, promovendo um diálogo entre o tradicional e o contemporâneo
+          e revigora a experiência de compra.
+          A busca pela excelência e o apreço pelo capital humano são os pilares
+          para a perenidade e o sucesso. Após tantas conquistas, ainda seguimos
+          com o mesmo desejo de ir cada vez mais longe.
           </p>
         </div>
         <div className="sobreImg"/>
