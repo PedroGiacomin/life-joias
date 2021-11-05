@@ -30,14 +30,14 @@ function ItemCarrinho(produto){
             {/**Tentar um js aqui para mostrar ou nao o tamanho*/}
             <p className="itemSubtext"
               style={{ display: (produto.product_tamanho == null) ? "none" : "block"}}>
-              Tamanho: {produto.product_tamanho}
+              Tamanho: {15}
             </p>
           </div>
 
           <div className="quantItem">
             <p className="itemSubtext">Quantidade</p>
             <input className="quantInput" 
-              defaultValue={produto.product_quantidade}
+              defaultValue={1}
               readOnly
               />
 
@@ -81,7 +81,6 @@ function Carrinho(){
 
   return(
     <>
-    {console.log(cartItens)}
       <div className="baseCarrinho">
         <div className="caixaCarrinho">
           <h2 className="titleCarrinho">Carrinho de Compras</h2>
@@ -119,6 +118,7 @@ function Carrinho(){
 
               <div className="onePrice">
                 <p>Subtotal</p>
+                {console.log(subTotal)}
                 <p>{subTotal.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
               </div>
 
