@@ -30,7 +30,7 @@ function ItemCarrinho(produto){
             {/**Tentar um js aqui para mostrar ou nao o tamanho*/}
             <p className="itemSubtext"
               style={{ display: (produto.product_tamanho == null) ? "none" : "block"}}>
-              Tamanho: {15}
+              Tamanho: {produto.product_tamanho}
             </p>
           </div>
 
