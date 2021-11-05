@@ -44,10 +44,9 @@ function ItemCarrinho(produto){
           <div className="quantItem">
             <p className="itemSubtext">Quantidade</p>
             <input className="quantInput" 
-              defaultValue={1}
-              onChange={(e) => {
-                //setQuantidade(e.target.value);  
-              }}/>
+              defaultValue={produto.product_tamanho}
+              readOnly
+              />
           </div>
 
           <div className="precoItem">
