@@ -15,9 +15,14 @@ function Produto2(){
   const prod = getProdutoAtual();
 
   const [quantidade, setQuantidade] = useState();
+  const [tamanho, setTamanho] = useState();
 
   function handleInputChange(e){
     setQuantidade(e.target.value);  
+  }
+
+  function handleTamChange(e){
+    setTamanho(e.target.value);
   }
 
   async function handleAddQuant(produtoId, quant){ 
@@ -25,9 +30,20 @@ function Produto2(){
     try {
       
       const obj = { 'product_quantidade' : quant};
-      console.log(produtoId);
       const response = await api.put(`/products/${produtoId}`, obj);
 
+
+    } catch (error) {
+      alert("Algo deu errado!");
+    }
+  }
+
+  async function handleAddTam(produtoId, tam){ 
+
+    try {
+      
+      const obj = { 'product_tamanho' : tam};
+      const response = await api.put(`/products/${produtoId}`, obj);
 
     } catch (error) {
       alert("Algo deu errado!");
@@ -37,7 +53,7 @@ function Produto2(){
   function handleClickAddCarrinho(produto){
     addItemToCart(produto);
     handleAddQuant(produto.product_id, quantidade);
-    console.log(produto);
+    handleAddTam(produto.product_id, tamanho);
     alert("Item adicionado ao carrinho!");
   }
 
@@ -45,7 +61,6 @@ function Produto2(){
   <div className="containerProduto1">
     <div className="baseFoto1">
   
-
        <img src={prod.product_imagem} width="400" height="400" alt="Colar de Prata Maggy"></img> 
     </div>
     
@@ -69,14 +84,14 @@ function Produto2(){
 
 <div className="infoContentTam" style={{ display: (prod.product_tamanho === null) ? "none" : "flex" }}>
 <Form.Label>Tamanho</Form.Label>      
-<Form.Select aria-label="Default select example">
+<Form.Select onChange={handleTamChange} aria-label="Default select example">
   <option>Escolha o tamanho</option>
-  <option value="1">15</option>
-  <option value="2">17</option>
-  <option value="3">19</option>
-  <option value="4">20</option>
-  <option value="5">21</option>
-  <option value="6">23</option>
+  <option value="15">15</option>
+  <option value="17">17</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="23">23</option>
 </Form.Select>
 </div>
 
