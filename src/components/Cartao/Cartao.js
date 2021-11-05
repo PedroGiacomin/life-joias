@@ -7,17 +7,10 @@ import { useHistory } from "react-router";
 import "./Cartao.css";
 
 
-
-
-function handleClickCompra(produtoId){
-  addItemToCart(produtoId);
-  alert("Item adicionado ao carrinho!");
-}
-
 function handleClickCartao(produto, history){
   
   addProdutoAtual(produto);
-  history.push('Produtos');
+  history.push('Produto2');
 }
 
 function Cartao({produto}){
@@ -43,7 +36,7 @@ function Cartao({produto}){
           <Button 
             variant="contained"
             className="myButton"
-            onClick={() => handleClickCompra(produto)}>
+            onClick={() => handleClickCartao(produto, history)}>
             Comprar
           </Button>
           

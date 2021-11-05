@@ -5,9 +5,12 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Button from "react-bootstrap/Button";
 import Cartao from "../../components/Cartao";
 import CardGroup from 'react-bootstrap/CardGroup';
+import { getProdutoAtual } from "../../services/product-handle";
 import "./Produto1.css"
 
 function Produto1(){
+
+  
 
   return(
   <div className="containerProduto1">
@@ -27,10 +30,10 @@ function Produto1(){
         <input className="quantInput"/>
      </form>
           
-     <div className="containerPreco1">
+    <div className="containerPreco1">
       <Form.Label>Preço </Form.Label>
       <p className="itemSubtext2">R$205,90</p>
-      </div>
+    </div>
 
       
       </div>
