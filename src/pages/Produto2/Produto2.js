@@ -7,6 +7,7 @@ import Cartao from "../../components/Cartao";
 import CardGroup from 'react-bootstrap/CardGroup';
 import { getProdutoAtual } from "../../services/product-handle";
 import { addItemToCart } from "../../services/cart-handle";
+import api from "../../services/api";
 import "./Produto2.css"
 
 function Produto2(){
@@ -16,20 +17,34 @@ function Produto2(){
   const [quantidade, setQuantidade] = useState();
 
   function handleInputChange(e){
-    const key = e.target.name;
+    setQuantidade(e.target.value);  
+  }
 
-    setQuantidade(e.target.value);
+  async function handleAddQuant(produtoId, quant){ 
+
+    try {
+      
+      const obj = {'product_quantidade' : quant};
+      console.log(obj);
+      await api.put(`/products/${produtoId}`, obj);
+
+
+    } catch (error) {
+      alert("Algo deu errado!");
+    }
   }
 
   function handleClickAddCarrinho(produto){
     addItemToCart(produto);
+    handleAddQuant(produto.product_id, quantidade);
+    console.log(produto);
     alert("Item adicionado ao carrinho!");
   }
 
   return(
   <div className="containerProduto1">
     <div className="baseFoto1">
-    
+  
 
        <img src={prod.product_imagem} width="400" height="400" alt="Colar de Prata Maggy"></img> 
     </div>
@@ -41,8 +56,10 @@ function Produto2(){
        </div>
      <div className="dadosQuantPreco1">
      <form className="inputsProduto1">
-     <p className="itemSubtext" onChange={handleInputChange}>Quantidade</p>
-        <input className="quantInput"/>
+     <p className="itemSubtext" >Quantidade</p>
+     
+        <input className="quantInput" onChange={handleInputChange}/>
+        
      </form>
           
      <div className="containerPreco1">
@@ -50,7 +67,7 @@ function Produto2(){
       <p className="itemSubtext2">{(prod.product_preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
       </div>
 
-<div className="infoContentTam">
+<div className="infoContentTam" style={{ display: (prod.product_tamanho === null) ? "none" : "flex" }}>
 <Form.Label>Tamanho</Form.Label>      
 <Form.Select aria-label="Default select example">
   <option>Escolha o tamanho</option>
