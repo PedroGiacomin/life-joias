@@ -19,24 +19,40 @@ function Perfil(){
 
   const [pessoaAtual, setPessoaAtual] = useState({});
   const user_email = getEmail();
-  console.log(user_email);
+
+  async function getPessoa(user_email){
+    try {
+      
+      const response = await api.get(`/users` , {
+        params:{user_email}
+      });
+
+      console.log(response.data);
+      setPessoaAtual(response.data);
+
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado");   
+    }
+  }
+
+  useEffect(() => {
+    getPessoa(user_email)
+  }, []);
+
+  // const isFailureStatus = (result) => {
+  //   return !result || result.status >= 400;
+  // };
 
   // async function getPessoa(user_email){
-  //   try {
-  //     console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-  //     const obj = {user_email};
-  //     console.log(obj);
-  //     const response = await api.get(`/users`, {user_email});
-  //     console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    
+  //   const response = await api.get('/users', {user_email});
+  //   if(isFailureStatus(response)){
+  //     alert("Deu ruim amigo...");
+  //   }
+  //   else{
   //     console.log(response);
-  //     // const aux = [...response.data];
-  //     // console.log(aux);
-
-  //     //setPessoaAtual(aux);
-
-  //   } catch (error) {
-  //     console.warn(error);
-  //     alert("Algo deu errado");   
+  //     setPessoaAtual(response.data);
   //   }
   // }
 
@@ -44,29 +60,9 @@ function Perfil(){
   //   getPessoa(user_email)
   // }, []);
 
-  const isFailureStatus = (result) => {
-    return !result || result.status >= 400;
-  };
-
-  async function getPessoa(){
-    
-    const response = api.get('/users', {user_email});
-    if(isFailureStatus(response)){
-      alert("Deu ruim amigo...");
-    }
-    else{
-      console.log(response);
-      setPessoaAtual(response.data);
-    }
-  }
-
-  useEffect(() => {
-    getPessoa()
-  }, []);
-
-  useEffect(() => {
-    console.log(pessoaAtual)
-  },[pessoaAtual])
+  // useEffect(() => {
+  //   console.log(pessoaAtual);
+  // },[pessoaAtual])
  
   //Objeto de teste
   const pessoa = {
@@ -137,27 +133,27 @@ function Perfil(){
         <h3 className="subtitlePerfil">Dados Pessoais</h3>
         <Form className="formPerfil">
           
-          
-          {inputBox("Nome", pessoa.nome)}
-          {inputBox("Email", pessoa.email)}
+          {console.log(pessoaAtual)}
+          {inputBox("Nome", pessoaAtual.user_nome)}
+          {inputBox("Email", pessoaAtual.user_email)}
           <div className="doisInputs">
-            {inputBoxShort("Telefone", pessoa.telefone)}
-            {inputBoxShort("Nascimento", pessoa.dataNascimento)} 
+            {inputBoxShort("Telefone", pessoaAtual.user_telefone)}
+            {inputBoxShort("Nascimento", pessoaAtual.user_nascimento)} 
           </div>
 
         </Form>
         
         <h3 className="subtitlePerfil">Endereço</h3>
         <Form className="formPerfil">
-          {inputBox("Logradouro", pessoa.endereco.rua)}
+          {inputBox("Logradouro", pessoaAtual.user_rua)}
           
           <div className="doisInputs">
-            {inputBoxShort("CEP", pessoa.dataNascimento)}
-            {inputBoxShort("Cidade", pessoa.telefone)}
+            {inputBoxShort("CEP", pessoaAtual.user_cep)}
+            {inputBoxShort("Cidade", pessoaAtual.user_cidade)}
           </div>
           <div className="doisInputs">
-            {inputBoxShort("Número", pessoa.dataNascimento)}
-            {inputBoxShort("Bairro", pessoa.telefone)}
+            {inputBoxShort("Número", pessoaAtual.user_numero)}
+            {inputBoxShort("Bairro", pessoaAtual.user_bairro)}
           </div>
         </Form>
 
