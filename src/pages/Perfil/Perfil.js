@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
-import { logout } from "../../services/auth";
+import { logout , getEmail} from "../../services/auth";
+import api from "../../services/api";
+
 import "./Perfil.css"
 import { Link } from "react-router-dom";
 
@@ -15,6 +17,53 @@ function Perfil(){
     alert("Até logo!!")
   }
 
+  const [pessoaAtual, setPessoaAtual] = useState({});
+  const user_email = getEmail();
+
+  async function getPessoa(user_email){
+    try {
+      
+      const response = await api.get(`/users` , {
+        params:{user_email}
+      });
+
+      console.log(response.data);
+      setPessoaAtual(response.data);
+
+    } catch (error) {
+      console.warn(error);
+      alert("Algo deu errado");   
+    }
+  }
+
+  useEffect(() => {
+    getPessoa(user_email)
+  }, []);
+
+  // const isFailureStatus = (result) => {
+  //   return !result || result.status >= 400;
+  // };
+
+  // async function getPessoa(user_email){
+    
+  //   const response = await api.get('/users', {user_email});
+  //   if(isFailureStatus(response)){
+  //     alert("Deu ruim amigo...");
+  //   }
+  //   else{
+  //     console.log(response);
+  //     setPessoaAtual(response.data);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   getPessoa(user_email)
+  // }, []);
+
+  // useEffect(() => {
+  //   console.log(pessoaAtual);
+  // },[pessoaAtual])
+ 
   //Objeto de teste
   const pessoa = {
     nome: "Taylor",
@@ -84,27 +133,27 @@ function Perfil(){
         <h3 className="subtitlePerfil">Dados Pessoais</h3>
         <Form className="formPerfil">
           
-          
-          {inputBox("Nome", pessoa.nome)}
-          {inputBox("Email", pessoa.email)}
+          {console.log(pessoaAtual)}
+          {inputBox("Nome", pessoaAtual.user_nome)}
+          {inputBox("Email", pessoaAtual.user_email)}
           <div className="doisInputs">
-            {inputBoxShort("Telefone", pessoa.telefone)}
-            {inputBoxShort("Nascimento", pessoa.dataNascimento)} 
+            {inputBoxShort("Telefone", pessoaAtual.user_telefone)}
+            {inputBoxShort("Nascimento", pessoaAtual.user_nascimento)} 
           </div>
 
         </Form>
         
         <h3 className="subtitlePerfil">Endereço</h3>
         <Form className="formPerfil">
-          {inputBox("Logradouro", pessoa.endereco.rua)}
+          {inputBox("Logradouro", pessoaAtual.user_rua)}
           
           <div className="doisInputs">
-            {inputBoxShort("CEP", pessoa.dataNascimento)}
-            {inputBoxShort("Cidade", pessoa.telefone)}
+            {inputBoxShort("CEP", pessoaAtual.user_cep)}
+            {inputBoxShort("Cidade", pessoaAtual.user_cidade)}
           </div>
           <div className="doisInputs">
-            {inputBoxShort("Número", pessoa.dataNascimento)}
-            {inputBoxShort("Bairro", pessoa.telefone)}
+            {inputBoxShort("Número", pessoaAtual.user_numero)}
+            {inputBoxShort("Bairro", pessoaAtual.user_bairro)}
           </div>
         </Form>
 
