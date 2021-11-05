@@ -12,9 +12,9 @@ function arrayRemove(arr, value) {
 }
 
 
-export const addItemToCart = (item) =>{
+export const addItemToCart = (item, quantidade) =>{
   //Pega o array de itens, se nao tiver cria um vazio
- 
+  item.product_quantidade = quantidade;
   //String --> array
   let cartItens = JSON.parse(sessionStorage.getItem('cartItens') || '[]');
   //Add elemento ao array

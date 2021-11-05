@@ -56,7 +56,7 @@ function Produto2(){
     
     //handleAddTam(produto.product_id, tamanho);
     
-    addItemToCart(produto);
+    addItemToCart(produto, quantidade);
     alert("Item adicionado ao carrinho!");
   }
 

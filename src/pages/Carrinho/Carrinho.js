@@ -37,7 +37,7 @@ function ItemCarrinho(produto){
           <div className="quantItem">
             <p className="itemSubtext">Quantidade</p>
             <input className="quantInput" 
-              defaultValue={1}
+              defaultValue={produto.product_quantidade}
               readOnly
               />
 
