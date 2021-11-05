@@ -24,9 +24,9 @@ function Produto2(){
 
     try {
       
-      const obj = {'product_quantidade' : quant};
-      console.log(obj);
-      await api.put(`/products/${produtoId}`, obj);
+      const obj = { 'product_quantidade' : quant};
+      console.log(produtoId);
+      const response = await api.put(`/products/${produtoId}`, obj);
 
 
     } catch (error) {
