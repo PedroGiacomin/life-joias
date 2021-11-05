@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {Card, ListItem, ListItemText, Typography} from '@material-ui/core';
 import { Form } from "react-bootstrap";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
@@ -13,7 +13,15 @@ function Produto2(){
 
   const prod = getProdutoAtual();
 
-  function handleClickCompra(produto){
+  const [quantidade, setQuantidade] = useState();
+
+  function handleInputChange(e){
+    const key = e.target.name;
+
+    setQuantidade(e.target.value);
+  }
+
+  function handleClickAddCarrinho(produto){
     addItemToCart(produto);
     alert("Item adicionado ao carrinho!");
   }
@@ -33,7 +41,7 @@ function Produto2(){
        </div>
      <div className="dadosQuantPreco1">
      <form className="inputsProduto1">
-     <p className="itemSubtext">Quantidade</p>
+     <p className="itemSubtext" onChange={handleInputChange}>Quantidade</p>
         <input className="quantInput"/>
      </form>
           
@@ -59,7 +67,7 @@ function Produto2(){
 
       <div className="containerBotao1"></div>
         <Button className="botaoCompra1" variant="primary" size="lg"
-          onClick={() => handleClickCompra(prod)}>
+          onClick={() => handleClickAddCarrinho(prod)}>
             Adicionar ao carrinho
         </Button>{' '}
 

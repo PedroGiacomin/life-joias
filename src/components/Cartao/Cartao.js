@@ -7,13 +7,6 @@ import { useHistory } from "react-router";
 import "./Cartao.css";
 
 
-
-
-function handleClickCompra(produtoId){
-  addItemToCart(produtoId);
-  alert("Item adicionado ao carrinho!");
-}
-
 function handleClickCartao(produto, history){
   
   addProdutoAtual(produto);
@@ -30,7 +23,7 @@ function Cartao({produto}){
       <div className="cardContainerCarrossel">
         <Card className="myCard">
           
-        <img src={produto.product_imagem} onClick={() => handleClickCartao(produto, history)}/>
+        <img className="prodImageCartao" src={produto.product_imagem} onClick={() => handleClickCartao(produto, history)}/>
       
           <Typography className="nomeCard" gutterBottom variant="h5" align="center">
             {produto.product_nome}
@@ -43,7 +36,7 @@ function Cartao({produto}){
           <Button 
             variant="contained"
             className="myButton"
-            onClick={() => handleClickCompra(produto)}>
+            onClick={() => handleClickCartao(produto, history)}>
             Comprar
           </Button>
           
