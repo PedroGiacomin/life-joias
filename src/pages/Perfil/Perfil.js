@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {useState} from "react";
-import { logout } from "../../services/auth";
+import { logout , getEmail} from "../../services/auth";
+import api from "../../services/api";
+
 import "./Perfil.css"
 import { Link } from "react-router-dom";
 
@@ -15,6 +17,57 @@ function Perfil(){
     alert("Até logo!!")
   }
 
+  const [pessoaAtual, setPessoaAtual] = useState({});
+  const user_email = getEmail();
+  console.log(user_email);
+
+  // async function getPessoa(user_email){
+  //   try {
+  //     console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  //     const obj = {user_email};
+  //     console.log(obj);
+  //     const response = await api.get(`/users`, {user_email});
+  //     console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  //     console.log(response);
+  //     // const aux = [...response.data];
+  //     // console.log(aux);
+
+  //     //setPessoaAtual(aux);
+
+  //   } catch (error) {
+  //     console.warn(error);
+  //     alert("Algo deu errado");   
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   getPessoa(user_email)
+  // }, []);
+
+  const isFailureStatus = (result) => {
+    return !result || result.status >= 400;
+  };
+
+  async function getPessoa(){
+    
+    const response = api.get('/users', {user_email});
+    if(isFailureStatus(response)){
+      alert("Deu ruim amigo...");
+    }
+    else{
+      console.log(response);
+      setPessoaAtual(response.data);
+    }
+  }
+
+  useEffect(() => {
+    getPessoa()
+  }, []);
+
+  useEffect(() => {
+    console.log(pessoaAtual)
+  },[pessoaAtual])
+ 
   //Objeto de teste
   const pessoa = {
     nome: "Taylor",

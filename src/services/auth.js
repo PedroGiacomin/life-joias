@@ -11,4 +11,6 @@ export const logout = () => {
 
 export const saveEmail = (email) => {
   sessionStorage.setItem(LOGGED_EMAIL, email)
-}
+};
+
+export const getEmail = () => sessionStorage.getItem(LOGGED_EMAIL);
